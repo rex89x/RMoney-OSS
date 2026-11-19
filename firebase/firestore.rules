@@ -1,0 +1,646 @@
+rules_version = '2';
+
+// Personal Hub — Firestore Security Rules (v2 — multi-user aware)
+//
+// 角色：
+//   admin   — owner；管理使用者 / 白名單
+//   owner   — 一般主使用者（持有 ledger / portfolio / ...）
+//   member  — 被邀請的共享使用者，只能看別人分享給他的 trips / txs / itineraries
+//   viewer  — 保留
+//
+// 兩個 bootstrap 例外同 v1：
+//   1. config/allowedEmails: 任何 auth user 可讀（白名單檢查）
+//   2. users/{uid}: 使用者可讀寫自己的 doc
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function uid() { return request.auth.uid; }
+
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(uid())).data;
+    }
+    function role() {
+      return isSignedIn() && exists(/databases/$(database)/documents/users/$(uid()))
+        ? userDoc().role
+        : '';
+    }
+    function isAdmin() { return role() == 'admin'; }
+    function isOwner() { return role() == 'owner' || role() == 'admin'; }
+    function isMember() { return isSignedIn() && (role() == 'member' || role() == 'owner' || role() == 'admin'); }
+    // Viewer = 只能看分享給他的旅程；'guest' 是舊稱仍視為相同等級。
+    function isViewer() { return role() == 'viewer' || role() == 'guest'; }
+
+    // Trip 讀取：owner 自己的 或 被 sharedWith
+    function canReadTrip(trip) {
+      return isSignedIn() && (
+        trip.userId == uid() ||
+        trip.ownerId == uid() ||
+        (trip.sharedWith != null && uid() in trip.sharedWith) ||
+        isAdmin()
+      );
+    }
+    function canWriteTrip(trip) {
+      return isSignedIn() && (trip.userId == uid() || trip.ownerId == uid() || isAdmin());
+    }
+
+    // Household（共同帳本）：members 才能讀寫；member 角色（伴侶）靠這個拿到分帳資料
+    function householdDoc(hid) {
+      return get(/databases/$(database)/documents/households/$(hid)).data;
+    }
+    function isHouseholdMember(hid) {
+      return isSignedIn() && hid != null && hid != ''
+        && exists(/databases/$(database)/documents/households/$(hid))
+        && uid() in householdDoc(hid).memberIds;
+    }
+    // 個人支出分享：users/{x}.ledgerSharedWith 列出的 uid 可讀 x 的個人支出（唯讀）。
+    // 只有 x 本人（或 admin）寫得進 users/{x}，所以分享一定是「本人主動開放自己的資料」。
+    // 前端在 households.ledgerSharing 留一份鏡像純粹給 UI 判斷要不要顯示分頁，這裡不採信它。
+    // 授權依據就是「資料擁有者自己列的名單」，不再多疊一層 role 檢查 —— 多一層只會變成靜默失效的來源。
+    // 同樣要防 null：欄位可能存在但是 null。
+    function ledgerViewersOf(sharerUid) {
+      return exists(/databases/$(database)/documents/users/$(sharerUid))
+        && get(/databases/$(database)/documents/users/$(sharerUid)).data.get('ledgerSharedWith', []) is list
+        ? get(/databases/$(database)/documents/users/$(sharerUid)).data.ledgerSharedWith
+        : [];
+    }
+    // 個人支出「編輯」分享：users/{x}.ledgerEditors 列出的 uid 可以修改 x 的 type == 'expense' 交易
+    //（改金額 / 類別 / 備註 / 日期、改成共同分攤、軟刪除與復原），但不能替 x 新增交易、不能硬刪、
+    // 不能改 userId（搶走交易）或 type（變成收入 / 轉帳就超出被分享的範圍）。
+    // 同樣只以資料擁有者自己列的名單為依據；households.ledgerEditing 只是 UI 鏡像。
+    // 前端 setLedgerSharing() 保證 editors ⊆ viewers；rules 不另外檢查，因為 update 本來就要先讀得到。
+    function ledgerEditorsOf(sharerUid) {
+      return exists(/databases/$(database)/documents/users/$(sharerUid))
+        && get(/databases/$(database)/documents/users/$(sharerUid)).data.get('ledgerEditors', []) is list
+        ? get(/databases/$(database)/documents/users/$(sharerUid)).data.ledgerEditors
+        : [];
+    }
+    // 成員權限：households.members[uid].permissions[key]；沒設用 def。owner 永遠 true。
+    // 注意：`permissions` 這個 key 可能「存在但是 null」（前端 converter 以前會寫 null 進去），
+    // 這時 get('permissions', {}) 回的是 null 不是 {}，再 .get() 就會 runtime error → 整條規則變成拒絕。
+    // 所以一定要先用 `is map` 檢查，不能只靠 get() 的 default。
+    function memberPermMap(members) {
+      return members.get(uid(), {}).get('permissions', {}) is map
+        ? members.get(uid(), {}).get('permissions', {})
+        : {};
+    }
+    function householdPerm(hid, key, def) {
+      return householdDoc(hid).ownerId == uid()
+        || memberPermMap(householdDoc(hid).get('members', {})).get(key, def) == true;
+    }
+
+    // config/allowedEmails / config/guestEmails — 白名單（明文）
+    //   讀：僅 admin。之前任何登入者都能讀 → 任何 Google 帳號登入後可列出全部受邀者 email（2026-11 稽核 S3）。
+    // config/allowedEmailHashes / config/guestEmailHashes — 白名單 SHA-256（lib/email-hash.ts）
+    //   讀：任何 authenticated user（登入前的白名單檢查只能驗自己在不在，列不出別人）
+    // 寫：僅 admin（前端 WhitelistPanel）；Apps Script 以 owner 身分寫，不經 rules
+    match /config/{docId} {
+      allow read: if isSignedIn() && docId in ['allowedEmailHashes', 'guestEmailHashes'];
+      allow read: if isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // users/{uid} — 自己可讀寫（不含 role 欄位）；admin 可讀寫所有 users（以便後台管理角色）
+    // 重點：guest 不能自我升級 role；任何 role 變更必須由 admin 或 Apps Script (admin SDK) 處理。
+    // create 也要鎖 role：Firebase Auth 的 Google provider 不受白名單限制，任何 Google 帳號都能登入後
+    // 直接用 SDK 建 users/{uid}。若 create 不限制欄位，寫 role: 'admin' 就等於拿到全庫讀寫
+    //（2026-11 稽核 S1）。首次登入只能是 member / viewer；owner / admin 由 admin 後台或 console 指定。
+    match /users/{targetUid} {
+      allow read: if isSignedIn() && (request.auth.uid == targetUid || isAdmin());
+      allow create: if isSignedIn() && request.auth.uid == targetUid
+        && request.resource.data.role in ['member', 'viewer']
+        && request.resource.data.keys().hasOnly([
+          'email', 'displayName', 'photoURL', 'role',
+          'ledgerSharedWith', 'ledgerEditors', 'preferences', 'createdAt'
+        ]);
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        (
+          request.auth.uid == targetUid &&
+          // 自己只能改非 role 欄位
+          !(request.resource.data.diff(resource.data).changedKeys().hasAny(['role']))
+        )
+      );
+      allow delete: if isAdmin();
+    }
+
+    // ------- Owner-only data -------
+    match /stocks/{symbol} {
+      allow read, write: if isOwner();
+      // 共同投資帳：member（伴侶）只能 get 單一檔報價（公開市場資料）來算共同持股損益；
+      // 不開 list —— 否則等於看得到 owner 追蹤的全部股票（自選股 / 持股清單）。
+      allow get: if isMember();
+      match /history/{historyId} { allow read, write: if isOwner(); }
+      match /candles/{candleId} { allow read, write: if isOwner(); }
+    }
+    match /watchlist/{docId}           { allow read, write: if isOwner(); }
+    match /portfolio/{positionId}      { allow read, write: if isOwner(); }
+    // 投資理財計畫：追蹤目標金額、期限、月投入與提醒開關。
+    match /investment_plans/{planId}   { allow read, write: if isOwner(); }
+    // 投資組合每日 snapshot（doc id = YYYY-MM-DD）
+    match /portfolio_snapshots/{snapId} { allow read, write: if isOwner(); }
+    // 短波段實驗：盤後候選、策略設定、紙上交易，不影響正式 portfolio。
+    match /swing_strategy_configs/{configId} { allow read, write: if isOwner(); }
+    match /swing_signal_runs/{runId}        { allow read, write: if isOwner(); }
+    match /swing_paper_trades/{tradeId}     { allow read, write: if isOwner(); }
+    match /swing_paper_summaries/{summaryId} { allow read, write: if isOwner(); }
+    match /swing_paper_sync_runs/{runId}    { allow read, write: if isOwner(); }
+    // 股市雷達盤前評估：Apps Script（service account）每日寫入，前端只讀；
+    // 建議由確定性公式產生，不允許前端改寫歷史評估，成績單才可信。
+    match /stock_radar_runs/{runId}        { allow read: if isOwner(); allow write: if false; }
+    // Claude 排程推送的輿情、事後報酬（成績單）、回測、台股籌碼日資料：同樣只由 Apps Script 寫入。
+    match /stock_radar_sentiment/{runId}   { allow read: if isOwner(); allow write: if false; }
+    match /stock_radar_outcomes/{runId}    { allow read: if isOwner(); allow write: if false; }
+    match /stock_radar_backtests/{market}  { allow read: if isOwner(); allow write: if false; }
+    match /stock_radar_flows/{date}        { allow read: if isOwner(); allow write: if false; }
+    // 股市雷達前端設定（Claude 提示詞已複製的代號清單）：owner 自己讀寫。
+    match /stock_radar_configs/{configId}  { allow read, write: if isOwner(); }
+    // 台指期虛擬交易（docs/TAIFEX_PAPER_TRADING_PLAN.md §5）：日 K、訊號、輿情、虛擬帳戶、交易紀錄、回測
+    // 一律由 Apps Script（service account）以確定性程式寫入，前端只讀；手動下單 / 重置也走 Apps Script action，
+    // 避免從前端改出好看的績效，之後接券商前的紙上紀錄才可信。
+    match /taifex_daily/{date}             { allow read: if isOwner(); allow write: if false; }
+    match /taifex_signals/{date}           { allow read: if isOwner(); allow write: if false; }
+    match /taifex_sentiment/{date}         { allow read: if isOwner(); allow write: if false; }
+    match /taifex_paper_accounts/{id}      { allow read: if isOwner(); allow write: if false; }
+    match /taifex_paper_trades/{id}        { allow read: if isOwner(); allow write: if false; }
+    match /taifex_backtests/{id}           { allow read: if isOwner(); allow write: if false; }
+    // 台指期盤中即時報價 / 快取、每週 walk-forward 參數最佳化結果：同樣只由 Apps Script 寫入（前端改不了模擬成交與最佳化結果）。
+    match /taifex_live/{id}                { allow read: if isOwner(); allow write: if false; }
+    match /taifex_optimizations/{id}       { allow read: if isOwner(); allow write: if false; }
+    // 台指期每週檢討（Claude 透過 MCP 存的檢討 + 調整提案）與目前生效的調校值：前端只讀。
+    // 提案由 MCP 寫入工具存檔；套用 / 退回 / 還原只能走 Apps Script action（applyTaifexReview 等，會重驗範圍並留 audit_logs），
+    // 前端不能直接改調校值，否則等於繞過「提案 → owner 核准」與上下限檢查。
+    match /taifex_reviews/{id}             { allow read: if isOwner(); allow write: if false; }
+    match /taifex_tuning/{id}              { allow read: if isOwner(); allow write: if false; }
+    // 台指期資金管理設定（模式、契約、風險%、成本）：owner 自己讀寫；Apps Script 讀取時會再驗一次範圍。
+    match /taifex_configs/{configId}       { allow read, write: if isOwner(); }
+    // 淨值相關
+    // Accounts 是 Phase 1 新帳戶主資料；legacy cash_accounts/payment_methods/liabilities 仍保留到 2027-01-05。
+    match /accounts/{id} {
+      allow read, write: if isOwner();
+      // 個人支出編輯者（users/{ownerId}.ledgerEditors）改對方交易的金額 / 帳戶時，
+      // 前端 updateTransaction 會在同一個 runTransaction 裡回補該帳戶餘額，所以要：
+      //   get   單一帳戶（不開 list，看不到對方的帳戶清單）
+      //   update 只限餘額欄位（名稱 / 類型 / 封存 / ownerId 都不能動）
+      // 放在 isOwner() 之後，owner 自己讀寫不會多付 users/{ownerId} 的 get()。
+      allow get: if isSignedIn() && resource != null
+        && resource.data.get('ownerId', '') != ''
+        && uid() in ledgerEditorsOf(resource.data.ownerId);
+      allow update: if isSignedIn()
+        && resource.data.get('ownerId', '') != ''
+        && uid() in ledgerEditorsOf(resource.data.ownerId)
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['balance', 'balanceTWD', 'balanceUpdatedAt', 'updatedAt']);
+    }
+    match /cash_accounts/{id}          { allow read, write: if isOwner(); }
+    match /manual_assets/{id}          { allow read, write: if isOwner(); }
+    match /liabilities/{id}            { allow read, write: if isOwner(); }
+    match /net_worth_snapshots/{id}    { allow read, write: if isOwner(); }
+    match /subscriptions/{id}          { allow read, write: if isOwner(); }
+    match /scheduled_payments/{id}     { allow read, write: if isOwner(); }
+    // 儲蓄目標：owner 全部；有 householdId 的「共同目標」成員也能讀寫（含存入紀錄）
+    match /savings_goals/{goalId} {
+      function goalHousehold() { return resource.data.householdId; }
+      allow read: if isOwner() || (goalHousehold() != null && isHouseholdMember(goalHousehold()));
+      allow create: if isOwner()
+        || (request.resource.data.householdId != null
+            && isHouseholdMember(request.resource.data.householdId)
+            && householdPerm(request.resource.data.householdId, 'canManageGoals', true));
+      allow update, delete: if isOwner()
+        || (goalHousehold() != null && isHouseholdMember(goalHousehold()) && householdPerm(goalHousehold(), 'canManageGoals', true));
+      match /contributions/{cId} {
+        function parentGoal() {
+          return get(/databases/$(database)/documents/savings_goals/$(goalId)).data;
+        }
+        allow read: if isOwner() || (
+          exists(/databases/$(database)/documents/savings_goals/$(goalId))
+          && parentGoal().householdId != null
+          && isHouseholdMember(parentGoal().householdId)
+        );
+        allow write: if isOwner() || (
+          exists(/databases/$(database)/documents/savings_goals/$(goalId))
+          && parentGoal().householdId != null
+          && isHouseholdMember(parentGoal().householdId)
+          && householdPerm(parentGoal().householdId, 'canManageGoals', true)
+        );
+      }
+    }
+    match /dividends/{id}              { allow read, write: if isOwner(); }
+    match /realized_lots/{id}          { allow read, write: if isOwner(); }
+    match /audit_logs/{id}             { allow read, write: if isOwner(); }
+    match /fx_pairs/{pairId}           { allow read, write: if isOwner(); }
+    match /fx_rates/{pair} {
+      allow read, write: if isOwner();
+      // 共同投資帳的美股要換算 TWD：member 只能 get 單一匯率（公開資料），不能 list
+      allow get: if isMember();
+      match /candles/{candleId} { allow read, write: if isOwner(); }
+    }
+    match /alerts/{alertId}            { allow read, write: if isOwner(); }
+    match /alert_logs/{logId}          { allow read, write: if isOwner(); }
+    // 類別：member（共同帳本成員）可讀，讓分帳頁能顯示類別名稱；寫入仍限 owner
+    match /categories/{categoryId}     { allow read: if isMember(); allow write: if isOwner(); }
+    match /payment_methods/{pmId}      { allow read, write: if isOwner(); }
+    // 信用卡帳單周期紀錄（每張卡每月一筆）。doc id = `{pmId}__{YYYY-MM}`
+    match /credit_card_bills/{billId}  { allow read, write: if isOwner(); }
+    match /budgets/{budgetId}          { allow read, write: if isOwner(); }
+    // 墊付團（下午茶 / 揪團）— 純 owner 自己用
+    match /payout_groups/{id}          { allow read, write: if isOwner(); }
+    // 租賃資產（先支出買入，後續每月收回變動金額）— 純 owner 自己用
+    match /rentals/{id}                { allow read, write: if isOwner(); }
+    match /recurring/{recurringId}     { allow read, write: if isOwner(); }
+    // 信用卡分期計畫（F2）：只有 owner 自己的卡片消費會分期，共同帳本成員不需要也不該看到；
+    // 每期入帳由 Apps Script（service account，不受 rules 限制）寫 transactions + 推進 paidPeriods。
+    match /installment_plans/{planId}  { allow read, write: if isOwner(); }
+    match /notifications/{notifId}     { allow read, write: if isOwner(); }
+    match /error_logs/{logId}          { allow read, write: if isOwner(); }
+
+    // Gemini 用量由 Apps Script 依 API response usageMetadata 寫入，前端不可偽造；
+    // 預算設定則由 owner 管理，用於警示與選配的 hard stop。
+    match /ai_usage_events/{eventId}   { allow read: if isOwner(); allow write: if false; }
+    match /ai_budget_configs/{userId}  {
+      allow read, write: if isOwner() && userId == uid();
+    }
+
+    // 機票價格訂閱含個人旅遊偏好。歷史快照由 Apps Script 寫入，前端唯讀，避免 client 偽造歷史低價。
+    // owner：全部可管理（維持原樣）。
+    // member（共同帳本伴侶，2026-11 開放機票雷達）：
+    //   - 讀：自己建立的（userId == 自己），或建立者分享給我的（自己 in sharedWith）——
+    //     owner 建的航線伴侶看得到；伴侶建的 owner 也看得到。sharedWith 由建立者前端依共同帳本成員自動維護。
+    //     前端兩個 query（where userId == 我 / where sharedWith array-contains 我）都能被這條規則證明。
+    //   - 寫：只有自己建立的（update 不能把 userId 改成別人）；別人分享的只能看。
+    //   get 要先判 resource != null（不存在的 doc 碰 resource.data 會 error，見 household README「踩過的坑」）。
+    function flightWatchVisible(data) {
+      return data.userId == uid() || uid() in data.get('sharedWith', []);
+    }
+    match /flight_watches/{watchId} {
+      allow read, write: if isOwner();
+      allow get: if isMember() && resource != null && flightWatchVisible(resource.data);
+      allow list: if isMember() && flightWatchVisible(resource.data);
+      allow create: if isMember() && request.resource.data.userId == uid();
+      allow update: if isMember() && resource.data.userId == uid() && request.resource.data.userId == uid();
+      allow delete: if isMember() && resource.data.userId == uid();
+      match /snapshots/{snapshotId} {
+        allow read: if isOwner();
+        // member：看得到那筆訂閱就看得到它的快照（多一次 get()；展開價格趨勢時才讀，量很小）
+        allow read: if isMember()
+          && flightWatchVisible(get(/databases/$(database)/documents/flight_watches/$(watchId)).data);
+        allow write: if false;
+      }
+    }
+
+    // ------- Households（共同帳本，multi-user） -------
+    // 讀：成員或 admin。建立：owner 自己當 ownerId 且在 memberIds 內。
+    // 更新：成員（改名 / 比例 / 預算 / pendingInvites）但不能換 ownerId；memberIds 只由 Apps Script（admin SDK）在接受邀請時改。
+    match /households/{hid} {
+      allow read: if isSignedIn() && (isAdmin() || uid() in resource.data.memberIds);
+      allow create: if isOwner()
+        && request.resource.data.ownerId == uid()
+        && uid() in request.resource.data.memberIds;
+      // 更新：owner 可改任何欄位（含 memberIds — 移除成員）但不能換 ownerId；
+      //       其他成員要有 canEditSettings 權限，且不能動 ownerId / memberIds（加入走 Apps Script）
+      //       例外：任何成員都可以改 ledgerSharing / ledgerEditing 裡「自己那一把 key」——那是他自己的資料
+      //             要不要分享，跟 canEditSettings 無關（真正的授權依據仍是 users/{uid}.ledgerSharedWith / ledgerEditors）
+      allow update: if isSignedIn() && request.resource.data.ownerId == resource.data.ownerId && (
+        isAdmin()
+        || resource.data.ownerId == uid()
+        || (
+          uid() in resource.data.memberIds
+          && request.resource.data.memberIds == resource.data.memberIds
+          // 邀請碼只有 owner 能產生 / 重設：joinHousehold 拿到碼就能把任何 Google 帳號加進白名單 + 帳本，
+          // 成員若能改碼等於能邀外人（2026-11 稽核 S4）
+          && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['inviteCode', 'inviteCodeExpiresAt'])
+          && memberPermMap(resource.data.get('members', {})).get('canEditSettings', false) == true
+        )
+        || (
+          // 共同投資目標：有 canManageInvestments（預設開）的成員可以改 investmentPlan，其他欄位不能動
+          uid() in resource.data.memberIds
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['investmentPlan', 'updatedAt'])
+          && memberPermMap(resource.data.get('members', {})).get('canManageInvestments', true) == true
+        )
+        || (
+          // 公基金管理（canManageFund，預設開）：每月計畫 fundPlan、公基金保管人 fundKeeperUid，其他欄位不能動。
+          // fundPlanRuns 只由 Apps Script 寫（自動存入的執行紀錄），成員不能碰。
+          // 保管人只能指定成員或清空（null），不能指定外人。
+          uid() in resource.data.memberIds
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['fundPlan', 'fundKeeperUid', 'updatedAt'])
+          && (request.resource.data.get('fundKeeperUid', null) == null
+              || request.resource.data.fundKeeperUid in resource.data.memberIds)
+          && memberPermMap(resource.data.get('members', {})).get('canManageFund', true) == true
+        )
+        || (
+          // ledgerSharing（可看）與 ledgerEditing（可編輯）都只能改自己那把 key
+          uid() in resource.data.memberIds
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['ledgerSharing', 'ledgerEditing', 'updatedAt'])
+          && request.resource.data.get('ledgerSharing', {})
+               .diff(resource.data.get('ledgerSharing', {})).affectedKeys().hasOnly([uid()])
+          && request.resource.data.get('ledgerEditing', {})
+               .diff(resource.data.get('ledgerEditing', {})).affectedKeys().hasOnly([uid()])
+        )
+      );
+      allow delete: if isSignedIn() && (isAdmin() || resource.data.ownerId == uid());
+      // 結算紀錄：成員可讀；寫入需 canSettle（預設開）
+      match /settlements/{sid} {
+        allow read: if isHouseholdMember(hid);
+        allow write: if isHouseholdMember(hid) && householdPerm(hid, 'canSettle', true);
+      }
+      // 公基金存入紀錄：成員可讀；本人只能替自己新增正數存入。
+      // 刪除限建立者或 household owner，避免伴侶互刪紀錄。
+      match /fund_entries/{entryId} {
+        allow read: if isHouseholdMember(hid);
+        // 建立：
+        //   contribution  — 本人替自己存入（canAddExpense）
+        //   reimbursement — 公基金撥還給先墊付的成員（contributorUid = 收款人，須是成員），
+        //                   要「公基金管理」canManageFund（預設開，owner 可在成員權限關掉）；
+        //                   只動「實際現金」，不影響帳上可用餘額
+        allow create: if isHouseholdMember(hid)
+          && request.resource.data.createdBy == uid()
+          && request.resource.data.amountTWD is number
+          && request.resource.data.amountTWD > 0
+          && (
+            (request.resource.data.type == 'contribution'
+              && householdPerm(hid, 'canAddExpense', true)
+              && request.resource.data.contributorUid == uid())
+            || (request.resource.data.type == 'reimbursement'
+              && householdPerm(hid, 'canManageFund', true)
+              && request.resource.data.contributorUid in householdDoc(hid).memberIds)
+          );
+        // 修改：與刪除同一批人（建立者或 household owner），只能改金額 / 備註 / 日期；
+        // type、contributorUid、createdBy、planMonth 不能動，避免把別人的存入改成自己的或灌進別的月份計畫。
+        allow update: if isHouseholdMember(hid)
+          && (resource.data.createdBy == uid() || householdDoc(hid).ownerId == uid())
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['amountTWD', 'note', 'date'])
+          && request.resource.data.amountTWD is number
+          && request.resource.data.amountTWD > 0;
+        allow delete: if isHouseholdMember(hid)
+          && (resource.data.createdBy == uid() || householdDoc(hid).ownerId == uid());
+      }
+      // 共同投資帳持股：成員都能讀（共同 + 兩人各自的持股，這就是這個功能的目的）。
+      // 寫入：
+      //   personal — 只有持有人本人（ownerUid == 自己），伴侶不能改你的持股
+      //   joint    — 要有 canManageInvestments（預設開；owner 永遠可以）
+      //   source 'portfolio'（連結 owner 投資組合）只有 role owner/admin 能建立，而且只能連結自己的
+      // bucket / ownerUid / createdBy / source 建立後不能改（避免把別人的持股改成自己的，或反過來）。
+      match /investment_holdings/{holdingId} {
+        function holdingWritable(data) {
+          return (data.bucket == 'personal' && data.ownerUid == uid())
+            || (data.bucket == 'joint' && householdPerm(hid, 'canManageInvestments', true));
+        }
+        function validHolding(data) {
+          return data.symbol is string && data.symbol.size() > 0 && data.symbol.size() <= 12
+            && data.bucket in ['joint', 'personal']
+            && data.currency in ['TWD', 'USD']
+            && data.lots is list && data.lots.size() <= 500
+            && data.source in ['manual', 'portfolio'];
+        }
+        allow read: if isHouseholdMember(hid);
+        allow create: if isHouseholdMember(hid)
+          && validHolding(request.resource.data)
+          && request.resource.data.createdBy == uid()
+          && holdingWritable(request.resource.data)
+          && (request.resource.data.source == 'manual'
+              || (isOwner() && request.resource.data.bucket == 'personal' && request.resource.data.ownerUid == uid()));
+        allow update: if isHouseholdMember(hid)
+          && validHolding(request.resource.data)
+          && holdingWritable(resource.data)
+          && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['bucket', 'ownerUid', 'createdBy', 'source', 'sourcePositionId']);
+        allow delete: if isHouseholdMember(hid) && holdingWritable(resource.data);
+      }
+      // 共同投資每日快照：Apps Script（admin 權限）寫，成員唯讀
+      match /investment_snapshots/{dateKey} {
+        allow read: if isHouseholdMember(hid);
+        allow write: if false;
+      }
+    }
+
+    // ------- Telegram 綁定（共同帳本報告） -------
+    // 全部由 Apps Script 在使用者於 Telegram 按 Start 後寫入；前端只能讀「自己的」綁定狀態。
+    // 不開放前端寫，否則有人可以把自己的 chat 掛到別人的帳號上收報告。
+    match /telegram_links/{linkUid} {
+      allow read: if isSignedIn() && linkUid == uid();
+      allow write: if false;
+    }
+    // chatId → uid 反查表與一次性 token：只有 Apps Script 用，前端完全不可讀寫
+    match /telegram_chats/{chatId}       { allow read, write: if false; }
+    match /telegram_link_tokens/{token}  { allow read, write: if false; }
+
+    // ------- Trips (multi-user) -------
+    match /trips/{tripId} {
+      allow read: if canReadTrip(resource.data);
+      allow create: if isOwner() || isAdmin();
+      allow update, delete: if canWriteTrip(resource.data);
+
+      // Trip documents：簽證 / 機票 PDF / 連結。read = canReadTrip（含 share user，唯讀）；
+      // write 限定 owner（trip writer），share user 不能上傳避免汙染 owner 的 Drive。
+      match /documents/{docId} {
+        function parentTrip() {
+          return get(/databases/$(database)/documents/trips/$(tripId)).data;
+        }
+        allow read: if isSignedIn() && (
+          isAdmin() ||
+          (exists(/databases/$(database)/documents/trips/$(tripId)) && canReadTrip(parentTrip()))
+        );
+        allow write: if isSignedIn() && (
+          isAdmin() ||
+          (exists(/databases/$(database)/documents/trips/$(tripId)) && canWriteTrip(parentTrip()))
+        );
+      }
+
+      // Packing list（行李清單，F8）：read = canReadTrip（含 share user）；
+      // create / delete / 改名稱分類數量 = trip writer（owner / admin）。
+      // 被分享的旅伴（canReadTrip 但不是 writer）只能勾選 packed、改 assignee（誰帶），
+      // 讓伴侶能一起打勾，但不能改名或刪掉 owner 的項目。
+      match /packing/{itemId} {
+        function packingTrip() {
+          return get(/databases/$(database)/documents/trips/$(tripId)).data;
+        }
+        function packingTripExists() {
+          return exists(/databases/$(database)/documents/trips/$(tripId));
+        }
+        // 只碰 packed / assignee（加 updatedAt 時間戳），且型別正確
+        function memberTogglePatch() {
+          return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['packed', 'assignee', 'updatedAt'])
+            && request.resource.data.get('packed', false) is bool
+            && (request.resource.data.get('assignee', null) == null || request.resource.data.get('assignee', null) is string);
+        }
+        allow read: if isSignedIn() && (
+          isAdmin() ||
+          (packingTripExists() && canReadTrip(packingTrip()))
+        );
+        allow create, delete: if isSignedIn() && (
+          isAdmin() ||
+          (packingTripExists() && canWriteTrip(packingTrip()))
+        );
+        allow update: if isSignedIn() && (
+          isAdmin() ||
+          (packingTripExists() && (
+            canWriteTrip(packingTrip()) ||
+            (canReadTrip(packingTrip()) && memberTogglePatch())
+          ))
+        );
+      }
+    }
+
+    // ------- Transactions -------
+    // 規則：owner 可讀寫自己的 tx
+    //       被分享 trip 的 user 可讀（不可寫）該 trip 的 txs
+    //       共同帳本成員可讀該 household 的 txs（不可改對方的；自己建立的照舊）
+    //       被分享個人支出的成員可讀對方 type == 'expense' 的 txs（見 ledgerViewersOf）；
+    //       被授權編輯的成員（ledgerEditorsOf）還可以 update 這些 txs，不能 create / 硬刪
+    //       共同帳本成員 / 被分享旅程的成員可以只改「分攤」欄位（txSplitEditableByPartner）
+    //       guest 一律不可寫
+    match /transactions/{txId} {
+      function canReadTx() {
+        return resource.data.userId == uid() ||
+          isAdmin() ||
+          (resource.data.tripId != null &&
+            exists(/databases/$(database)/documents/trips/$(resource.data.tripId)) &&
+            canReadTrip(get(/databases/$(database)/documents/trips/$(resource.data.tripId)).data)) ||
+          (resource.data.householdId != null && isHouseholdMember(resource.data.householdId)) ||
+          // 被分享的個人支出：只放行 type == 'expense'，收入 / 轉帳一律看不到。
+          // 放最後一個 || 讓自己讀自己的 tx 不用多付一次 get()。
+          (resource.data.type == 'expense'
+            && resource.data.userId != null
+            && uid() in ledgerViewersOf(resource.data.userId));
+      }
+      // 下面的 helper 都先檢查 resource / request.resource 是不是 null 再取 .data
+      //（create 沒有 resource、delete 沒有 request.resource），不要依賴 CEL 的 error 吸收行為 ——
+      // 那會變成「admin 剛好有一個 true 運算元所以過、member 整條 error 所以被拒」。
+      function txIsMine() {
+        return isAdmin()
+          || (request.resource != null && request.resource.data.userId == uid())
+          || (resource != null && resource.data.userId == uid());
+      }
+      // 寫入後這筆屬於哪個 household（delete 或個人支出 = null）
+      function txHouseholdId() {
+        return request.resource != null && 'householdId' in request.resource.data
+          ? request.resource.data.householdId
+          : null;
+      }
+      // 共同支出：要是該 household 成員且有 canAddExpense 權限（owner / admin 不受限）
+      function txScopeAllowed() {
+        return isOwner()
+          || txHouseholdId() == null
+          || (isHouseholdMember(txHouseholdId())
+              && householdPerm(txHouseholdId(), 'canAddExpense', true));
+      }
+      // 旅程支出：member 只能把 tx 掛在自己看得到的 trip 上（自己的或被分享的）。
+      // 以前不驗 tripId，member 可以往任何人的 trip 灌假支出（2026-11 稽核 S12）。owner / admin 不多付 get()。
+      function txTripId() {
+        return request.resource != null ? request.resource.data.get('tripId', null) : null;
+      }
+      function txTripAllowed() {
+        return isOwner()
+          || txTripId() == null
+          || (exists(/databases/$(database)/documents/trips/$(txTripId()))
+              && canReadTrip(get(/databases/$(database)/documents/trips/$(txTripId())).data));
+      }
+
+      // `get` 要允許「文件不存在」：createTransaction() 為了冪等性，會在 runTransaction 裡先 get
+      // 一次還沒建立的 doc。文件不存在時 resource 是 null，canReadTx() 每個條件都會去碰
+      // resource.data.* 而丟出 error；CEL 只有在另一個運算元為 true 時才吸收 error，
+      // 所以 admin 靠 isAdmin() 過關、member 整條變成 error → 新增共同支出被拒
+      //（症狀：UI 按得下去，存檔跳 "Missing or insufficient permissions."）。
+      // 讀一份不存在的文件本來就拿不到任何資料，放行沒有外洩問題。
+      // 只開在 get 不開在 list —— query 回來的一定是存在的文件，不需要也不該放寬。
+      // 個人支出編輯者：資料擁有者在 users/{userId}.ledgerEditors 列了我 → 可以 update 他的支出
+      //（含改成共同分攤、軟刪除 / 復原）。限制：原本與改完都要是 type == 'expense'、userId 不能變。
+      // 只開 update：新增要 userId == 自己（txIsMine），硬刪仍限本人 / admin。
+      function txEditableByLedgerEditor() {
+        return resource != null && request.resource != null
+          && resource.data.type == 'expense'
+          && request.resource.data.type == 'expense'
+          && resource.data.userId != null
+          && request.resource.data.userId == resource.data.userId
+          && uid() in ledgerEditorsOf(resource.data.userId);
+      }
+
+      // 夥伴「只改分攤」：共同帳本成員（有 canAddExpense）或被分享旅程的成員，可以改一筆支出的
+      // 分攤明細（誰付 / 怎麼分 / 各人金額 / myShareTWD / 公基金負擔時誰先墊 fundAdvancedBy），
+      // 其他欄位（金額、帳戶、類別…）一律不能動。
+      // 前端 updateTransaction 對這種 patch 不會去讀帳戶，所以不需要 accounts 權限。
+      function splitOnlyPatch() {
+        return request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['customShares', 'shareType', 'payerId', 'paidByUid', 'fundAdvancedBy', 'myShareTWD', 'lineItems', 'updatedAt']);
+      }
+      function txSplitEditableByPartner() {
+        return resource != null && request.resource != null
+          && resource.data.type == 'expense'
+          && splitOnlyPatch()
+          && (
+            (resource.data.get('householdId', null) != null
+              && isHouseholdMember(resource.data.householdId)
+              && householdPerm(resource.data.householdId, 'canAddExpense', true))
+            || (resource.data.get('tripId', null) != null
+              && exists(/databases/$(database)/documents/trips/$(resource.data.tripId))
+              && get(/databases/$(database)/documents/trips/$(resource.data.tripId)).data.get('sharedWith', []) is list
+              && uid() in get(/databases/$(database)/documents/trips/$(resource.data.tripId)).data.sharedWith)
+          );
+      }
+
+      allow get: if isSignedIn() && (resource == null || canReadTx());
+      allow list: if isSignedIn() && canReadTx();
+      allow create, delete: if isSignedIn() && !isViewer() && txIsMine() && txScopeAllowed() && txTripAllowed();
+      allow update: if isSignedIn() && !isViewer()
+        && (txIsMine() || txEditableByLedgerEditor() || txSplitEditableByPartner())
+        && txScopeAllowed() && txTripAllowed();
+    }
+
+    // ------- Itineraries -------
+    // 讀：若其 tripId 的 trip 可讀
+    // 寫：只有 trip owner (或 admin)
+    match /itineraries/{itineraryId} {
+      function itineraryTripId() {
+        return resource.data.tripId != null ? resource.data.tripId : itineraryId;
+      }
+      function itineraryTrip() {
+        return get(/databases/$(database)/documents/trips/$(itineraryTripId())).data;
+      }
+      allow read: if isSignedIn() && (
+        isAdmin() ||
+        (exists(/databases/$(database)/documents/trips/$(itineraryTripId())) &&
+          canReadTrip(itineraryTrip()))
+      );
+      allow write: if isSignedIn() && (
+        isAdmin() ||
+        (exists(/databases/$(database)/documents/trips/$(itineraryTripId())) &&
+          canWriteTrip(itineraryTrip()))
+      );
+
+      match /days/{dayId} {
+        function dayTrip() {
+          return get(/databases/$(database)/documents/trips/$(itineraryId)).data;
+        }
+        allow read: if isSignedIn() && (
+          isAdmin() ||
+          (exists(/databases/$(database)/documents/trips/$(itineraryId)) && canReadTrip(dayTrip()))
+        );
+        // 重點：write 用 canWriteTrip 不是 canReadTrip → guest / share user 不能改別人行程
+        allow write: if isSignedIn() && (
+          isAdmin() ||
+          (exists(/databases/$(database)/documents/trips/$(itineraryId)) && canWriteTrip(dayTrip()))
+        );
+        match /items/{itemId} {
+          function itemTrip() {
+            return get(/databases/$(database)/documents/trips/$(itineraryId)).data;
+          }
+          allow read: if isSignedIn() && (
+            isAdmin() ||
+            (exists(/databases/$(database)/documents/trips/$(itineraryId)) && canReadTrip(itemTrip()))
+          );
+          allow write: if isSignedIn() && (
+            isAdmin() ||
+            (exists(/databases/$(database)/documents/trips/$(itineraryId)) && canWriteTrip(itemTrip()))
+          );
+        }
+      }
+    }
+
+    // 預設 deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

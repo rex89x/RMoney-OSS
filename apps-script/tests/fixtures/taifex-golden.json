@@ -1,0 +1,8020 @@
+{
+ "description": "TaifexStrategy.gs golden vectors — see docs/TAIFEX_PAPER_TRADING_PLAN.md §9.5.4",
+ "input": {
+  "bars": [
+   {
+    "date": "2025-01-02",
+    "contract": "202501",
+    "open": 21932,
+    "high": 21938,
+    "low": 21835.1,
+    "close": 21917.6,
+    "nextContract": "202502",
+    "nextClose": 21929.1,
+    "foreignNetOi": 3601,
+    "pcrOi": 108
+   },
+   {
+    "date": "2025-01-03",
+    "contract": "202501",
+    "open": 21892.1,
+    "high": 21964.4,
+    "low": 21514.7,
+    "close": 21582.9,
+    "nextContract": "202502",
+    "nextClose": 21598.5,
+    "foreignNetOi": 10503,
+    "pcrOi": 110.3
+   },
+   {
+    "date": "2025-01-06",
+    "contract": "202501",
+    "open": 21530.5,
+    "high": 21557.5,
+    "low": 21444.5,
+    "close": 21450,
+    "nextContract": "202502",
+    "nextClose": 21463.4,
+    "foreignNetOi": 14434,
+    "pcrOi": 92.9
+   },
+   {
+    "date": "2025-01-07",
+    "contract": "202501",
+    "open": 21445.8,
+    "high": 21513.4,
+    "low": 21288.3,
+    "close": 21326.4,
+    "nextContract": "202502",
+    "nextClose": 21339.1,
+    "foreignNetOi": 18731,
+    "pcrOi": 104.2
+   },
+   {
+    "date": "2025-01-08",
+    "contract": "202501",
+    "open": 21411.5,
+    "high": 21473,
+    "low": 21199,
+    "close": 21237.8,
+    "nextContract": "202502",
+    "nextClose": 21255.5,
+    "foreignNetOi": 23481,
+    "pcrOi": 95.9
+   },
+   {
+    "date": "2025-01-09",
+    "contract": "202501",
+    "open": 21219.8,
+    "high": 21338.5,
+    "low": 21180.9,
+    "close": 21306.5,
+    "nextContract": "202502",
+    "nextClose": 21324.9,
+    "foreignNetOi": 29589,
+    "pcrOi": 139.8
+   },
+   {
+    "date": "2025-01-10",
+    "contract": "202501",
+    "open": 21327.1,
+    "high": 21362.2,
+    "low": 21195.2,
+    "close": 21199.7,
+    "nextContract": "202502",
+    "nextClose": 21209.4,
+    "foreignNetOi": 34712,
+    "pcrOi": 126.7
+   },
+   {
+    "date": "2025-01-13",
+    "contract": "202501",
+    "open": 21216.4,
+    "high": 21218.7,
+    "low": 20868.2,
+    "close": 20907.9,
+    "nextContract": "202502",
+    "nextClose": 20914.8,
+    "foreignNetOi": 40965,
+    "pcrOi": 102.3
+   },
+   {
+    "date": "2025-01-14",
+    "contract": "202501",
+    "open": 20929.1,
+    "high": 20963.9,
+    "low": 20737.6,
+    "close": 20804.7,
+    "nextContract": "202502",
+    "nextClose": 20811.7,
+    "foreignNetOi": 49089,
+    "pcrOi": 109
+   },
+   {
+    "date": "2025-01-15",
+    "contract": "202501",
+    "open": 20878.6,
+    "high": 21201.8,
+    "low": 20861.9,
+    "close": 21134.3,
+    "nextContract": "202502",
+    "nextClose": 21143.1,
+    "foreignNetOi": 53442,
+    "pcrOi": 122.7
+   },
+   {
+    "date": "2025-01-16",
+    "contract": "202501",
+    "open": 21034.3,
+    "high": 21422.8,
+    "low": 21022.4,
+    "close": 21383.7,
+    "nextContract": "202502",
+    "nextClose": 21400.8,
+    "foreignNetOi": 60789,
+    "pcrOi": 121
+   },
+   {
+    "date": "2025-01-17",
+    "contract": "202501",
+    "open": 21524.5,
+    "high": 21570.2,
+    "low": 21482.5,
+    "close": 21505,
+    "nextContract": "202502",
+    "nextClose": 21518.2,
+    "foreignNetOi": 63969,
+    "pcrOi": 122.8
+   },
+   {
+    "date": "2025-01-20",
+    "contract": "202501",
+    "open": 21457.5,
+    "high": 21543.6,
+    "low": 21411.8,
+    "close": 21491.6,
+    "nextContract": "202502",
+    "nextClose": 21504.8,
+    "foreignNetOi": 66802,
+    "pcrOi": 125.1
+   },
+   {
+    "date": "2025-01-21",
+    "contract": "202501",
+    "open": 21525.4,
+    "high": 21601.1,
+    "low": 21360.1,
+    "close": 21419.5,
+    "nextContract": "202502",
+    "nextClose": 21439,
+    "foreignNetOi": 72566,
+    "pcrOi": 100.4
+   },
+   {
+    "date": "2025-01-22",
+    "contract": "202501",
+    "open": 21435.7,
+    "high": 21714.8,
+    "low": 21389.2,
+    "close": 21631.4,
+    "nextContract": "202502",
+    "nextClose": 21644.4,
+    "foreignNetOi": 79030,
+    "pcrOi": 100.2
+   },
+   {
+    "date": "2025-01-23",
+    "contract": "202501",
+    "open": 21674.7,
+    "high": 21739.9,
+    "low": 21412.9,
+    "close": 21496.6,
+    "nextContract": "202502",
+    "nextClose": 21513.5,
+    "foreignNetOi": 81442,
+    "pcrOi": 120.6
+   },
+   {
+    "date": "2025-01-24",
+    "contract": "202501",
+    "open": 21490.7,
+    "high": 21880.3,
+    "low": 21424.6,
+    "close": 21826.9,
+    "nextContract": "202502",
+    "nextClose": 21835.3,
+    "foreignNetOi": 85796,
+    "pcrOi": 101
+   },
+   {
+    "date": "2025-01-27",
+    "contract": "202501",
+    "open": 21877.8,
+    "high": 22049.9,
+    "low": 21858,
+    "close": 22041.9,
+    "nextContract": "202502",
+    "nextClose": 22054.6,
+    "foreignNetOi": 90081,
+    "pcrOi": 99.7
+   },
+   {
+    "date": "2025-01-28",
+    "contract": "202501",
+    "open": 22040.3,
+    "high": 22055.1,
+    "low": 22036.4,
+    "close": 22051.2,
+    "nextContract": "202502",
+    "nextClose": 22062.1,
+    "foreignNetOi": 96481,
+    "pcrOi": 93
+   },
+   {
+    "date": "2025-01-29",
+    "contract": "202501",
+    "open": 22040.7,
+    "high": 22123.4,
+    "low": 21685.3,
+    "close": 21689.3,
+    "nextContract": "202502",
+    "nextClose": 21704.2,
+    "foreignNetOi": 100203,
+    "pcrOi": 105
+   },
+   {
+    "date": "2025-01-30",
+    "contract": "202501",
+    "open": 21531.6,
+    "high": 21806.9,
+    "low": 21475.5,
+    "close": 21784.1,
+    "nextContract": "202502",
+    "nextClose": 21804.1,
+    "foreignNetOi": 107150,
+    "pcrOi": 89.2
+   },
+   {
+    "date": "2025-01-31",
+    "contract": "202502",
+    "open": 21706.7,
+    "high": 21743.6,
+    "low": 21660.2,
+    "close": 21740.8,
+    "nextContract": "202503",
+    "nextClose": 21758,
+    "foreignNetOi": 111172,
+    "pcrOi": 101.2
+   },
+   {
+    "date": "2025-02-03",
+    "contract": "202502",
+    "open": 21688,
+    "high": 22095.4,
+    "low": 21687.6,
+    "close": 22037.8,
+    "nextContract": "202503",
+    "nextClose": 22052.9,
+    "foreignNetOi": 116743,
+    "pcrOi": 123.3
+   },
+   {
+    "date": "2025-02-04",
+    "contract": "202502",
+    "open": 21983.9,
+    "high": 22186.3,
+    "low": 21957.1,
+    "close": 22176.6,
+    "nextContract": "202503",
+    "nextClose": 22191.1,
+    "foreignNetOi": 121527,
+    "pcrOi": 106.4
+   },
+   {
+    "date": "2025-02-05",
+    "contract": "202502",
+    "open": 22084.1,
+    "high": 22106.5,
+    "low": 21861.7,
+    "close": 21876.4,
+    "nextContract": "202503",
+    "nextClose": 21893.8,
+    "foreignNetOi": 128161,
+    "pcrOi": 112.2
+   },
+   {
+    "date": "2025-02-06",
+    "contract": "202502",
+    "open": 21889.6,
+    "high": 21926.1,
+    "low": 21766,
+    "close": 21807.5,
+    "nextContract": "202503",
+    "nextClose": 21820,
+    "foreignNetOi": 131577,
+    "pcrOi": 122.9
+   },
+   {
+    "date": "2025-02-07",
+    "contract": "202502",
+    "open": 21684.1,
+    "high": 21928.7,
+    "low": 21658.4,
+    "close": 21875.5,
+    "nextContract": "202503",
+    "nextClose": 21882.3,
+    "foreignNetOi": 134908,
+    "pcrOi": 115
+   },
+   {
+    "date": "2025-02-10",
+    "contract": "202502",
+    "open": 21918.4,
+    "high": 21920.9,
+    "low": 21611.8,
+    "close": 21618.7,
+    "nextContract": "202503",
+    "nextClose": 21628.4,
+    "foreignNetOi": 142337,
+    "pcrOi": 93.8
+   },
+   {
+    "date": "2025-02-11",
+    "contract": "202502",
+    "open": 21594.7,
+    "high": 22112.4,
+    "low": 21510.7,
+    "close": 22031.2,
+    "nextContract": "202503",
+    "nextClose": 22052.5,
+    "foreignNetOi": 146915,
+    "pcrOi": 108
+   },
+   {
+    "date": "2025-02-12",
+    "contract": "202502",
+    "open": 22198.2,
+    "high": 22328.4,
+    "low": 22193.4,
+    "close": 22302.1,
+    "nextContract": "202503",
+    "nextClose": 22320.9,
+    "foreignNetOi": 155230,
+    "pcrOi": 117.8
+   },
+   {
+    "date": "2025-02-13",
+    "contract": "202502",
+    "open": 22334.3,
+    "high": 22351.8,
+    "low": 22228,
+    "close": 22288.6,
+    "nextContract": "202503",
+    "nextClose": 22312.6,
+    "foreignNetOi": 161542,
+    "pcrOi": 116.8
+   },
+   {
+    "date": "2025-02-14",
+    "contract": "202502",
+    "open": 22283.3,
+    "high": 22751.5,
+    "low": 22263.7,
+    "close": 22675.8,
+    "nextContract": "202503",
+    "nextClose": 22692.7,
+    "foreignNetOi": 167751,
+    "pcrOi": 109.1
+   },
+   {
+    "date": "2025-02-17",
+    "contract": "202502",
+    "open": 22682.7,
+    "high": 22708.1,
+    "low": 22615.6,
+    "close": 22704.2,
+    "nextContract": "202503",
+    "nextClose": 22715.2,
+    "foreignNetOi": 171471,
+    "pcrOi": 120.9
+   },
+   {
+    "date": "2025-02-18",
+    "contract": "202502",
+    "open": 22613,
+    "high": 22886,
+    "low": 22562.8,
+    "close": 22837.4,
+    "nextContract": "202503",
+    "nextClose": 22842.8,
+    "foreignNetOi": 176565,
+    "pcrOi": 105.7
+   },
+   {
+    "date": "2025-02-19",
+    "contract": "202502",
+    "open": 22836,
+    "high": 23274.4,
+    "low": 22752.7,
+    "close": 23205.4,
+    "nextContract": "202503",
+    "nextClose": 23218.5,
+    "foreignNetOi": 181245,
+    "pcrOi": 106
+   },
+   {
+    "date": "2025-02-20",
+    "contract": "202502",
+    "open": 23168.1,
+    "high": 23258.5,
+    "low": 22655.3,
+    "close": 22688.2,
+    "nextContract": "202503",
+    "nextClose": 22694.8,
+    "foreignNetOi": 185962,
+    "pcrOi": 119.8
+   },
+   {
+    "date": "2025-02-21",
+    "contract": "202502",
+    "open": 22706.9,
+    "high": 22980.3,
+    "low": 22654.4,
+    "close": 22889.8,
+    "nextContract": "202503",
+    "nextClose": 22900.6,
+    "foreignNetOi": 190693,
+    "pcrOi": 100.7
+   },
+   {
+    "date": "2025-02-24",
+    "contract": "202502",
+    "open": 22785.2,
+    "high": 22818,
+    "low": 22674.7,
+    "close": 22683.5,
+    "nextContract": "202503",
+    "nextClose": 22693.2,
+    "foreignNetOi": 193363,
+    "pcrOi": 107
+   },
+   {
+    "date": "2025-02-25",
+    "contract": "202502",
+    "open": 22692.5,
+    "high": 22725.6,
+    "low": 22316.5,
+    "close": 22337.5,
+    "nextContract": "202503",
+    "nextClose": 22357,
+    "foreignNetOi": 201414,
+    "pcrOi": 122.1
+   },
+   {
+    "date": "2025-02-26",
+    "contract": "202502",
+    "open": 22327,
+    "high": 22527.3,
+    "low": 22270.9,
+    "close": 22457.1,
+    "nextContract": "202503",
+    "nextClose": 22472.4,
+    "foreignNetOi": 207440,
+    "pcrOi": 112
+   },
+   {
+    "date": "2025-02-27",
+    "contract": "202502",
+    "open": 22354.9,
+    "high": 22377.2,
+    "low": 22244.6,
+    "close": 22298.7,
+    "nextContract": "202503",
+    "nextClose": 22313.4,
+    "foreignNetOi": 213095,
+    "pcrOi": 101.4
+   },
+   {
+    "date": "2025-02-28",
+    "contract": "202502",
+    "open": 22263.7,
+    "high": 22271.7,
+    "low": 22115.1,
+    "close": 22175.2,
+    "nextContract": "202503",
+    "nextClose": 22201,
+    "foreignNetOi": 219737,
+    "pcrOi": 121.9
+   },
+   {
+    "date": "2025-03-03",
+    "contract": "202503",
+    "open": 22277.8,
+    "high": 22466.7,
+    "low": 22216.3,
+    "close": 22384.4,
+    "nextContract": "202504",
+    "nextClose": 22393.6,
+    "foreignNetOi": 223571,
+    "pcrOi": 114.3
+   },
+   {
+    "date": "2025-03-04",
+    "contract": "202503",
+    "open": 22470.6,
+    "high": 22957.5,
+    "low": 22424.3,
+    "close": 22927.5,
+    "nextContract": "202504",
+    "nextClose": 22939.5,
+    "foreignNetOi": 227491,
+    "pcrOi": 101.1
+   },
+   {
+    "date": "2025-03-05",
+    "contract": "202503",
+    "open": 22873.7,
+    "high": 22929.1,
+    "low": 22664.4,
+    "close": 22739.3,
+    "nextContract": "202504",
+    "nextClose": 22746.8,
+    "foreignNetOi": 232821,
+    "pcrOi": 96.1
+   },
+   {
+    "date": "2025-03-06",
+    "contract": "202503",
+    "open": 22640.6,
+    "high": 22671.5,
+    "low": 22622.9,
+    "close": 22659.2,
+    "nextContract": "202504",
+    "nextClose": 22678.9,
+    "foreignNetOi": 236192,
+    "pcrOi": 111.9
+   },
+   {
+    "date": "2025-03-07",
+    "contract": "202503",
+    "open": 22717.9,
+    "high": 22888.7,
+    "low": 22687.3,
+    "close": 22886.3,
+    "nextContract": "202504",
+    "nextClose": 22905.6,
+    "foreignNetOi": 240136,
+    "pcrOi": 120.8
+   },
+   {
+    "date": "2025-03-10",
+    "contract": "202503",
+    "open": 22809.9,
+    "high": 23157.7,
+    "low": 22722.6,
+    "close": 23154.3,
+    "nextContract": "202504",
+    "nextClose": 23171.4,
+    "foreignNetOi": 246074,
+    "pcrOi": 100.6
+   },
+   {
+    "date": "2025-03-11",
+    "contract": "202503",
+    "open": 23259.9,
+    "high": 23284.8,
+    "low": 23161.8,
+    "close": 23242.3,
+    "nextContract": "202504",
+    "nextClose": 23255.1,
+    "foreignNetOi": 248909,
+    "pcrOi": 112.2
+   },
+   {
+    "date": "2025-03-12",
+    "contract": "202503",
+    "open": 23220,
+    "high": 23220.5,
+    "low": 22813.2,
+    "close": 22896.4,
+    "nextContract": "202504",
+    "nextClose": 22921.3,
+    "foreignNetOi": 253180,
+    "pcrOi": 97.6
+   },
+   {
+    "date": "2025-03-13",
+    "contract": "202503",
+    "open": 23018.6,
+    "high": 23408.2,
+    "low": 23012.9,
+    "close": 23387.8,
+    "nextContract": "202504",
+    "nextClose": 23407.5,
+    "foreignNetOi": 258579,
+    "pcrOi": 121.4
+   },
+   {
+    "date": "2025-03-14",
+    "contract": "202503",
+    "open": 23416.1,
+    "high": 23480.1,
+    "low": 23375.1,
+    "close": 23387.7,
+    "nextContract": "202504",
+    "nextClose": 23404.1,
+    "foreignNetOi": 264994,
+    "pcrOi": 126
+   },
+   {
+    "date": "2025-03-17",
+    "contract": "202503",
+    "open": 23493.3,
+    "high": 23720.4,
+    "low": 23453.7,
+    "close": 23635.4,
+    "nextContract": "202504",
+    "nextClose": 23645.9,
+    "foreignNetOi": 270307,
+    "pcrOi": 124.5
+   },
+   {
+    "date": "2025-03-18",
+    "contract": "202503",
+    "open": 23622.6,
+    "high": 23746.7,
+    "low": 23598.5,
+    "close": 23671.4,
+    "nextContract": "202504",
+    "nextClose": 23680.7,
+    "foreignNetOi": 277107,
+    "pcrOi": 99.8
+   },
+   {
+    "date": "2025-03-19",
+    "contract": "202503",
+    "open": 23730.2,
+    "high": 23762.2,
+    "low": 23536.8,
+    "close": 23543.9,
+    "nextContract": "202504",
+    "nextClose": 23561.6,
+    "foreignNetOi": 281084,
+    "pcrOi": 104
+   },
+   {
+    "date": "2025-03-20",
+    "contract": "202503",
+    "open": 23606.5,
+    "high": 23743.9,
+    "low": 23529.9,
+    "close": 23734.1,
+    "nextContract": "202504",
+    "nextClose": 23743.8,
+    "foreignNetOi": 286950,
+    "pcrOi": 107.5
+   },
+   {
+    "date": "2025-03-21",
+    "contract": "202503",
+    "open": 23707.2,
+    "high": 23750.4,
+    "low": 23583.8,
+    "close": 23638,
+    "nextContract": "202504",
+    "nextClose": 23659.9,
+    "foreignNetOi": 291362,
+    "pcrOi": 105.6
+   },
+   {
+    "date": "2025-03-24",
+    "contract": "202503",
+    "open": 23728.3,
+    "high": 23936,
+    "low": 23713.1,
+    "close": 23901.8,
+    "nextContract": "202504",
+    "nextClose": 23916.6,
+    "foreignNetOi": 296187,
+    "pcrOi": 101.5
+   },
+   {
+    "date": "2025-03-25",
+    "contract": "202503",
+    "open": 23778.9,
+    "high": 23820.5,
+    "low": 23633.6,
+    "close": 23686.5,
+    "nextContract": "202504",
+    "nextClose": 23703.2,
+    "foreignNetOi": 299766,
+    "pcrOi": 115.5
+   },
+   {
+    "date": "2025-03-26",
+    "contract": "202503",
+    "open": 23688,
+    "high": 23780.1,
+    "low": 23640.4,
+    "close": 23732.8,
+    "nextContract": "202504",
+    "nextClose": 23749.5,
+    "foreignNetOi": 306081,
+    "pcrOi": 110.1
+   },
+   {
+    "date": "2025-03-27",
+    "contract": "202503",
+    "open": 23791.4,
+    "high": 23941.2,
+    "low": 23713,
+    "close": 23932.8,
+    "nextContract": "202504",
+    "nextClose": 23950.1,
+    "foreignNetOi": 302568,
+    "pcrOi": 109.8
+   },
+   {
+    "date": "2025-03-28",
+    "contract": "202503",
+    "open": 23941.2,
+    "high": 24233.7,
+    "low": 23927.4,
+    "close": 24226.4,
+    "nextContract": "202504",
+    "nextClose": 24237,
+    "foreignNetOi": 299244,
+    "pcrOi": 102.3
+   },
+   {
+    "date": "2025-03-31",
+    "contract": "202503",
+    "open": 24106.3,
+    "high": 24194.1,
+    "low": 23754.3,
+    "close": 23758.1,
+    "nextContract": "202504",
+    "nextClose": 23781.4,
+    "foreignNetOi": 295671,
+    "pcrOi": 130.2
+   },
+   {
+    "date": "2025-04-01",
+    "contract": "202504",
+    "open": 23712.3,
+    "high": 23802.4,
+    "low": 23610.9,
+    "close": 23683.6,
+    "nextContract": "202505",
+    "nextClose": 23700.2,
+    "foreignNetOi": 293756,
+    "pcrOi": 99.2
+   },
+   {
+    "date": "2025-04-02",
+    "contract": "202504",
+    "open": 23731.6,
+    "high": 23766,
+    "low": 23083.4,
+    "close": 23108.4,
+    "nextContract": "202505",
+    "nextClose": 23130.7,
+    "foreignNetOi": 286775,
+    "pcrOi": 109
+   },
+   {
+    "date": "2025-04-03",
+    "contract": "202504",
+    "open": 23109.4,
+    "high": 23196.7,
+    "low": 22935.2,
+    "close": 22959.1,
+    "nextContract": "202505",
+    "nextClose": 22977.2,
+    "foreignNetOi": 281198,
+    "pcrOi": 115.1
+   },
+   {
+    "date": "2025-04-04",
+    "contract": "202504",
+    "open": 22956.8,
+    "high": 23114,
+    "low": 22931.2,
+    "close": 23096.2,
+    "nextContract": "202505",
+    "nextClose": 23114.2,
+    "foreignNetOi": 275047,
+    "pcrOi": 115.2
+   },
+   {
+    "date": "2025-04-07",
+    "contract": "202504",
+    "open": 22992.5,
+    "high": 23215.7,
+    "low": 22938.1,
+    "close": 23196.3,
+    "nextContract": "202505",
+    "nextClose": 23208.8,
+    "foreignNetOi": 267458,
+    "pcrOi": 107.1
+   },
+   {
+    "date": "2025-04-08",
+    "contract": "202504",
+    "open": 23158.1,
+    "high": 23231.5,
+    "low": 23123.1,
+    "close": 23124.7,
+    "nextContract": "202505",
+    "nextClose": 23123.9,
+    "foreignNetOi": 261148,
+    "pcrOi": 111.7
+   },
+   {
+    "date": "2025-04-09",
+    "contract": "202504",
+    "open": 23087.1,
+    "high": 23201.1,
+    "low": 23000.6,
+    "close": 23193.4,
+    "nextContract": "202505",
+    "nextClose": 23205.5,
+    "foreignNetOi": 257654,
+    "pcrOi": 109.7
+   },
+   {
+    "date": "2025-04-10",
+    "contract": "202504",
+    "open": 23269.3,
+    "high": 23428.4,
+    "low": 23204.7,
+    "close": 23418.5,
+    "nextContract": "202505",
+    "nextClose": 23432.2,
+    "foreignNetOi": 250195,
+    "pcrOi": 114
+   },
+   {
+    "date": "2025-04-11",
+    "contract": "202504",
+    "open": 23400.3,
+    "high": 23417.9,
+    "low": 23137.6,
+    "close": 23160.6,
+    "nextContract": "202505",
+    "nextClose": 23180.1,
+    "foreignNetOi": 244699,
+    "pcrOi": 102.7
+   },
+   {
+    "date": "2025-04-14",
+    "contract": "202504",
+    "open": 23014.2,
+    "high": 23204.7,
+    "low": 22941.7,
+    "close": 23151,
+    "nextContract": "202505",
+    "nextClose": 23162.3,
+    "foreignNetOi": 241111,
+    "pcrOi": 130.6
+   },
+   {
+    "date": "2025-04-15",
+    "contract": "202504",
+    "open": 23154.6,
+    "high": 23189.5,
+    "low": 22854.1,
+    "close": 22860.1,
+    "nextContract": "202505",
+    "nextClose": 22874.5,
+    "foreignNetOi": 237127,
+    "pcrOi": 109.6
+   },
+   {
+    "date": "2025-04-16",
+    "contract": "202504",
+    "open": 22757.7,
+    "high": 22825,
+    "low": 22697.2,
+    "close": 22782,
+    "nextContract": "202505",
+    "nextClose": 22792.8,
+    "foreignNetOi": 233161,
+    "pcrOi": 115.3
+   },
+   {
+    "date": "2025-04-17",
+    "contract": "202504",
+    "open": 22690.1,
+    "high": 22773.8,
+    "low": 22615.5,
+    "close": 22750.8,
+    "nextContract": "202505",
+    "nextClose": 22755.1,
+    "foreignNetOi": 228103,
+    "pcrOi": 83
+   },
+   {
+    "date": "2025-04-18",
+    "contract": "202504",
+    "open": 22672.3,
+    "high": 22733.8,
+    "low": 22545,
+    "close": 22631.4,
+    "nextContract": "202505",
+    "nextClose": 22650.5,
+    "foreignNetOi": 222408,
+    "pcrOi": 120.2
+   },
+   {
+    "date": "2025-04-21",
+    "contract": "202504",
+    "open": 22586.7,
+    "high": 22604.8,
+    "low": 22464.3,
+    "close": 22512.8,
+    "nextContract": "202505",
+    "nextClose": 22520.4,
+    "foreignNetOi": 218221,
+    "pcrOi": 114.9
+   },
+   {
+    "date": "2025-04-22",
+    "contract": "202504",
+    "open": 22553.7,
+    "high": 22580.4,
+    "low": 22043.8,
+    "close": 22048.6,
+    "nextContract": "202505",
+    "nextClose": 22065.8,
+    "foreignNetOi": 214106,
+    "pcrOi": 112.6
+   },
+   {
+    "date": "2025-04-23",
+    "contract": "202504",
+    "open": 22027,
+    "high": 22458.9,
+    "low": 22013.8,
+    "close": 22381.5,
+    "nextContract": "202505",
+    "nextClose": 22397.4,
+    "foreignNetOi": 210599,
+    "pcrOi": 104
+   },
+   {
+    "date": "2025-04-24",
+    "contract": "202504",
+    "open": 22413.5,
+    "high": 22650.6,
+    "low": 22324.8,
+    "close": 22589.9,
+    "nextContract": "202505",
+    "nextClose": 22604.9,
+    "foreignNetOi": 205308,
+    "pcrOi": 125.6
+   },
+   {
+    "date": "2025-04-25",
+    "contract": "202504",
+    "open": 22655.4,
+    "high": 22680.6,
+    "low": 22435.6,
+    "close": 22440.5,
+    "nextContract": "202505",
+    "nextClose": 22458.4,
+    "foreignNetOi": 200829,
+    "pcrOi": 113.6
+   },
+   {
+    "date": "2025-04-28",
+    "contract": "202504",
+    "open": 22428.5,
+    "high": 22498.4,
+    "low": 22320,
+    "close": 22338.7,
+    "nextContract": "202505",
+    "nextClose": 22359.7,
+    "foreignNetOi": 193905,
+    "pcrOi": 108.7
+   },
+   {
+    "date": "2025-04-29",
+    "contract": "202504",
+    "open": 22311.7,
+    "high": 22490.8,
+    "low": 22236.1,
+    "close": 22490.2,
+    "nextContract": "202505",
+    "nextClose": 22508,
+    "foreignNetOi": 189129,
+    "pcrOi": 106.8
+   },
+   {
+    "date": "2025-04-30",
+    "contract": "202505",
+    "open": 22407.9,
+    "high": 22430.2,
+    "low": 22153.5,
+    "close": 22213,
+    "nextContract": "202506",
+    "nextClose": 22236.2,
+    "foreignNetOi": 184650,
+    "pcrOi": 116.4
+   },
+   {
+    "date": "2025-05-01",
+    "contract": "202505",
+    "open": 22188.6,
+    "high": 22372.5,
+    "low": 22117.4,
+    "close": 22313.6,
+    "nextContract": "202506",
+    "nextClose": 22325.6,
+    "foreignNetOi": 181050,
+    "pcrOi": 114.1
+   },
+   {
+    "date": "2025-05-02",
+    "contract": "202505",
+    "open": 22237.4,
+    "high": 22312.6,
+    "low": 21827.4,
+    "close": 21847.6,
+    "nextContract": "202506",
+    "nextClose": 21855.2,
+    "foreignNetOi": 177219,
+    "pcrOi": 104.7
+   },
+   {
+    "date": "2025-05-05",
+    "contract": "202505",
+    "open": 21798.8,
+    "high": 21826.9,
+    "low": 21735.2,
+    "close": 21754.3,
+    "nextContract": "202506",
+    "nextClose": 21769.2,
+    "foreignNetOi": 171920,
+    "pcrOi": 119
+   },
+   {
+    "date": "2025-05-06",
+    "contract": "202505",
+    "open": 21744.7,
+    "high": 21999,
+    "low": 21658.3,
+    "close": 21942.4,
+    "nextContract": "202506",
+    "nextClose": 21957.2,
+    "foreignNetOi": 165654,
+    "pcrOi": 122.8
+   },
+   {
+    "date": "2025-05-07",
+    "contract": "202505",
+    "open": 21824,
+    "high": 21951.7,
+    "low": 21758.5,
+    "close": 21926.6,
+    "nextContract": "202506",
+    "nextClose": 21947.2,
+    "foreignNetOi": 159758,
+    "pcrOi": 112.7
+   },
+   {
+    "date": "2025-05-08",
+    "contract": "202505",
+    "open": 21945.6,
+    "high": 21980.6,
+    "low": 21647.8,
+    "close": 21677.9,
+    "nextContract": "202506",
+    "nextClose": 21697.4,
+    "foreignNetOi": 151812,
+    "pcrOi": 95.7
+   },
+   {
+    "date": "2025-05-09",
+    "contract": "202505",
+    "open": 21771.7,
+    "high": 21799.1,
+    "low": 21668.2,
+    "close": 21673.7,
+    "nextContract": "202506",
+    "nextClose": 21689.1,
+    "foreignNetOi": 148298,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2025-05-12",
+    "contract": "202505",
+    "open": 21721.1,
+    "high": 21807,
+    "low": 21596.5,
+    "close": 21618.8,
+    "nextContract": "202506",
+    "nextClose": 21642.4,
+    "foreignNetOi": 145298,
+    "pcrOi": 110.2
+   },
+   {
+    "date": "2025-05-13",
+    "contract": "202505",
+    "open": 21608.4,
+    "high": 21659.5,
+    "low": 21391.3,
+    "close": 21468,
+    "nextContract": "202506",
+    "nextClose": 21480.7,
+    "foreignNetOi": 141684,
+    "pcrOi": 109.3
+   },
+   {
+    "date": "2025-05-14",
+    "contract": "202505",
+    "open": 21548.5,
+    "high": 21613.8,
+    "low": 21540.9,
+    "close": 21601.5,
+    "nextContract": "202506",
+    "nextClose": 21614.4,
+    "foreignNetOi": 134740,
+    "pcrOi": 113.6
+   },
+   {
+    "date": "2025-05-15",
+    "contract": "202505",
+    "open": 21649.2,
+    "high": 21845.6,
+    "low": 21644.5,
+    "close": 21798.3,
+    "nextContract": "202506",
+    "nextClose": 21806.2,
+    "foreignNetOi": 129323,
+    "pcrOi": 105.8
+   },
+   {
+    "date": "2025-05-16",
+    "contract": "202505",
+    "open": 21910,
+    "high": 22398.4,
+    "low": 21825.7,
+    "close": 22319.7,
+    "nextContract": "202506",
+    "nextClose": 22338.9,
+    "foreignNetOi": 125285,
+    "pcrOi": 118
+   },
+   {
+    "date": "2025-05-19",
+    "contract": "202505",
+    "open": 22375.5,
+    "high": 22495.6,
+    "low": 22290.6,
+    "close": 22436.8,
+    "nextContract": "202506",
+    "nextClose": 22451.6,
+    "foreignNetOi": 119659,
+    "pcrOi": 110.4
+   },
+   {
+    "date": "2025-05-20",
+    "contract": "202505",
+    "open": 22459.3,
+    "high": 22527.6,
+    "low": 22079.4,
+    "close": 22144.2,
+    "nextContract": "202506",
+    "nextClose": 22154.5,
+    "foreignNetOi": 112773,
+    "pcrOi": 102.6
+   },
+   {
+    "date": "2025-05-21",
+    "contract": "202505",
+    "open": 22127.9,
+    "high": 22197,
+    "low": 21800.8,
+    "close": 21843.2,
+    "nextContract": "202506",
+    "nextClose": 21860.2,
+    "foreignNetOi": 105502,
+    "pcrOi": 95.3
+   },
+   {
+    "date": "2025-05-22",
+    "contract": "202505",
+    "open": 21975.2,
+    "high": 22046.9,
+    "low": 21798.3,
+    "close": 21880,
+    "nextContract": "202506",
+    "nextClose": 21893.3,
+    "foreignNetOi": 96074,
+    "pcrOi": 104
+   },
+   {
+    "date": "2025-05-23",
+    "contract": "202505",
+    "open": 21811,
+    "high": 21843.1,
+    "low": 21446.4,
+    "close": 21464.2,
+    "nextContract": "202506",
+    "nextClose": 21475.5,
+    "foreignNetOi": 90744,
+    "pcrOi": 125.3
+   },
+   {
+    "date": "2025-05-26",
+    "contract": "202505",
+    "open": 21528.8,
+    "high": 21570.4,
+    "low": 21522.8,
+    "close": 21523.7,
+    "nextContract": "202506",
+    "nextClose": 21538,
+    "foreignNetOi": 84835,
+    "pcrOi": 100.1
+   },
+   {
+    "date": "2025-05-27",
+    "contract": "202505",
+    "open": 21543.8,
+    "high": 21641.2,
+    "low": 21504.1,
+    "close": 21579,
+    "nextContract": "202506",
+    "nextClose": 21588.6,
+    "foreignNetOi": 80481,
+    "pcrOi": 109.2
+   },
+   {
+    "date": "2025-05-28",
+    "contract": "202505",
+    "open": 21527.1,
+    "high": 21610.4,
+    "low": 21310.2,
+    "close": 21358.7,
+    "nextContract": "202506",
+    "nextClose": 21370.4,
+    "foreignNetOi": 76674,
+    "pcrOi": 107.6
+   },
+   {
+    "date": "2025-05-29",
+    "contract": "202506",
+    "open": 21481.8,
+    "high": 21580.4,
+    "low": 21432.3,
+    "close": 21572.7,
+    "nextContract": "202507",
+    "nextClose": 21582.6,
+    "foreignNetOi": 70001,
+    "pcrOi": 126.2
+   },
+   {
+    "date": "2025-05-30",
+    "contract": "202506",
+    "open": 21616.6,
+    "high": 21640,
+    "low": 21526.5,
+    "close": 21592.5,
+    "nextContract": "202507",
+    "nextClose": 21605.8,
+    "foreignNetOi": 64504,
+    "pcrOi": 122.9
+   },
+   {
+    "date": "2025-06-02",
+    "contract": "202506",
+    "open": 21623.3,
+    "high": 21630.8,
+    "low": 21245,
+    "close": 21289.7,
+    "nextContract": "202507",
+    "nextClose": 21310,
+    "foreignNetOi": 56923,
+    "pcrOi": 105.9
+   },
+   {
+    "date": "2025-06-03",
+    "contract": "202506",
+    "open": 21283.6,
+    "high": 21437.9,
+    "low": 21198.8,
+    "close": 21358.4,
+    "nextContract": "202507",
+    "nextClose": 21368.8,
+    "foreignNetOi": 54116,
+    "pcrOi": 103.3
+   },
+   {
+    "date": "2025-06-04",
+    "contract": "202506",
+    "open": 21323.3,
+    "high": 21346.3,
+    "low": 21225,
+    "close": 21301.6,
+    "nextContract": "202507",
+    "nextClose": 21316.6,
+    "foreignNetOi": 51418,
+    "pcrOi": 86.9
+   },
+   {
+    "date": "2025-06-05",
+    "contract": "202506",
+    "open": 21228.6,
+    "high": 21248,
+    "low": 20844.8,
+    "close": 20866.9,
+    "nextContract": "202507",
+    "nextClose": 20887.6,
+    "foreignNetOi": 46960,
+    "pcrOi": 116.1
+   },
+   {
+    "date": "2025-06-06",
+    "contract": "202506",
+    "open": 20837.3,
+    "high": 20907.5,
+    "low": 20671.3,
+    "close": 20721.5,
+    "nextContract": "202507",
+    "nextClose": 20735,
+    "foreignNetOi": 41759,
+    "pcrOi": 104.2
+   },
+   {
+    "date": "2025-06-09",
+    "contract": "202506",
+    "open": 20658.5,
+    "high": 20771.3,
+    "low": 20575.9,
+    "close": 20716.1,
+    "nextContract": "202507",
+    "nextClose": 20722.9,
+    "foreignNetOi": 36667,
+    "pcrOi": 90.8
+   },
+   {
+    "date": "2025-06-10",
+    "contract": "202506",
+    "open": 20754.4,
+    "high": 20974.7,
+    "low": 20682,
+    "close": 20959.1,
+    "nextContract": "202507",
+    "nextClose": 20984.9,
+    "foreignNetOi": 31537,
+    "pcrOi": 102
+   },
+   {
+    "date": "2025-06-11",
+    "contract": "202506",
+    "open": 20924.9,
+    "high": 20995.6,
+    "low": 20754.2,
+    "close": 20826,
+    "nextContract": "202507",
+    "nextClose": 20843.5,
+    "foreignNetOi": 24689,
+    "pcrOi": 119.3
+   },
+   {
+    "date": "2025-06-12",
+    "contract": "202506",
+    "open": 20932.9,
+    "high": 20968.1,
+    "low": 20812.5,
+    "close": 20846.8,
+    "nextContract": "202507",
+    "nextClose": 20860.1,
+    "foreignNetOi": 19703,
+    "pcrOi": 127.7
+   },
+   {
+    "date": "2025-06-13",
+    "contract": "202506",
+    "open": 20914.4,
+    "high": 21032.2,
+    "low": 20865.5,
+    "close": 21030.3,
+    "nextContract": "202507",
+    "nextClose": 21043.4,
+    "foreignNetOi": 15436,
+    "pcrOi": 108.5
+   },
+   {
+    "date": "2025-06-16",
+    "contract": "202506",
+    "open": 20986,
+    "high": 21010.4,
+    "low": 20625.4,
+    "close": 20659.3,
+    "nextContract": "202507",
+    "nextClose": 20678.2,
+    "foreignNetOi": 12097,
+    "pcrOi": 96.7
+   },
+   {
+    "date": "2025-06-17",
+    "contract": "202506",
+    "open": 20697.6,
+    "high": 20776.5,
+    "low": 20372.1,
+    "close": 20449.2,
+    "nextContract": "202507",
+    "nextClose": 20462.2,
+    "foreignNetOi": 6107,
+    "pcrOi": 114.7
+   },
+   {
+    "date": "2025-06-18",
+    "contract": "202506",
+    "open": 20483.3,
+    "high": 20686.6,
+    "low": 20406.5,
+    "close": 20644.1,
+    "nextContract": "202507",
+    "nextClose": 20664.2,
+    "foreignNetOi": 1580,
+    "pcrOi": 110.1
+   },
+   {
+    "date": "2025-06-19",
+    "contract": "202506",
+    "open": 20551.6,
+    "high": 20564.9,
+    "low": 20414.6,
+    "close": 20428.5,
+    "nextContract": "202507",
+    "nextClose": 20441,
+    "foreignNetOi": -771,
+    "pcrOi": 113.7
+   },
+   {
+    "date": "2025-06-20",
+    "contract": "202506",
+    "open": 20466.7,
+    "high": 20542.5,
+    "low": 20403.1,
+    "close": 20458.5,
+    "nextContract": "202507",
+    "nextClose": 20481.3,
+    "foreignNetOi": 46,
+    "pcrOi": 110.3
+   },
+   {
+    "date": "2025-06-23",
+    "contract": "202506",
+    "open": 20482.3,
+    "high": 20737.7,
+    "low": 20462.2,
+    "close": 20663.2,
+    "nextContract": "202507",
+    "nextClose": 20683.1,
+    "foreignNetOi": 1778,
+    "pcrOi": 97.1
+   },
+   {
+    "date": "2025-06-24",
+    "contract": "202506",
+    "open": 20620.4,
+    "high": 20625,
+    "low": 20118.7,
+    "close": 20140.4,
+    "nextContract": "202507",
+    "nextClose": 20162.9,
+    "foreignNetOi": 1744,
+    "pcrOi": 120.8
+   },
+   {
+    "date": "2025-06-25",
+    "contract": "202506",
+    "open": 20155.9,
+    "high": 20330.7,
+    "low": 20119.5,
+    "close": 20287.5,
+    "nextContract": "202507",
+    "nextClose": 20312.3,
+    "foreignNetOi": 1661,
+    "pcrOi": 104.8
+   },
+   {
+    "date": "2025-06-26",
+    "contract": "202506",
+    "open": 20333.4,
+    "high": 20407.2,
+    "low": 20150.6,
+    "close": 20209.5,
+    "nextContract": "202507",
+    "nextClose": 20223,
+    "foreignNetOi": 3566,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2025-06-27",
+    "contract": "202507",
+    "open": 20245.7,
+    "high": 20269.6,
+    "low": 20032.7,
+    "close": 20043.9,
+    "nextContract": "202508",
+    "nextClose": 20055.4,
+    "foreignNetOi": 239,
+    "pcrOi": 111.2
+   },
+   {
+    "date": "2025-06-30",
+    "contract": "202507",
+    "open": 20044,
+    "high": 20065,
+    "low": 19767.9,
+    "close": 19815.1,
+    "nextContract": "202508",
+    "nextClose": 19829.5,
+    "foreignNetOi": 3129,
+    "pcrOi": 103.4
+   },
+   {
+    "date": "2025-07-01",
+    "contract": "202507",
+    "open": 19878.9,
+    "high": 20118.6,
+    "low": 19807.2,
+    "close": 20073.6,
+    "nextContract": "202508",
+    "nextClose": 20084.1,
+    "foreignNetOi": 3269,
+    "pcrOi": 130.7
+   },
+   {
+    "date": "2025-07-02",
+    "contract": "202507",
+    "open": 20168.6,
+    "high": 20346.9,
+    "low": 20130.1,
+    "close": 20299.6,
+    "nextContract": "202508",
+    "nextClose": 20320.6,
+    "foreignNetOi": 3107,
+    "pcrOi": 108.7
+   },
+   {
+    "date": "2025-07-03",
+    "contract": "202507",
+    "open": 20282.8,
+    "high": 20325.6,
+    "low": 20178.5,
+    "close": 20194.4,
+    "nextContract": "202508",
+    "nextClose": 20211.5,
+    "foreignNetOi": 2641,
+    "pcrOi": 104
+   },
+   {
+    "date": "2025-07-04",
+    "contract": "202507",
+    "open": 20210.1,
+    "high": 20533.6,
+    "low": 20146.3,
+    "close": 20481.6,
+    "nextContract": "202508",
+    "nextClose": 20493.4,
+    "foreignNetOi": 2761,
+    "pcrOi": 107.9
+   },
+   {
+    "date": "2025-07-07",
+    "contract": "202507",
+    "open": 20499.9,
+    "high": 20577.1,
+    "low": 20204.5,
+    "close": 20280.8,
+    "nextContract": "202508",
+    "nextClose": 20296.5,
+    "foreignNetOi": 2760,
+    "pcrOi": 110.8
+   },
+   {
+    "date": "2025-07-08",
+    "contract": "202507",
+    "open": 20234.2,
+    "high": 20278.9,
+    "low": 20228.3,
+    "close": 20248.1,
+    "nextContract": "202508",
+    "nextClose": 20259.5,
+    "foreignNetOi": 1305,
+    "pcrOi": 108.7
+   },
+   {
+    "date": "2025-07-09",
+    "contract": "202507",
+    "open": 20214,
+    "high": 20279.3,
+    "low": 20036,
+    "close": 20052.8,
+    "nextContract": "202508",
+    "nextClose": 20066.8,
+    "foreignNetOi": 194,
+    "pcrOi": 106
+   },
+   {
+    "date": "2025-07-10",
+    "contract": "202507",
+    "open": 20102.8,
+    "high": 20221.1,
+    "low": 20095.2,
+    "close": 20205.3,
+    "nextContract": "202508",
+    "nextClose": 20221,
+    "foreignNetOi": -1605,
+    "pcrOi": 94.2
+   },
+   {
+    "date": "2025-07-11",
+    "contract": "202507",
+    "open": 20242.1,
+    "high": 20251.1,
+    "low": 20101.3,
+    "close": 20120.1,
+    "nextContract": "202508",
+    "nextClose": 20133.5,
+    "foreignNetOi": -2712,
+    "pcrOi": 129
+   },
+   {
+    "date": "2025-07-14",
+    "contract": "202507",
+    "open": 20127.5,
+    "high": 20198,
+    "low": 20107.3,
+    "close": 20175.9,
+    "nextContract": "202508",
+    "nextClose": 20182.8,
+    "foreignNetOi": -1529,
+    "pcrOi": 109.2
+   },
+   {
+    "date": "2025-07-15",
+    "contract": "202507",
+    "open": 20158.9,
+    "high": 20474.6,
+    "low": 20127.9,
+    "close": 20398.8,
+    "nextContract": "202508",
+    "nextClose": 20413.5,
+    "foreignNetOi": -531,
+    "pcrOi": 117.6
+   },
+   {
+    "date": "2025-07-16",
+    "contract": "202507",
+    "open": 20481.4,
+    "high": 20558.4,
+    "low": 20100.3,
+    "close": 20178.2,
+    "nextContract": "202508",
+    "nextClose": 20194.8,
+    "foreignNetOi": -757,
+    "pcrOi": 111.6
+   },
+   {
+    "date": "2025-07-17",
+    "contract": "202507",
+    "open": 20145.6,
+    "high": 20275.5,
+    "low": 20101,
+    "close": 20255.1,
+    "nextContract": "202508",
+    "nextClose": 20273.2,
+    "foreignNetOi": 236,
+    "pcrOi": 108
+   },
+   {
+    "date": "2025-07-18",
+    "contract": "202507",
+    "open": 20281.2,
+    "high": 20317.8,
+    "low": 20217.3,
+    "close": 20312,
+    "nextContract": "202508",
+    "nextClose": 20332.1,
+    "foreignNetOi": 2155,
+    "pcrOi": 117.7
+   },
+   {
+    "date": "2025-07-21",
+    "contract": "202507",
+    "open": 20249.2,
+    "high": 20281.1,
+    "low": 19979.7,
+    "close": 20007.4,
+    "nextContract": "202508",
+    "nextClose": 20019.5,
+    "foreignNetOi": 1805,
+    "pcrOi": 116.2
+   },
+   {
+    "date": "2025-07-22",
+    "contract": "202507",
+    "open": 19968.8,
+    "high": 20290.7,
+    "low": 19897.8,
+    "close": 20259.9,
+    "nextContract": "202508",
+    "nextClose": 20274.1,
+    "foreignNetOi": 2087,
+    "pcrOi": 113.2
+   },
+   {
+    "date": "2025-07-23",
+    "contract": "202507",
+    "open": 20268.7,
+    "high": 20432.3,
+    "low": 20266.7,
+    "close": 20363,
+    "nextContract": "202508",
+    "nextClose": 20377.9,
+    "foreignNetOi": 2430,
+    "pcrOi": 110
+   },
+   {
+    "date": "2025-07-24",
+    "contract": "202507",
+    "open": 20334.3,
+    "high": 20470.2,
+    "low": 20332.8,
+    "close": 20436.5,
+    "nextContract": "202508",
+    "nextClose": 20451.2,
+    "foreignNetOi": 1581,
+    "pcrOi": 106.4
+   },
+   {
+    "date": "2025-07-25",
+    "contract": "202507",
+    "open": 20368.8,
+    "high": 20493,
+    "low": 20292.6,
+    "close": 20421.7,
+    "nextContract": "202508",
+    "nextClose": 20438.2,
+    "foreignNetOi": 1720,
+    "pcrOi": 120.7
+   },
+   {
+    "date": "2025-07-28",
+    "contract": "202508",
+    "open": 20458.6,
+    "high": 20653,
+    "low": 20435.1,
+    "close": 20608.8,
+    "nextContract": "202509",
+    "nextClose": 20625.4,
+    "foreignNetOi": 68,
+    "pcrOi": 125
+   },
+   {
+    "date": "2025-07-29",
+    "contract": "202508",
+    "open": 20557.4,
+    "high": 20571.8,
+    "low": 20410.3,
+    "close": 20428.1,
+    "nextContract": "202509",
+    "nextClose": 20451.8,
+    "foreignNetOi": -355,
+    "pcrOi": 80.6
+   },
+   {
+    "date": "2025-07-30",
+    "contract": "202508",
+    "open": 20475.2,
+    "high": 20491.8,
+    "low": 20366.1,
+    "close": 20422.4,
+    "nextContract": "202509",
+    "nextClose": 20438.3,
+    "foreignNetOi": 1407,
+    "pcrOi": 108.2
+   },
+   {
+    "date": "2025-07-31",
+    "contract": "202508",
+    "open": 20412.5,
+    "high": 20478.2,
+    "low": 20372.5,
+    "close": 20440.3,
+    "nextContract": "202509",
+    "nextClose": 20452,
+    "foreignNetOi": -963,
+    "pcrOi": 124.7
+   },
+   {
+    "date": "2025-08-01",
+    "contract": "202508",
+    "open": 20447.4,
+    "high": 20604.2,
+    "low": 20422.8,
+    "close": 20564.8,
+    "nextContract": "202509",
+    "nextClose": 20579.9,
+    "foreignNetOi": -2072,
+    "pcrOi": 99.2
+   },
+   {
+    "date": "2025-08-04",
+    "contract": "202508",
+    "open": 20498.2,
+    "high": 20504.6,
+    "low": 20337.7,
+    "close": 20397.6,
+    "nextContract": "202509",
+    "nextClose": 20407.2,
+    "foreignNetOi": 478,
+    "pcrOi": 115.6
+   },
+   {
+    "date": "2025-08-05",
+    "contract": "202508",
+    "open": 20311.3,
+    "high": 20313.9,
+    "low": 20242.3,
+    "close": 20279.3,
+    "nextContract": "202509",
+    "nextClose": 20298,
+    "foreignNetOi": 569,
+    "pcrOi": 109.3
+   },
+   {
+    "date": "2025-08-06",
+    "contract": "202508",
+    "open": 20302.4,
+    "high": 20318.6,
+    "low": 20172.5,
+    "close": 20175.3,
+    "nextContract": "202509",
+    "nextClose": 20194.5,
+    "foreignNetOi": -444,
+    "pcrOi": 94.3
+   },
+   {
+    "date": "2025-08-07",
+    "contract": "202508",
+    "open": 20209.9,
+    "high": 20273.5,
+    "low": 20181.4,
+    "close": 20213.7,
+    "nextContract": "202509",
+    "nextClose": 20230.9,
+    "foreignNetOi": 1928,
+    "pcrOi": 110.9
+   },
+   {
+    "date": "2025-08-08",
+    "contract": "202508",
+    "open": 20166.6,
+    "high": 20211.1,
+    "low": 20083.2,
+    "close": 20101.8,
+    "nextContract": "202509",
+    "nextClose": 20124,
+    "foreignNetOi": 1190,
+    "pcrOi": 114
+   },
+   {
+    "date": "2025-08-11",
+    "contract": "202508",
+    "open": 20193.7,
+    "high": 20273.8,
+    "low": 20114.7,
+    "close": 20125.2,
+    "nextContract": "202509",
+    "nextClose": 20143.4,
+    "foreignNetOi": 4184,
+    "pcrOi": 104.6
+   },
+   {
+    "date": "2025-08-12",
+    "contract": "202508",
+    "open": 20071.8,
+    "high": 20129.6,
+    "low": 19479.7,
+    "close": 19513.3,
+    "nextContract": "202509",
+    "nextClose": 19526.2,
+    "foreignNetOi": 2727,
+    "pcrOi": 110.8
+   },
+   {
+    "date": "2025-08-13",
+    "contract": "202508",
+    "open": 19466.7,
+    "high": 19664.6,
+    "low": 19432.4,
+    "close": 19662.2,
+    "nextContract": "202509",
+    "nextClose": 19676.1,
+    "foreignNetOi": 2043,
+    "pcrOi": 109.4
+   },
+   {
+    "date": "2025-08-14",
+    "contract": "202508",
+    "open": 19765.5,
+    "high": 19950,
+    "low": 19738.3,
+    "close": 19933.2,
+    "nextContract": "202509",
+    "nextClose": 19942,
+    "foreignNetOi": 2231,
+    "pcrOi": 96.4
+   },
+   {
+    "date": "2025-08-15",
+    "contract": "202508",
+    "open": 19882,
+    "high": 20014,
+    "low": 19850,
+    "close": 19940.3,
+    "nextContract": "202509",
+    "nextClose": 19959.2,
+    "foreignNetOi": 1667,
+    "pcrOi": 110.5
+   },
+   {
+    "date": "2025-08-18",
+    "contract": "202508",
+    "open": 19965.3,
+    "high": 20036.6,
+    "low": 19804.2,
+    "close": 19870.5,
+    "nextContract": "202509",
+    "nextClose": 19881.9,
+    "foreignNetOi": 1143,
+    "pcrOi": 131.3
+   },
+   {
+    "date": "2025-08-19",
+    "contract": "202508",
+    "open": 19754.4,
+    "high": 19908.5,
+    "low": 19720.8,
+    "close": 19886.6,
+    "nextContract": "202509",
+    "nextClose": 19909.1,
+    "foreignNetOi": 2557,
+    "pcrOi": 117.5
+   },
+   {
+    "date": "2025-08-20",
+    "contract": "202508",
+    "open": 19978.8,
+    "high": 20034.7,
+    "low": 19906.2,
+    "close": 19956.5,
+    "nextContract": "202509",
+    "nextClose": 19969.9,
+    "foreignNetOi": 4374,
+    "pcrOi": 107.7
+   },
+   {
+    "date": "2025-08-21",
+    "contract": "202508",
+    "open": 19984.2,
+    "high": 20008.9,
+    "low": 19680.1,
+    "close": 19740.9,
+    "nextContract": "202509",
+    "nextClose": 19757.5,
+    "foreignNetOi": 4773,
+    "pcrOi": 106.6
+   },
+   {
+    "date": "2025-08-22",
+    "contract": "202508",
+    "open": 19747.5,
+    "high": 19803.4,
+    "low": 19562.2,
+    "close": 19593.9,
+    "nextContract": "202509",
+    "nextClose": 19602.8,
+    "foreignNetOi": 4422,
+    "pcrOi": 114.2
+   },
+   {
+    "date": "2025-08-25",
+    "contract": "202508",
+    "open": 19605.6,
+    "high": 19676.1,
+    "low": 19560.3,
+    "close": 19632.5,
+    "nextContract": "202509",
+    "nextClose": 19655.9,
+    "foreignNetOi": 3552,
+    "pcrOi": 106.4
+   },
+   {
+    "date": "2025-08-26",
+    "contract": "202509",
+    "open": 19690.8,
+    "high": 19746.2,
+    "low": 19355.9,
+    "close": 19360.6,
+    "nextContract": "202510",
+    "nextClose": 19379.9,
+    "foreignNetOi": 3670,
+    "pcrOi": 92.4
+   },
+   {
+    "date": "2025-08-27",
+    "contract": "202509",
+    "open": 19330,
+    "high": 19374.4,
+    "low": 19169.4,
+    "close": 19239.3,
+    "nextContract": "202510",
+    "nextClose": 19255.6,
+    "foreignNetOi": 4340,
+    "pcrOi": 101.4
+   },
+   {
+    "date": "2025-08-28",
+    "contract": "202509",
+    "open": 19294.3,
+    "high": 19304.1,
+    "low": 19226.8,
+    "close": 19232.4,
+    "nextContract": "202510",
+    "nextClose": 19239.9,
+    "foreignNetOi": 4564,
+    "pcrOi": 108.5
+   },
+   {
+    "date": "2025-08-29",
+    "contract": "202509",
+    "open": 19221.7,
+    "high": 19228.7,
+    "low": 19104.4,
+    "close": 19123.1,
+    "nextContract": "202510",
+    "nextClose": 19131.1,
+    "foreignNetOi": 3147,
+    "pcrOi": 120.8
+   },
+   {
+    "date": "2025-09-01",
+    "contract": "202509",
+    "open": 19121.2,
+    "high": 19258.8,
+    "low": 19072.2,
+    "close": 19182.7,
+    "nextContract": "202510",
+    "nextClose": 19211.3,
+    "foreignNetOi": 3456,
+    "pcrOi": 117.2
+   },
+   {
+    "date": "2025-09-02",
+    "contract": "202509",
+    "open": 19020.2,
+    "high": 19066.3,
+    "low": 18936.4,
+    "close": 18969.5,
+    "nextContract": "202510",
+    "nextClose": 18987.1,
+    "foreignNetOi": 5979,
+    "pcrOi": 109.5
+   },
+   {
+    "date": "2025-09-03",
+    "contract": "202509",
+    "open": 18880.8,
+    "high": 19235.7,
+    "low": 18823.8,
+    "close": 19170.8,
+    "nextContract": "202510",
+    "nextClose": 19188.2,
+    "foreignNetOi": 4318,
+    "pcrOi": 110
+   },
+   {
+    "date": "2025-09-04",
+    "contract": "202509",
+    "open": 19204,
+    "high": 19235.2,
+    "low": 19081.4,
+    "close": 19132.4,
+    "nextContract": "202510",
+    "nextClose": 19142.6,
+    "foreignNetOi": 3910,
+    "pcrOi": 94.6
+   },
+   {
+    "date": "2025-09-05",
+    "contract": "202509",
+    "open": 19155.7,
+    "high": 19188.4,
+    "low": 18992.4,
+    "close": 19048.7,
+    "nextContract": "202510",
+    "nextClose": 19064.4,
+    "foreignNetOi": 4081,
+    "pcrOi": 111.2
+   },
+   {
+    "date": "2025-09-08",
+    "contract": "202509",
+    "open": 18997.7,
+    "high": 19381.9,
+    "low": 18937.1,
+    "close": 19342.2,
+    "nextContract": "202510",
+    "nextClose": 19355.8,
+    "foreignNetOi": 5296,
+    "pcrOi": 109.4
+   },
+   {
+    "date": "2025-09-09",
+    "contract": "202509",
+    "open": 19269.3,
+    "high": 19318.1,
+    "low": 18715.8,
+    "close": 18739.8,
+    "nextContract": "202510",
+    "nextClose": 18761.3,
+    "foreignNetOi": 2948,
+    "pcrOi": 107.3
+   },
+   {
+    "date": "2025-09-10",
+    "contract": "202509",
+    "open": 18700.7,
+    "high": 18731.7,
+    "low": 18460.8,
+    "close": 18470.9,
+    "nextContract": "202510",
+    "nextClose": 18492.2,
+    "foreignNetOi": 3584,
+    "pcrOi": 125.5
+   },
+   {
+    "date": "2025-09-11",
+    "contract": "202509",
+    "open": 18479.2,
+    "high": 18509.6,
+    "low": 18465.3,
+    "close": 18482.7,
+    "nextContract": "202510",
+    "nextClose": 18498.4,
+    "foreignNetOi": 9401,
+    "pcrOi": 96.4
+   },
+   {
+    "date": "2025-09-12",
+    "contract": "202509",
+    "open": 18514.5,
+    "high": 18594.6,
+    "low": 18446.2,
+    "close": 18555.8,
+    "nextContract": "202510",
+    "nextClose": 18573.7,
+    "foreignNetOi": 14976,
+    "pcrOi": 126.3
+   },
+   {
+    "date": "2025-09-15",
+    "contract": "202509",
+    "open": 18539.4,
+    "high": 18540.3,
+    "low": 18444.1,
+    "close": 18477.5,
+    "nextContract": "202510",
+    "nextClose": 18496.9,
+    "foreignNetOi": 19195,
+    "pcrOi": 108.8
+   },
+   {
+    "date": "2025-09-16",
+    "contract": "202509",
+    "open": 18463.3,
+    "high": 18529.7,
+    "low": 18355,
+    "close": 18426.3,
+    "nextContract": "202510",
+    "nextClose": 18443.2,
+    "foreignNetOi": 24708,
+    "pcrOi": 139.8
+   },
+   {
+    "date": "2025-09-17",
+    "contract": "202509",
+    "open": 18557.4,
+    "high": 18562.5,
+    "low": 18060.9,
+    "close": 18090.1,
+    "nextContract": "202510",
+    "nextClose": 18108.1,
+    "foreignNetOi": 28339,
+    "pcrOi": 109.8
+   },
+   {
+    "date": "2025-09-18",
+    "contract": "202509",
+    "open": 18054.9,
+    "high": 18076.8,
+    "low": 17976,
+    "close": 18032.3,
+    "nextContract": "202510",
+    "nextClose": 18055.4,
+    "foreignNetOi": 32594,
+    "pcrOi": 110.6
+   },
+   {
+    "date": "2025-09-19",
+    "contract": "202509",
+    "open": 18003.4,
+    "high": 18052.1,
+    "low": 17872.3,
+    "close": 17919.4,
+    "nextContract": "202510",
+    "nextClose": 17939.3,
+    "foreignNetOi": 38301,
+    "pcrOi": 122.1
+   },
+   {
+    "date": "2025-09-22",
+    "contract": "202509",
+    "open": 17870.6,
+    "high": 17983.2,
+    "low": 17823,
+    "close": 17925.2,
+    "nextContract": "202510",
+    "nextClose": 17936,
+    "foreignNetOi": 43218,
+    "pcrOi": 126.9
+   },
+   {
+    "date": "2025-09-23",
+    "contract": "202509",
+    "open": 17927.8,
+    "high": 17951,
+    "low": 17913.5,
+    "close": 17916.6,
+    "nextContract": "202510",
+    "nextClose": 17936.3,
+    "foreignNetOi": 47753,
+    "pcrOi": 114.6
+   },
+   {
+    "date": "2025-09-24",
+    "contract": "202510",
+    "open": 17869.3,
+    "high": 17880.3,
+    "low": 17522.6,
+    "close": 17527.7,
+    "nextContract": "202511",
+    "nextClose": 17535.8,
+    "foreignNetOi": 54826,
+    "pcrOi": 96.6
+   },
+   {
+    "date": "2025-09-25",
+    "contract": "202510",
+    "open": 17510.1,
+    "high": 17567.5,
+    "low": 17458.3,
+    "close": 17516,
+    "nextContract": "202511",
+    "nextClose": 17526.7,
+    "foreignNetOi": 59556,
+    "pcrOi": 99.5
+   },
+   {
+    "date": "2025-09-26",
+    "contract": "202510",
+    "open": 17512.4,
+    "high": 17553.8,
+    "low": 17465.7,
+    "close": 17492.5,
+    "nextContract": "202511",
+    "nextClose": 17503.3,
+    "foreignNetOi": 63320,
+    "pcrOi": 88.3
+   },
+   {
+    "date": "2025-09-29",
+    "contract": "202510",
+    "open": 17410.6,
+    "high": 17429.6,
+    "low": 17186.8,
+    "close": 17197.5,
+    "nextContract": "202511",
+    "nextClose": 17216.4,
+    "foreignNetOi": 68483,
+    "pcrOi": 114.8
+   },
+   {
+    "date": "2025-09-30",
+    "contract": "202510",
+    "open": 17147.6,
+    "high": 17224.2,
+    "low": 17079.1,
+    "close": 17172.6,
+    "nextContract": "202511",
+    "nextClose": 17188.3,
+    "foreignNetOi": 74371,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2025-10-01",
+    "contract": "202510",
+    "open": 17203,
+    "high": 17231.6,
+    "low": 17130.6,
+    "close": 17198.2,
+    "nextContract": "202511",
+    "nextClose": 17214.1,
+    "foreignNetOi": 76517,
+    "pcrOi": 106.4
+   },
+   {
+    "date": "2025-10-02",
+    "contract": "202510",
+    "open": 17243.9,
+    "high": 17264.6,
+    "low": 16855.9,
+    "close": 16912.3,
+    "nextContract": "202511",
+    "nextClose": 16934.8,
+    "foreignNetOi": 83916,
+    "pcrOi": 111.7
+   },
+   {
+    "date": "2025-10-03",
+    "contract": "202510",
+    "open": 16967.7,
+    "high": 17031.1,
+    "low": 16905.7,
+    "close": 16961.5,
+    "nextContract": "202511",
+    "nextClose": 16981.7,
+    "foreignNetOi": 86232,
+    "pcrOi": 135.4
+   },
+   {
+    "date": "2025-10-06",
+    "contract": "202510",
+    "open": 16871.7,
+    "high": 16935,
+    "low": 16733,
+    "close": 16788.7,
+    "nextContract": "202511",
+    "nextClose": 16801.2,
+    "foreignNetOi": 91768,
+    "pcrOi": 115.9
+   },
+   {
+    "date": "2025-10-07",
+    "contract": "202510",
+    "open": 16770.4,
+    "high": 16774,
+    "low": 16613.9,
+    "close": 16648.4,
+    "nextContract": "202511",
+    "nextClose": 16674.4,
+    "foreignNetOi": 98126,
+    "pcrOi": 103.1
+   },
+   {
+    "date": "2025-10-08",
+    "contract": "202510",
+    "open": 16638.6,
+    "high": 16643.4,
+    "low": 16450.3,
+    "close": 16492.2,
+    "nextContract": "202511",
+    "nextClose": 16507.4,
+    "foreignNetOi": 103844,
+    "pcrOi": 112.8
+   },
+   {
+    "date": "2025-10-09",
+    "contract": "202510",
+    "open": 16526.6,
+    "high": 16579.1,
+    "low": 16365.3,
+    "close": 16394.7,
+    "nextContract": "202511",
+    "nextClose": 16412.6,
+    "foreignNetOi": 106761,
+    "pcrOi": 96.9
+   },
+   {
+    "date": "2025-10-10",
+    "contract": "202510",
+    "open": 16470.1,
+    "high": 16530.1,
+    "low": 16329,
+    "close": 16392.4,
+    "nextContract": "202511",
+    "nextClose": 16401.8,
+    "foreignNetOi": 111861,
+    "pcrOi": 132.5
+   },
+   {
+    "date": "2025-10-13",
+    "contract": "202510",
+    "open": 16445.3,
+    "high": 16504.3,
+    "low": 16367.7,
+    "close": 16405,
+    "nextContract": "202511",
+    "nextClose": 16423.5,
+    "foreignNetOi": 116076,
+    "pcrOi": 99.8
+   },
+   {
+    "date": "2025-10-14",
+    "contract": "202510",
+    "open": 16499.8,
+    "high": 16541.3,
+    "low": 16444.3,
+    "close": 16515.3,
+    "nextContract": "202511",
+    "nextClose": 16533.2,
+    "foreignNetOi": 119299,
+    "pcrOi": 112.4
+   },
+   {
+    "date": "2025-10-15",
+    "contract": "202510",
+    "open": 16501.1,
+    "high": 16682.6,
+    "low": 16449.7,
+    "close": 16654.9,
+    "nextContract": "202511",
+    "nextClose": 16665.7,
+    "foreignNetOi": 126180,
+    "pcrOi": 120.9
+   },
+   {
+    "date": "2025-10-16",
+    "contract": "202510",
+    "open": 16670.2,
+    "high": 16810.4,
+    "low": 16610.3,
+    "close": 16792.2,
+    "nextContract": "202511",
+    "nextClose": 16813.4,
+    "foreignNetOi": 131313,
+    "pcrOi": 114.4
+   },
+   {
+    "date": "2025-10-17",
+    "contract": "202510",
+    "open": 16708.7,
+    "high": 16769.9,
+    "low": 16664.5,
+    "close": 16713.4,
+    "nextContract": "202511",
+    "nextClose": 16729.2,
+    "foreignNetOi": 138409,
+    "pcrOi": 124.6
+   },
+   {
+    "date": "2025-10-20",
+    "contract": "202510",
+    "open": 16723.3,
+    "high": 16828.9,
+    "low": 16688,
+    "close": 16789.3,
+    "nextContract": "202511",
+    "nextClose": 16798.7,
+    "foreignNetOi": 143898,
+    "pcrOi": 115.7
+   },
+   {
+    "date": "2025-10-21",
+    "contract": "202510",
+    "open": 16824.7,
+    "high": 16887.6,
+    "low": 16782,
+    "close": 16831.9,
+    "nextContract": "202511",
+    "nextClose": 16844,
+    "foreignNetOi": 148003,
+    "pcrOi": 107.6
+   },
+   {
+    "date": "2025-10-22",
+    "contract": "202510",
+    "open": 16815.5,
+    "high": 16857.6,
+    "low": 16787.3,
+    "close": 16832.7,
+    "nextContract": "202511",
+    "nextClose": 16850.6,
+    "foreignNetOi": 152446,
+    "pcrOi": 109.8
+   },
+   {
+    "date": "2025-10-23",
+    "contract": "202511",
+    "open": 16759.8,
+    "high": 16949.8,
+    "low": 16752.4,
+    "close": 16884.3,
+    "nextContract": "202512",
+    "nextClose": 16898.7,
+    "foreignNetOi": 156610,
+    "pcrOi": 105.3
+   },
+   {
+    "date": "2025-10-24",
+    "contract": "202511",
+    "open": 16906.2,
+    "high": 16951.8,
+    "low": 16870.1,
+    "close": 16941.1,
+    "nextContract": "202512",
+    "nextClose": 16959.3,
+    "foreignNetOi": 164123,
+    "pcrOi": 126.9
+   },
+   {
+    "date": "2025-10-27",
+    "contract": "202511",
+    "open": 16902.9,
+    "high": 16919.3,
+    "low": 16742.1,
+    "close": 16766.5,
+    "nextContract": "202512",
+    "nextClose": 16776.2,
+    "foreignNetOi": 168515,
+    "pcrOi": 118.1
+   },
+   {
+    "date": "2025-10-28",
+    "contract": "202511",
+    "open": 16732.1,
+    "high": 16805.3,
+    "low": 16702.7,
+    "close": 16789.8,
+    "nextContract": "202512",
+    "nextClose": 16804.4,
+    "foreignNetOi": 173663,
+    "pcrOi": 96.2
+   },
+   {
+    "date": "2025-10-29",
+    "contract": "202511",
+    "open": 16847.5,
+    "high": 16926.6,
+    "low": 16840.7,
+    "close": 16876.2,
+    "nextContract": "202512",
+    "nextClose": 16882.4,
+    "foreignNetOi": 178516,
+    "pcrOi": 96.5
+   },
+   {
+    "date": "2025-10-30",
+    "contract": "202511",
+    "open": 16872.5,
+    "high": 16949.2,
+    "low": 16865,
+    "close": 16890.9,
+    "nextContract": "202512",
+    "nextClose": 16900.4,
+    "foreignNetOi": 182442,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2025-10-31",
+    "contract": "202511",
+    "open": 16899.4,
+    "high": 16961.1,
+    "low": 16767.8,
+    "close": 16807.3,
+    "nextContract": "202512",
+    "nextClose": 16827.3,
+    "foreignNetOi": 191214,
+    "pcrOi": 116.7
+   },
+   {
+    "date": "2025-11-03",
+    "contract": "202511",
+    "open": 16815.3,
+    "high": 16949.1,
+    "low": 16795.3,
+    "close": 16911.6,
+    "nextContract": "202512",
+    "nextClose": 16921.3,
+    "foreignNetOi": 198880,
+    "pcrOi": 109.7
+   },
+   {
+    "date": "2025-11-04",
+    "contract": "202511",
+    "open": 16871.2,
+    "high": 17209.5,
+    "low": 16806.8,
+    "close": 17150.4,
+    "nextContract": "202512",
+    "nextClose": 17169.2,
+    "foreignNetOi": 202955,
+    "pcrOi": 99.7
+   },
+   {
+    "date": "2025-11-05",
+    "contract": "202511",
+    "open": 17087.8,
+    "high": 17303.1,
+    "low": 17063,
+    "close": 17283.8,
+    "nextContract": "202512",
+    "nextClose": 17306.8,
+    "foreignNetOi": 207878,
+    "pcrOi": 110.1
+   },
+   {
+    "date": "2025-11-06",
+    "contract": "202511",
+    "open": 17233.6,
+    "high": 17445.9,
+    "low": 17195.8,
+    "close": 17420.3,
+    "nextContract": "202512",
+    "nextClose": 17434.6,
+    "foreignNetOi": 212765,
+    "pcrOi": 109
+   },
+   {
+    "date": "2025-11-07",
+    "contract": "202511",
+    "open": 17365.5,
+    "high": 17570.5,
+    "low": 17331.5,
+    "close": 17512.3,
+    "nextContract": "202512",
+    "nextClose": 17516.8,
+    "foreignNetOi": 218417,
+    "pcrOi": 101.2
+   },
+   {
+    "date": "2025-11-10",
+    "contract": "202511",
+    "open": 17553.8,
+    "high": 17604.2,
+    "low": 17490.4,
+    "close": 17530.2,
+    "nextContract": "202512",
+    "nextClose": 17542.2,
+    "foreignNetOi": 220120,
+    "pcrOi": 116.6
+   },
+   {
+    "date": "2025-11-11",
+    "contract": "202511",
+    "open": 17502.5,
+    "high": 17661.6,
+    "low": 17437.7,
+    "close": 17602.1,
+    "nextContract": "202512",
+    "nextClose": 17616.5,
+    "foreignNetOi": 227110,
+    "pcrOi": 103.9
+   },
+   {
+    "date": "2025-11-12",
+    "contract": "202511",
+    "open": 17645.2,
+    "high": 17673.6,
+    "low": 17593.3,
+    "close": 17631.7,
+    "nextContract": "202512",
+    "nextClose": 17647.3,
+    "foreignNetOi": 232520,
+    "pcrOi": 105.3
+   },
+   {
+    "date": "2025-11-13",
+    "contract": "202511",
+    "open": 17698.5,
+    "high": 17788.6,
+    "low": 17629.8,
+    "close": 17741.8,
+    "nextContract": "202512",
+    "nextClose": 17748.8,
+    "foreignNetOi": 236795,
+    "pcrOi": 96.8
+   },
+   {
+    "date": "2025-11-14",
+    "contract": "202511",
+    "open": 17738.7,
+    "high": 17770.1,
+    "low": 17655.1,
+    "close": 17667.9,
+    "nextContract": "202512",
+    "nextClose": 17685.3,
+    "foreignNetOi": 241541,
+    "pcrOi": 108.1
+   },
+   {
+    "date": "2025-11-17",
+    "contract": "202511",
+    "open": 17568.8,
+    "high": 17672.8,
+    "low": 17521,
+    "close": 17623.1,
+    "nextContract": "202512",
+    "nextClose": 17633.9,
+    "foreignNetOi": 246200,
+    "pcrOi": 105.8
+   },
+   {
+    "date": "2025-11-18",
+    "contract": "202511",
+    "open": 17533.4,
+    "high": 17656.6,
+    "low": 17492.4,
+    "close": 17629.1,
+    "nextContract": "202512",
+    "nextClose": 17637.5,
+    "foreignNetOi": 251346,
+    "pcrOi": 104.9
+   },
+   {
+    "date": "2025-11-19",
+    "contract": "202511",
+    "open": 17675.3,
+    "high": 17729.1,
+    "low": 17561.8,
+    "close": 17616.4,
+    "nextContract": "202512",
+    "nextClose": 17622.8,
+    "foreignNetOi": 257215,
+    "pcrOi": 114.3
+   },
+   {
+    "date": "2025-11-20",
+    "contract": "202511",
+    "open": 17584.6,
+    "high": 17710.9,
+    "low": 17537.2,
+    "close": 17660.4,
+    "nextContract": "202512",
+    "nextClose": 17676.8,
+    "foreignNetOi": 261753,
+    "pcrOi": 105.4
+   },
+   {
+    "date": "2025-11-21",
+    "contract": "202512",
+    "open": 17683.4,
+    "high": 17828.7,
+    "low": 17657.6,
+    "close": 17817.2,
+    "nextContract": "202601",
+    "nextClose": 17828.6,
+    "foreignNetOi": 265180,
+    "pcrOi": 100.1
+   },
+   {
+    "date": "2025-11-24",
+    "contract": "202512",
+    "open": 17891.1,
+    "high": 17940.1,
+    "low": 17883.5,
+    "close": 17907.3,
+    "nextContract": "202601",
+    "nextClose": 17925.6,
+    "foreignNetOi": 270145,
+    "pcrOi": 124.3
+   },
+   {
+    "date": "2025-11-25",
+    "contract": "202512",
+    "open": 17898.6,
+    "high": 18166.2,
+    "low": 17887.2,
+    "close": 18118.8,
+    "nextContract": "202601",
+    "nextClose": 18129.4,
+    "foreignNetOi": 275436,
+    "pcrOi": 94.6
+   },
+   {
+    "date": "2025-11-26",
+    "contract": "202512",
+    "open": 18126.4,
+    "high": 18257.4,
+    "low": 18112.4,
+    "close": 18204,
+    "nextContract": "202601",
+    "nextClose": 18219.4,
+    "foreignNetOi": 280423,
+    "pcrOi": 110.8
+   },
+   {
+    "date": "2025-11-27",
+    "contract": "202512",
+    "open": 18239.3,
+    "high": 18357,
+    "low": 18200.7,
+    "close": 18340.3,
+    "nextContract": "202601",
+    "nextClose": 18355.3,
+    "foreignNetOi": 285692,
+    "pcrOi": 108
+   },
+   {
+    "date": "2025-11-28",
+    "contract": "202512",
+    "open": 18307.5,
+    "high": 18310.7,
+    "low": 18195.3,
+    "close": 18216.8,
+    "nextContract": "202601",
+    "nextClose": 18230.8,
+    "foreignNetOi": 288664,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2025-12-01",
+    "contract": "202512",
+    "open": 18188.1,
+    "high": 18320.1,
+    "low": 18174.7,
+    "close": 18251,
+    "nextContract": "202601",
+    "nextClose": 18262.5,
+    "foreignNetOi": 297714,
+    "pcrOi": 129.5
+   },
+   {
+    "date": "2025-12-02",
+    "contract": "202512",
+    "open": 18266.7,
+    "high": 18274.1,
+    "low": 18077.6,
+    "close": 18140.2,
+    "nextContract": "202601",
+    "nextClose": 18159,
+    "foreignNetOi": 302172,
+    "pcrOi": 116.1
+   },
+   {
+    "date": "2025-12-03",
+    "contract": "202512",
+    "open": 18134,
+    "high": 18239.2,
+    "low": 18109.6,
+    "close": 18217,
+    "nextContract": "202601",
+    "nextClose": 18231,
+    "foreignNetOi": 307871,
+    "pcrOi": 114.2
+   },
+   {
+    "date": "2025-12-04",
+    "contract": "202512",
+    "open": 18239.4,
+    "high": 18269,
+    "low": 18231,
+    "close": 18266.1,
+    "nextContract": "202601",
+    "nextClose": 18286.9,
+    "foreignNetOi": 300725,
+    "pcrOi": 97.9
+   },
+   {
+    "date": "2025-12-05",
+    "contract": "202512",
+    "open": 18429.1,
+    "high": 18450.4,
+    "low": 18312.9,
+    "close": 18345.4,
+    "nextContract": "202601",
+    "nextClose": 18360.2,
+    "foreignNetOi": 296391,
+    "pcrOi": 109.5
+   },
+   {
+    "date": "2025-12-08",
+    "contract": "202512",
+    "open": 18149.1,
+    "high": 18211.1,
+    "low": 18045.4,
+    "close": 18080.4,
+    "nextContract": "202601",
+    "nextClose": 18100,
+    "foreignNetOi": 292147,
+    "pcrOi": 117.4
+   },
+   {
+    "date": "2025-12-09",
+    "contract": "202512",
+    "open": 18056.1,
+    "high": 18073.5,
+    "low": 17933,
+    "close": 17989.5,
+    "nextContract": "202601",
+    "nextClose": 18002.8,
+    "foreignNetOi": 287342,
+    "pcrOi": 114
+   },
+   {
+    "date": "2025-12-10",
+    "contract": "202512",
+    "open": 18012.5,
+    "high": 18071.7,
+    "low": 17946.9,
+    "close": 18026.9,
+    "nextContract": "202601",
+    "nextClose": 18027.7,
+    "foreignNetOi": 281804,
+    "pcrOi": 108.9
+   },
+   {
+    "date": "2025-12-11",
+    "contract": "202512",
+    "open": 18059.6,
+    "high": 18066.2,
+    "low": 17918.3,
+    "close": 17968.4,
+    "nextContract": "202601",
+    "nextClose": 17984.9,
+    "foreignNetOi": 279227,
+    "pcrOi": 100.8
+   },
+   {
+    "date": "2025-12-12",
+    "contract": "202512",
+    "open": 17946.7,
+    "high": 18003.1,
+    "low": 17885.8,
+    "close": 17908.4,
+    "nextContract": "202601",
+    "nextClose": 17926.2,
+    "foreignNetOi": 275829,
+    "pcrOi": 107.2
+   },
+   {
+    "date": "2025-12-15",
+    "contract": "202512",
+    "open": 17804.2,
+    "high": 18061,
+    "low": 17735.9,
+    "close": 18002.6,
+    "nextContract": "202601",
+    "nextClose": 18012.8,
+    "foreignNetOi": 272099,
+    "pcrOi": 91.6
+   },
+   {
+    "date": "2025-12-16",
+    "contract": "202512",
+    "open": 17929.8,
+    "high": 18125.4,
+    "low": 17918.3,
+    "close": 18101,
+    "nextContract": "202601",
+    "nextClose": 18116.2,
+    "foreignNetOi": 269820,
+    "pcrOi": 108.9
+   },
+   {
+    "date": "2025-12-17",
+    "contract": "202512",
+    "open": 18090.2,
+    "high": 18098.4,
+    "low": 17951.5,
+    "close": 17966,
+    "nextContract": "202601",
+    "nextClose": 17984.3,
+    "foreignNetOi": 265285,
+    "pcrOi": 100.1
+   },
+   {
+    "date": "2025-12-18",
+    "contract": "202512",
+    "open": 18075.5,
+    "high": 18124,
+    "low": 17866.4,
+    "close": 17925,
+    "nextContract": "202601",
+    "nextClose": 17945.1,
+    "foreignNetOi": 259056,
+    "pcrOi": 111.3
+   },
+   {
+    "date": "2025-12-19",
+    "contract": "202512",
+    "open": 17918,
+    "high": 17979.6,
+    "low": 17363.7,
+    "close": 17406.5,
+    "nextContract": "202601",
+    "nextClose": 17419.6,
+    "foreignNetOi": 254098,
+    "pcrOi": 109.6
+   },
+   {
+    "date": "2025-12-22",
+    "contract": "202601",
+    "open": 17409.2,
+    "high": 17440.1,
+    "low": 17081.7,
+    "close": 17085.1,
+    "nextContract": "202602",
+    "nextClose": 17102.4,
+    "foreignNetOi": 250565,
+    "pcrOi": 116.6
+   },
+   {
+    "date": "2025-12-23",
+    "contract": "202601",
+    "open": 17038.9,
+    "high": 17065.8,
+    "low": 16956.9,
+    "close": 16993.8,
+    "nextContract": "202602",
+    "nextClose": 17004,
+    "foreignNetOi": 245655,
+    "pcrOi": 116.7
+   },
+   {
+    "date": "2025-12-24",
+    "contract": "202601",
+    "open": 17023.6,
+    "high": 17088.6,
+    "low": 16837.6,
+    "close": 16893.5,
+    "nextContract": "202602",
+    "nextClose": 16907.7,
+    "foreignNetOi": 241795,
+    "pcrOi": 122.1
+   },
+   {
+    "date": "2025-12-25",
+    "contract": "202601",
+    "open": 16910.6,
+    "high": 16961.3,
+    "low": 16731.5,
+    "close": 16734.4,
+    "nextContract": "202602",
+    "nextClose": 16747.4,
+    "foreignNetOi": 237429,
+    "pcrOi": 98.7
+   },
+   {
+    "date": "2025-12-26",
+    "contract": "202601",
+    "open": 16757.9,
+    "high": 16869.2,
+    "low": 16733.4,
+    "close": 16823.2,
+    "nextContract": "202602",
+    "nextClose": 16842.3,
+    "foreignNetOi": 232856,
+    "pcrOi": 107.1
+   },
+   {
+    "date": "2025-12-29",
+    "contract": "202601",
+    "open": 16825,
+    "high": 16865.5,
+    "low": 16673.5,
+    "close": 16713.4,
+    "nextContract": "202602",
+    "nextClose": 16732.2,
+    "foreignNetOi": 227007,
+    "pcrOi": 81.4
+   },
+   {
+    "date": "2025-12-30",
+    "contract": "202601",
+    "open": 16714.7,
+    "high": 16757.4,
+    "low": 16692.4,
+    "close": 16750.6,
+    "nextContract": "202602",
+    "nextClose": 16777.4,
+    "foreignNetOi": 220391,
+    "pcrOi": 98.9
+   },
+   {
+    "date": "2025-12-31",
+    "contract": "202601",
+    "open": 16713.2,
+    "high": 16760.9,
+    "low": 16594.9,
+    "close": 16660.3,
+    "nextContract": "202602",
+    "nextClose": 16683.2,
+    "foreignNetOi": 215480,
+    "pcrOi": 117.7
+   },
+   {
+    "date": "2026-01-01",
+    "contract": "202601",
+    "open": 16637.3,
+    "high": 16719.7,
+    "low": 16604.7,
+    "close": 16680.8,
+    "nextContract": "202602",
+    "nextClose": 16687.1,
+    "foreignNetOi": 206961,
+    "pcrOi": 113.9
+   },
+   {
+    "date": "2026-01-02",
+    "contract": "202601",
+    "open": 16680.1,
+    "high": 16779.8,
+    "low": 16620.2,
+    "close": 16725.8,
+    "nextContract": "202602",
+    "nextClose": 16740.8,
+    "foreignNetOi": 202721,
+    "pcrOi": 112.4
+   },
+   {
+    "date": "2026-01-05",
+    "contract": "202601",
+    "open": 16733.5,
+    "high": 16797.4,
+    "low": 16653.6,
+    "close": 16675.3,
+    "nextContract": "202602",
+    "nextClose": 16681.5,
+    "foreignNetOi": 197274,
+    "pcrOi": 97.8
+   },
+   {
+    "date": "2026-01-06",
+    "contract": "202601",
+    "open": 16582.5,
+    "high": 16583,
+    "low": 16421,
+    "close": 16474.8,
+    "nextContract": "202602",
+    "nextClose": 16489.5,
+    "foreignNetOi": 193323,
+    "pcrOi": 87.2
+   },
+   {
+    "date": "2026-01-07",
+    "contract": "202601",
+    "open": 16551.2,
+    "high": 16667.6,
+    "low": 16543.4,
+    "close": 16602.4,
+    "nextContract": "202602",
+    "nextClose": 16627.9,
+    "foreignNetOi": 188718,
+    "pcrOi": 109
+   },
+   {
+    "date": "2026-01-08",
+    "contract": "202601",
+    "open": 16547.3,
+    "high": 16567,
+    "low": 16318.7,
+    "close": 16331,
+    "nextContract": "202602",
+    "nextClose": 16351,
+    "foreignNetOi": 185743,
+    "pcrOi": 130.8
+   },
+   {
+    "date": "2026-01-09",
+    "contract": "202601",
+    "open": 16208.5,
+    "high": 16227.4,
+    "low": 15911.5,
+    "close": 15932.9,
+    "nextContract": "202602",
+    "nextClose": 15945.3,
+    "foreignNetOi": 182552,
+    "pcrOi": 87.3
+   },
+   {
+    "date": "2026-01-12",
+    "contract": "202601",
+    "open": 15805.7,
+    "high": 15833.3,
+    "low": 15753.7,
+    "close": 15759.1,
+    "nextContract": "202602",
+    "nextClose": 15782.5,
+    "foreignNetOi": 174840,
+    "pcrOi": 92.6
+   },
+   {
+    "date": "2026-01-13",
+    "contract": "202601",
+    "open": 15874.9,
+    "high": 15998.8,
+    "low": 15844.4,
+    "close": 15960.1,
+    "nextContract": "202602",
+    "nextClose": 15973.3,
+    "foreignNetOi": 169395,
+    "pcrOi": 112.7
+   },
+   {
+    "date": "2026-01-14",
+    "contract": "202601",
+    "open": 15934.9,
+    "high": 16020.3,
+    "low": 15896.6,
+    "close": 16012.8,
+    "nextContract": "202602",
+    "nextClose": 16039.4,
+    "foreignNetOi": 162568,
+    "pcrOi": 131.1
+   },
+   {
+    "date": "2026-01-15",
+    "contract": "202601",
+    "open": 15997.7,
+    "high": 16047,
+    "low": 15825.8,
+    "close": 15827.1,
+    "nextContract": "202602",
+    "nextClose": 15840.9,
+    "foreignNetOi": 157958,
+    "pcrOi": 120.1
+   },
+   {
+    "date": "2026-01-16",
+    "contract": "202601",
+    "open": 15861.8,
+    "high": 15923.3,
+    "low": 15819.4,
+    "close": 15886.9,
+    "nextContract": "202602",
+    "nextClose": 15903.7,
+    "foreignNetOi": 152035,
+    "pcrOi": 119.1
+   },
+   {
+    "date": "2026-01-19",
+    "contract": "202601",
+    "open": 15876,
+    "high": 16035.2,
+    "low": 15850.8,
+    "close": 16000.7,
+    "nextContract": "202602",
+    "nextClose": 16015.9,
+    "foreignNetOi": 148377,
+    "pcrOi": 106.7
+   },
+   {
+    "date": "2026-01-20",
+    "contract": "202602",
+    "open": 16026,
+    "high": 16093.5,
+    "low": 15980.2,
+    "close": 16085.3,
+    "nextContract": "202603",
+    "nextClose": 16098.7,
+    "foreignNetOi": 143778,
+    "pcrOi": 95.6
+   },
+   {
+    "date": "2026-01-21",
+    "contract": "202602",
+    "open": 16126,
+    "high": 16180.2,
+    "low": 16077.8,
+    "close": 16168,
+    "nextContract": "202603",
+    "nextClose": 16179.2,
+    "foreignNetOi": 139379,
+    "pcrOi": 110.6
+   },
+   {
+    "date": "2026-01-22",
+    "contract": "202602",
+    "open": 16136.3,
+    "high": 16182.7,
+    "low": 16029.6,
+    "close": 16050.7,
+    "nextContract": "202603",
+    "nextClose": 16062.7,
+    "foreignNetOi": 135655,
+    "pcrOi": 121.2
+   },
+   {
+    "date": "2026-01-23",
+    "contract": "202602",
+    "open": 16079.8,
+    "high": 16093.4,
+    "low": 16006.6,
+    "close": 16060.9,
+    "nextContract": "202603",
+    "nextClose": 16066.4,
+    "foreignNetOi": 129997,
+    "pcrOi": 112.7
+   },
+   {
+    "date": "2026-01-26",
+    "contract": "202602",
+    "open": 16073.5,
+    "high": 16095.5,
+    "low": 15926.3,
+    "close": 15942.3,
+    "nextContract": "202603",
+    "nextClose": 15970.8,
+    "foreignNetOi": 123783,
+    "pcrOi": 118.1
+   },
+   {
+    "date": "2026-01-27",
+    "contract": "202602",
+    "open": 15933.9,
+    "high": 16035.4,
+    "low": 15886.4,
+    "close": 16024.5,
+    "nextContract": "202603",
+    "nextClose": 16040.4,
+    "foreignNetOi": 117966,
+    "pcrOi": 129.7
+   },
+   {
+    "date": "2026-01-28",
+    "contract": "202602",
+    "open": 16016.9,
+    "high": 16070.3,
+    "low": 15899.2,
+    "close": 15936.6,
+    "nextContract": "202603",
+    "nextClose": 15955.3,
+    "foreignNetOi": 112926,
+    "pcrOi": 124
+   },
+   {
+    "date": "2026-01-29",
+    "contract": "202602",
+    "open": 15877.5,
+    "high": 15984.8,
+    "low": 15838,
+    "close": 15960.9,
+    "nextContract": "202603",
+    "nextClose": 15971.8,
+    "foreignNetOi": 107102,
+    "pcrOi": 128
+   },
+   {
+    "date": "2026-01-30",
+    "contract": "202602",
+    "open": 15950.3,
+    "high": 16013,
+    "low": 15877.9,
+    "close": 15924.4,
+    "nextContract": "202603",
+    "nextClose": 15938.8,
+    "foreignNetOi": 105064,
+    "pcrOi": 102.9
+   },
+   {
+    "date": "2026-02-02",
+    "contract": "202602",
+    "open": 15881.3,
+    "high": 16032.2,
+    "low": 15859.8,
+    "close": 15996.6,
+    "nextContract": "202603",
+    "nextClose": 16004.7,
+    "foreignNetOi": 99162,
+    "pcrOi": 102.4
+   },
+   {
+    "date": "2026-02-03",
+    "contract": "202602",
+    "open": 15964.1,
+    "high": 15984.2,
+    "low": 15635.8,
+    "close": 15671,
+    "nextContract": "202603",
+    "nextClose": 15690.9,
+    "foreignNetOi": 95488,
+    "pcrOi": 98.9
+   },
+   {
+    "date": "2026-02-04",
+    "contract": "202602",
+    "open": 15658.1,
+    "high": 15698.4,
+    "low": 15513.8,
+    "close": 15540.8,
+    "nextContract": "202603",
+    "nextClose": 15559.3,
+    "foreignNetOi": 91885,
+    "pcrOi": 120.4
+   },
+   {
+    "date": "2026-02-05",
+    "contract": "202602",
+    "open": 15525.7,
+    "high": 15765.4,
+    "low": 15503.1,
+    "close": 15744.7,
+    "nextContract": "202603",
+    "nextClose": 15760.8,
+    "foreignNetOi": 85002,
+    "pcrOi": 109.1
+   },
+   {
+    "date": "2026-02-06",
+    "contract": "202602",
+    "open": 15856.3,
+    "high": 15919.6,
+    "low": 15733.3,
+    "close": 15777.2,
+    "nextContract": "202603",
+    "nextClose": 15785.9,
+    "foreignNetOi": 78965,
+    "pcrOi": 101.4
+   },
+   {
+    "date": "2026-02-09",
+    "contract": "202602",
+    "open": 15816.9,
+    "high": 16144.7,
+    "low": 15812.4,
+    "close": 16130.6,
+    "nextContract": "202603",
+    "nextClose": 16147.7,
+    "foreignNetOi": 72558,
+    "pcrOi": 113.3
+   },
+   {
+    "date": "2026-02-10",
+    "contract": "202602",
+    "open": 16245.1,
+    "high": 16263.6,
+    "low": 16139.1,
+    "close": 16190.8,
+    "nextContract": "202603",
+    "nextClose": 16202.3,
+    "foreignNetOi": 70272,
+    "pcrOi": 120.9
+   },
+   {
+    "date": "2026-02-11",
+    "contract": "202602",
+    "open": 16146.2,
+    "high": 16213.9,
+    "low": 16109.7,
+    "close": 16171.2,
+    "nextContract": "202603",
+    "nextClose": 16188.3,
+    "foreignNetOi": 66751,
+    "pcrOi": 96.6
+   },
+   {
+    "date": "2026-02-12",
+    "contract": "202602",
+    "open": 16218.1,
+    "high": 16239.2,
+    "low": 16098.4,
+    "close": 16115.9,
+    "nextContract": "202603",
+    "nextClose": 16139.1,
+    "foreignNetOi": 61617,
+    "pcrOi": 98.8
+   },
+   {
+    "date": "2026-02-13",
+    "contract": "202602",
+    "open": 16155.4,
+    "high": 16167.5,
+    "low": 16031.3,
+    "close": 16091.1,
+    "nextContract": "202603",
+    "nextClose": 16104.9,
+    "foreignNetOi": 55524,
+    "pcrOi": 109.2
+   },
+   {
+    "date": "2026-02-16",
+    "contract": "202602",
+    "open": 16133.5,
+    "high": 16308.2,
+    "low": 16127.4,
+    "close": 16293.3,
+    "nextContract": "202603",
+    "nextClose": 16305.4,
+    "foreignNetOi": 50284,
+    "pcrOi": 107.1
+   },
+   {
+    "date": "2026-02-17",
+    "contract": "202602",
+    "open": 16288.7,
+    "high": 16416.9,
+    "low": 16227.4,
+    "close": 16414.4,
+    "nextContract": "202603",
+    "nextClose": 16423.8,
+    "foreignNetOi": 46304,
+    "pcrOi": 123.2
+   },
+   {
+    "date": "2026-02-18",
+    "contract": "202603",
+    "open": 16464.5,
+    "high": 16502,
+    "low": 16178.6,
+    "close": 16238.4,
+    "nextContract": "202604",
+    "nextClose": 16258.5,
+    "foreignNetOi": 43145,
+    "pcrOi": 140.3
+   },
+   {
+    "date": "2026-02-19",
+    "contract": "202603",
+    "open": 16236.6,
+    "high": 16410,
+    "low": 16207.6,
+    "close": 16361,
+    "nextContract": "202604",
+    "nextClose": 16373.3,
+    "foreignNetOi": 36561,
+    "pcrOi": 122.6
+   },
+   {
+    "date": "2026-02-20",
+    "contract": "202603",
+    "open": 16379.2,
+    "high": 16656.5,
+    "low": 16330.1,
+    "close": 16630.5,
+    "nextContract": "202604",
+    "nextClose": 16649.6,
+    "foreignNetOi": 33055,
+    "pcrOi": 114.9
+   },
+   {
+    "date": "2026-02-23",
+    "contract": "202603",
+    "open": 16700.9,
+    "high": 16761.8,
+    "low": 16681.2,
+    "close": 16726,
+    "nextContract": "202604",
+    "nextClose": 16741.6,
+    "foreignNetOi": 27822,
+    "pcrOi": 127.2
+   },
+   {
+    "date": "2026-02-24",
+    "contract": "202603",
+    "open": 16731.6,
+    "high": 16864.5,
+    "low": 16707.5,
+    "close": 16810.3,
+    "nextContract": "202604",
+    "nextClose": 16829.6,
+    "foreignNetOi": 23637,
+    "pcrOi": 102.5
+   },
+   {
+    "date": "2026-02-25",
+    "contract": "202603",
+    "open": 16771.9,
+    "high": 16899.1,
+    "low": 16723.1,
+    "close": 16877.1,
+    "nextContract": "202604",
+    "nextClose": 16900.3,
+    "foreignNetOi": 18114,
+    "pcrOi": 111.5
+   },
+   {
+    "date": "2026-02-26",
+    "contract": "202603",
+    "open": 16983.5,
+    "high": 17004.3,
+    "low": 16872.3,
+    "close": 16937.9,
+    "nextContract": "202604",
+    "nextClose": 16950.4,
+    "foreignNetOi": 14925,
+    "pcrOi": 94
+   },
+   {
+    "date": "2026-02-27",
+    "contract": "202603",
+    "open": 17029,
+    "high": 17070.5,
+    "low": 16730.9,
+    "close": 16781.4,
+    "nextContract": "202604",
+    "nextClose": 16811.9,
+    "foreignNetOi": 11724,
+    "pcrOi": 118.5
+   },
+   {
+    "date": "2026-03-02",
+    "contract": "202603",
+    "open": 16810.6,
+    "high": 16848.6,
+    "low": 16668.4,
+    "close": 16689.5,
+    "nextContract": "202604",
+    "nextClose": 16700.6,
+    "foreignNetOi": 12660,
+    "pcrOi": 107.2
+   },
+   {
+    "date": "2026-03-03",
+    "contract": "202603",
+    "open": 16749.8,
+    "high": 16764.6,
+    "low": 16695.6,
+    "close": 16737.9,
+    "nextContract": "202604",
+    "nextClose": 16754.1,
+    "foreignNetOi": 12523,
+    "pcrOi": 108.5
+   },
+   {
+    "date": "2026-03-04",
+    "contract": "202603",
+    "open": 16659.1,
+    "high": 16813.8,
+    "low": 16645.8,
+    "close": 16792.8,
+    "nextContract": "202604",
+    "nextClose": 16807.2,
+    "foreignNetOi": 12484,
+    "pcrOi": 107.5
+   },
+   {
+    "date": "2026-03-05",
+    "contract": "202603",
+    "open": 16794.2,
+    "high": 16829.4,
+    "low": 16686.7,
+    "close": 16749.4,
+    "nextContract": "202604",
+    "nextClose": 16766.8,
+    "foreignNetOi": 11798,
+    "pcrOi": 111.6
+   },
+   {
+    "date": "2026-03-06",
+    "contract": "202603",
+    "open": 16783,
+    "high": 16922.9,
+    "low": 16740.7,
+    "close": 16863.4,
+    "nextContract": "202604",
+    "nextClose": 16876.4,
+    "foreignNetOi": 11843,
+    "pcrOi": 111.9
+   },
+   {
+    "date": "2026-03-09",
+    "contract": "202603",
+    "open": 16762.5,
+    "high": 16810.8,
+    "low": 16583.5,
+    "close": 16635.9,
+    "nextContract": "202604",
+    "nextClose": 16649.8,
+    "foreignNetOi": 11636,
+    "pcrOi": 112.6
+   },
+   {
+    "date": "2026-03-10",
+    "contract": "202603",
+    "open": 16590.2,
+    "high": 17005.1,
+    "low": 16575,
+    "close": 16955.1,
+    "nextContract": "202604",
+    "nextClose": 16975.1,
+    "foreignNetOi": 10747,
+    "pcrOi": 94.2
+   },
+   {
+    "date": "2026-03-11",
+    "contract": "202603",
+    "open": 16972.4,
+    "high": 17013,
+    "low": 16663.3,
+    "close": 16698.6,
+    "nextContract": "202604",
+    "nextClose": 16727.2,
+    "foreignNetOi": 11284,
+    "pcrOi": 134.3
+   },
+   {
+    "date": "2026-03-12",
+    "contract": "202603",
+    "open": 16695.7,
+    "high": 16764.7,
+    "low": 16652.9,
+    "close": 16741.1,
+    "nextContract": "202604",
+    "nextClose": 16753.8,
+    "foreignNetOi": 9721,
+    "pcrOi": 98.2
+   },
+   {
+    "date": "2026-03-13",
+    "contract": "202603",
+    "open": 16653,
+    "high": 16850.5,
+    "low": 16651.8,
+    "close": 16806.4,
+    "nextContract": "202604",
+    "nextClose": 16830.7,
+    "foreignNetOi": 12837,
+    "pcrOi": 105.6
+   },
+   {
+    "date": "2026-03-16",
+    "contract": "202603",
+    "open": 16870.9,
+    "high": 16990.8,
+    "low": 16823.1,
+    "close": 16975.5,
+    "nextContract": "202604",
+    "nextClose": 16996.7,
+    "foreignNetOi": 11579,
+    "pcrOi": 115.6
+   },
+   {
+    "date": "2026-03-17",
+    "contract": "202603",
+    "open": 16944.7,
+    "high": 17231.2,
+    "low": 16909,
+    "close": 17165.9,
+    "nextContract": "202604",
+    "nextClose": 17177.8,
+    "foreignNetOi": 11585,
+    "pcrOi": 135.9
+   },
+   {
+    "date": "2026-03-18",
+    "contract": "202603",
+    "open": 17027.3,
+    "high": 17068.5,
+    "low": 16968.6,
+    "close": 17008.3,
+    "nextContract": "202604",
+    "nextClose": 17026.7,
+    "foreignNetOi": 8517,
+    "pcrOi": 96.2
+   },
+   {
+    "date": "2026-03-19",
+    "contract": "202604",
+    "open": 16974.7,
+    "high": 17023.8,
+    "low": 16885.9,
+    "close": 16921.6,
+    "nextContract": "202605",
+    "nextClose": 16944.4,
+    "foreignNetOi": 11640,
+    "pcrOi": 89.3
+   },
+   {
+    "date": "2026-03-20",
+    "contract": "202604",
+    "open": 16998.6,
+    "high": 17189.9,
+    "low": 16990.8,
+    "close": 17126.9,
+    "nextContract": "202605",
+    "nextClose": 17141.4,
+    "foreignNetOi": 9522,
+    "pcrOi": 102.4
+   },
+   {
+    "date": "2026-03-23",
+    "contract": "202604",
+    "open": 17052,
+    "high": 17140,
+    "low": 17013.8,
+    "close": 17075,
+    "nextContract": "202605",
+    "nextClose": 17083.8,
+    "foreignNetOi": 11327,
+    "pcrOi": 115.4
+   },
+   {
+    "date": "2026-03-24",
+    "contract": "202604",
+    "open": 17054.2,
+    "high": 17095.4,
+    "low": 16919.7,
+    "close": 16948.8,
+    "nextContract": "202605",
+    "nextClose": 16970.6,
+    "foreignNetOi": 13281,
+    "pcrOi": 94.5
+   },
+   {
+    "date": "2026-03-25",
+    "contract": "202604",
+    "open": 16982,
+    "high": 16991.4,
+    "low": 16878.9,
+    "close": 16902.8,
+    "nextContract": "202605",
+    "nextClose": 16919.4,
+    "foreignNetOi": 12959,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2026-03-26",
+    "contract": "202604",
+    "open": 16921.6,
+    "high": 16965.3,
+    "low": 16863.6,
+    "close": 16888.5,
+    "nextContract": "202605",
+    "nextClose": 16915.5,
+    "foreignNetOi": 11435,
+    "pcrOi": 107.7
+   },
+   {
+    "date": "2026-03-27",
+    "contract": "202604",
+    "open": 16831.8,
+    "high": 16849.3,
+    "low": 16628.3,
+    "close": 16667.1,
+    "nextContract": "202605",
+    "nextClose": 16683.8,
+    "foreignNetOi": 11842,
+    "pcrOi": 110.8
+   },
+   {
+    "date": "2026-03-30",
+    "contract": "202604",
+    "open": 16651.3,
+    "high": 16655.7,
+    "low": 16505.7,
+    "close": 16541.2,
+    "nextContract": "202605",
+    "nextClose": 16546.1,
+    "foreignNetOi": 11496,
+    "pcrOi": 107.9
+   },
+   {
+    "date": "2026-03-31",
+    "contract": "202604",
+    "open": 16518.7,
+    "high": 16542.7,
+    "low": 16368.9,
+    "close": 16430.7,
+    "nextContract": "202605",
+    "nextClose": 16440.8,
+    "foreignNetOi": 10248,
+    "pcrOi": 117.1
+   },
+   {
+    "date": "2026-04-01",
+    "contract": "202604",
+    "open": 16505.1,
+    "high": 16556.8,
+    "low": 16474.4,
+    "close": 16550.5,
+    "nextContract": "202605",
+    "nextClose": 16574.8,
+    "foreignNetOi": 11370,
+    "pcrOi": 111.5
+   },
+   {
+    "date": "2026-04-02",
+    "contract": "202604",
+    "open": 16645.4,
+    "high": 16734.1,
+    "low": 16596.8,
+    "close": 16720.6,
+    "nextContract": "202605",
+    "nextClose": 16739,
+    "foreignNetOi": 11768,
+    "pcrOi": 108.7
+   },
+   {
+    "date": "2026-04-03",
+    "contract": "202604",
+    "open": 16690.7,
+    "high": 16731.9,
+    "low": 16589.6,
+    "close": 16651.8,
+    "nextContract": "202605",
+    "nextClose": 16663.9,
+    "foreignNetOi": 10535,
+    "pcrOi": 104.7
+   },
+   {
+    "date": "2026-04-06",
+    "contract": "202604",
+    "open": 16687.3,
+    "high": 16704.7,
+    "low": 16472.5,
+    "close": 16474.7,
+    "nextContract": "202605",
+    "nextClose": 16489.3,
+    "foreignNetOi": 12057,
+    "pcrOi": 99.2
+   },
+   {
+    "date": "2026-04-07",
+    "contract": "202604",
+    "open": 16543.6,
+    "high": 16592.3,
+    "low": 16426.6,
+    "close": 16475.2,
+    "nextContract": "202605",
+    "nextClose": 16492.4,
+    "foreignNetOi": 11433,
+    "pcrOi": 109.1
+   },
+   {
+    "date": "2026-04-08",
+    "contract": "202604",
+    "open": 16456,
+    "high": 16564.7,
+    "low": 16429,
+    "close": 16561,
+    "nextContract": "202605",
+    "nextClose": 16573.4,
+    "foreignNetOi": 10966,
+    "pcrOi": 110
+   },
+   {
+    "date": "2026-04-09",
+    "contract": "202604",
+    "open": 16571.6,
+    "high": 16581.3,
+    "low": 16367.7,
+    "close": 16406.3,
+    "nextContract": "202605",
+    "nextClose": 16430.7,
+    "foreignNetOi": 10328,
+    "pcrOi": 102.9
+   },
+   {
+    "date": "2026-04-10",
+    "contract": "202604",
+    "open": 16334.6,
+    "high": 16376.5,
+    "low": 16059,
+    "close": 16107.9,
+    "nextContract": "202605",
+    "nextClose": 16117.2,
+    "foreignNetOi": 10641,
+    "pcrOi": 107.5
+   },
+   {
+    "date": "2026-04-13",
+    "contract": "202604",
+    "open": 16108.2,
+    "high": 16131.3,
+    "low": 16057.5,
+    "close": 16084.2,
+    "nextContract": "202605",
+    "nextClose": 16095.2,
+    "foreignNetOi": 13706,
+    "pcrOi": 96.7
+   },
+   {
+    "date": "2026-04-14",
+    "contract": "202604",
+    "open": 16107.2,
+    "high": 16131.4,
+    "low": 16008,
+    "close": 16057.6,
+    "nextContract": "202605",
+    "nextClose": 16071.5,
+    "foreignNetOi": 13061,
+    "pcrOi": 86.4
+   },
+   {
+    "date": "2026-04-15",
+    "contract": "202604",
+    "open": 16012.5,
+    "high": 16128.5,
+    "low": 15979.3,
+    "close": 16111.2,
+    "nextContract": "202605",
+    "nextClose": 16125.3,
+    "foreignNetOi": 11319,
+    "pcrOi": 102.5
+   },
+   {
+    "date": "2026-04-16",
+    "contract": "202604",
+    "open": 16091.5,
+    "high": 16127.5,
+    "low": 15894.4,
+    "close": 15927,
+    "nextContract": "202605",
+    "nextClose": 15941.5,
+    "foreignNetOi": 11278,
+    "pcrOi": 132
+   },
+   {
+    "date": "2026-04-17",
+    "contract": "202605",
+    "open": 15867.1,
+    "high": 15940.3,
+    "low": 15820.3,
+    "close": 15888.5,
+    "nextContract": "202606",
+    "nextClose": 15912.7,
+    "foreignNetOi": 13094,
+    "pcrOi": 106.4
+   },
+   {
+    "date": "2026-04-20",
+    "contract": "202605",
+    "open": 15954,
+    "high": 16012.8,
+    "low": 15822.9,
+    "close": 15864,
+    "nextContract": "202606",
+    "nextClose": 15875.3,
+    "foreignNetOi": 12746,
+    "pcrOi": 96.2
+   },
+   {
+    "date": "2026-04-21",
+    "contract": "202605",
+    "open": 15904.3,
+    "high": 15964.9,
+    "low": 15803.1,
+    "close": 15805.7,
+    "nextContract": "202606",
+    "nextClose": 15814.2,
+    "foreignNetOi": 12393,
+    "pcrOi": 105.9
+   },
+   {
+    "date": "2026-04-22",
+    "contract": "202605",
+    "open": 15830.6,
+    "high": 15966.3,
+    "low": 15791,
+    "close": 15963.2,
+    "nextContract": "202606",
+    "nextClose": 15975.3,
+    "foreignNetOi": 14081,
+    "pcrOi": 93.8
+   },
+   {
+    "date": "2026-04-23",
+    "contract": "202605",
+    "open": 15967.6,
+    "high": 16020.1,
+    "low": 15947.8,
+    "close": 16009.9,
+    "nextContract": "202606",
+    "nextClose": 16020.6,
+    "foreignNetOi": 13651,
+    "pcrOi": 100.8
+   },
+   {
+    "date": "2026-04-24",
+    "contract": "202605",
+    "open": 15960.7,
+    "high": 16021.8,
+    "low": 15797.9,
+    "close": 15811.4,
+    "nextContract": "202606",
+    "nextClose": 15831,
+    "foreignNetOi": 15039,
+    "pcrOi": 113.7
+   },
+   {
+    "date": "2026-04-27",
+    "contract": "202605",
+    "open": 15733.3,
+    "high": 15734.5,
+    "low": 15468.6,
+    "close": 15496.6,
+    "nextContract": "202606",
+    "nextClose": 15506.1,
+    "foreignNetOi": 15921,
+    "pcrOi": 91.6
+   },
+   {
+    "date": "2026-04-28",
+    "contract": "202605",
+    "open": 15363.3,
+    "high": 15418,
+    "low": 15229.4,
+    "close": 15248.7,
+    "nextContract": "202606",
+    "nextClose": 15259.3,
+    "foreignNetOi": 18292,
+    "pcrOi": 129.4
+   },
+   {
+    "date": "2026-04-29",
+    "contract": "202605",
+    "open": 15277.3,
+    "high": 15329.9,
+    "low": 15228.7,
+    "close": 15312.5,
+    "nextContract": "202606",
+    "nextClose": 15332.5,
+    "foreignNetOi": 16482,
+    "pcrOi": 122.2
+   },
+   {
+    "date": "2026-04-30",
+    "contract": "202605",
+    "open": 15297.3,
+    "high": 15319,
+    "low": 15190.9,
+    "close": 15228.2,
+    "nextContract": "202606",
+    "nextClose": 15240.1,
+    "foreignNetOi": 19582,
+    "pcrOi": 105.5
+   },
+   {
+    "date": "2026-05-01",
+    "contract": "202605",
+    "open": 15268,
+    "high": 15292.5,
+    "low": 15202.9,
+    "close": 15239.4,
+    "nextContract": "202606",
+    "nextClose": 15257.9,
+    "foreignNetOi": 21410,
+    "pcrOi": 87.7
+   },
+   {
+    "date": "2026-05-04",
+    "contract": "202605",
+    "open": 15248.3,
+    "high": 15299.6,
+    "low": 15189.1,
+    "close": 15267.8,
+    "nextContract": "202606",
+    "nextClose": 15283.8,
+    "foreignNetOi": 22020,
+    "pcrOi": 106.1
+   },
+   {
+    "date": "2026-05-05",
+    "contract": "202605",
+    "open": 15242.6,
+    "high": 15270.7,
+    "low": 15172.2,
+    "close": 15224.6,
+    "nextContract": "202606",
+    "nextClose": 15241.7,
+    "foreignNetOi": 20459,
+    "pcrOi": 116.3
+   },
+   {
+    "date": "2026-05-06",
+    "contract": "202605",
+    "open": 15221.8,
+    "high": 15232.6,
+    "low": 15154.5,
+    "close": 15212,
+    "nextContract": "202606",
+    "nextClose": 15222.8,
+    "foreignNetOi": 19602,
+    "pcrOi": 117.2
+   },
+   {
+    "date": "2026-05-07",
+    "contract": "202605",
+    "open": 15094,
+    "high": 15235.1,
+    "low": 15035.8,
+    "close": 15218.9,
+    "nextContract": "202606",
+    "nextClose": 15232.9,
+    "foreignNetOi": 19125,
+    "pcrOi": 113.2
+   },
+   {
+    "date": "2026-05-08",
+    "contract": "202605",
+    "open": 15119.6,
+    "high": 15320.8,
+    "low": 15070.8,
+    "close": 15269,
+    "nextContract": "202606",
+    "nextClose": 15285.5,
+    "foreignNetOi": 20403,
+    "pcrOi": 117.5
+   },
+   {
+    "date": "2026-05-11",
+    "contract": "202605",
+    "open": 15267,
+    "high": 15419.2,
+    "low": 15261.3,
+    "close": 15389.1,
+    "nextContract": "202606",
+    "nextClose": 15403.9,
+    "foreignNetOi": 21634,
+    "pcrOi": 112.6
+   },
+   {
+    "date": "2026-05-12",
+    "contract": "202605",
+    "open": 15413.2,
+    "high": 15512.5,
+    "low": 15362.2,
+    "close": 15504.6,
+    "nextContract": "202606",
+    "nextClose": 15526.2,
+    "foreignNetOi": 22091,
+    "pcrOi": 127
+   },
+   {
+    "date": "2026-05-13",
+    "contract": "202605",
+    "open": 15479.5,
+    "high": 15508.3,
+    "low": 15402.6,
+    "close": 15410,
+    "nextContract": "202606",
+    "nextClose": 15434.2,
+    "foreignNetOi": 20257,
+    "pcrOi": 115.3
+   },
+   {
+    "date": "2026-05-14",
+    "contract": "202605",
+    "open": 15401.5,
+    "high": 15437.4,
+    "low": 15278.7,
+    "close": 15281.9,
+    "nextContract": "202606",
+    "nextClose": 15298.6,
+    "foreignNetOi": 21504,
+    "pcrOi": 98.2
+   },
+   {
+    "date": "2026-05-15",
+    "contract": "202605",
+    "open": 15306.1,
+    "high": 15426.5,
+    "low": 15292.5,
+    "close": 15384.4,
+    "nextContract": "202606",
+    "nextClose": 15396.6,
+    "foreignNetOi": 23213,
+    "pcrOi": 113
+   },
+   {
+    "date": "2026-05-18",
+    "contract": "202606",
+    "open": 15266.8,
+    "high": 15440.2,
+    "low": 15211.6,
+    "close": 15390.6,
+    "nextContract": "202607",
+    "nextClose": 15405.6,
+    "foreignNetOi": 24373,
+    "pcrOi": 99
+   },
+   {
+    "date": "2026-05-19",
+    "contract": "202606",
+    "open": 15404.9,
+    "high": 15419.2,
+    "low": 15354.7,
+    "close": 15389,
+    "nextContract": "202607",
+    "nextClose": 15402,
+    "foreignNetOi": 25476,
+    "pcrOi": 119.5
+   },
+   {
+    "date": "2026-05-20",
+    "contract": "202606",
+    "open": 15378,
+    "high": 15508.4,
+    "low": 15355.6,
+    "close": 15482.5,
+    "nextContract": "202607",
+    "nextClose": 15495.6,
+    "foreignNetOi": 27896,
+    "pcrOi": 98
+   },
+   {
+    "date": "2026-05-21",
+    "contract": "202606",
+    "open": 15504.3,
+    "high": 15530.6,
+    "low": 15385.3,
+    "close": 15440.8,
+    "nextContract": "202607",
+    "nextClose": 15455.8,
+    "foreignNetOi": 32655,
+    "pcrOi": 125.9
+   },
+   {
+    "date": "2026-05-22",
+    "contract": "202606",
+    "open": 15451.7,
+    "high": 15744.4,
+    "low": 15402.8,
+    "close": 15733.2,
+    "nextContract": "202607",
+    "nextClose": 15755.2,
+    "foreignNetOi": 36770,
+    "pcrOi": 103
+   },
+   {
+    "date": "2026-05-25",
+    "contract": "202606",
+    "open": 15710.2,
+    "high": 15808.4,
+    "low": 15657.3,
+    "close": 15806.7,
+    "nextContract": "202607",
+    "nextClose": 15824.7,
+    "foreignNetOi": 42324,
+    "pcrOi": 119.6
+   },
+   {
+    "date": "2026-05-26",
+    "contract": "202606",
+    "open": 15741.1,
+    "high": 15770.3,
+    "low": 15646.8,
+    "close": 15665.2,
+    "nextContract": "202607",
+    "nextClose": 15680.9,
+    "foreignNetOi": 45913,
+    "pcrOi": 92.3
+   },
+   {
+    "date": "2026-05-27",
+    "contract": "202606",
+    "open": 15659.2,
+    "high": 15755.2,
+    "low": 15642,
+    "close": 15721,
+    "nextContract": "202607",
+    "nextClose": 15731.1,
+    "foreignNetOi": 51916,
+    "pcrOi": 113.9
+   },
+   {
+    "date": "2026-05-28",
+    "contract": "202606",
+    "open": 15734.7,
+    "high": 16027.2,
+    "low": 15675.1,
+    "close": 15972.3,
+    "nextContract": "202607",
+    "nextClose": 15983.7,
+    "foreignNetOi": 56875,
+    "pcrOi": 98.2
+   },
+   {
+    "date": "2026-05-29",
+    "contract": "202606",
+    "open": 16036.5,
+    "high": 16167.8,
+    "low": 15978.4,
+    "close": 16113,
+    "nextContract": "202607",
+    "nextClose": 16127.4,
+    "foreignNetOi": 63278,
+    "pcrOi": 95.8
+   },
+   {
+    "date": "2026-06-01",
+    "contract": "202606",
+    "open": 16082,
+    "high": 16212.7,
+    "low": 16033,
+    "close": 16155.1,
+    "nextContract": "202607",
+    "nextClose": 16176.7,
+    "foreignNetOi": 70389,
+    "pcrOi": 110.9
+   },
+   {
+    "date": "2026-06-02",
+    "contract": "202606",
+    "open": 16177,
+    "high": 16207.9,
+    "low": 16154.1,
+    "close": 16200.6,
+    "nextContract": "202607",
+    "nextClose": 16218.6,
+    "foreignNetOi": 76002,
+    "pcrOi": 112.6
+   },
+   {
+    "date": "2026-06-03",
+    "contract": "202606",
+    "open": 16228.8,
+    "high": 16252.4,
+    "low": 16090.8,
+    "close": 16143.5,
+    "nextContract": "202607",
+    "nextClose": 16151,
+    "foreignNetOi": 80578,
+    "pcrOi": 76.7
+   },
+   {
+    "date": "2026-06-04",
+    "contract": "202606",
+    "open": 16194.3,
+    "high": 16366.8,
+    "low": 16192.9,
+    "close": 16361.2,
+    "nextContract": "202607",
+    "nextClose": 16375,
+    "foreignNetOi": 85597,
+    "pcrOi": 98.6
+   },
+   {
+    "date": "2026-06-05",
+    "contract": "202606",
+    "open": 16340.6,
+    "high": 16357.2,
+    "low": 16171.1,
+    "close": 16176.8,
+    "nextContract": "202607",
+    "nextClose": 16185,
+    "foreignNetOi": 90927,
+    "pcrOi": 112.8
+   },
+   {
+    "date": "2026-06-08",
+    "contract": "202606",
+    "open": 16154.2,
+    "high": 16184.1,
+    "low": 15995,
+    "close": 16030.1,
+    "nextContract": "202607",
+    "nextClose": 16053.5,
+    "foreignNetOi": 97136,
+    "pcrOi": 112.8
+   },
+   {
+    "date": "2026-06-09",
+    "contract": "202606",
+    "open": 16063.6,
+    "high": 16246.6,
+    "low": 16005.3,
+    "close": 16213.5,
+    "nextContract": "202607",
+    "nextClose": 16229.7,
+    "foreignNetOi": 105860,
+    "pcrOi": 106.1
+   },
+   {
+    "date": "2026-06-10",
+    "contract": "202606",
+    "open": 16229.8,
+    "high": 16345.1,
+    "low": 16169.4,
+    "close": 16323.4,
+    "nextContract": "202607",
+    "nextClose": 16333.7,
+    "foreignNetOi": 109871,
+    "pcrOi": 115.3
+   },
+   {
+    "date": "2026-06-11",
+    "contract": "202606",
+    "open": 16314.6,
+    "high": 16337.4,
+    "low": 16186.1,
+    "close": 16223.2,
+    "nextContract": "202607",
+    "nextClose": 16243.5,
+    "foreignNetOi": 116467,
+    "pcrOi": 117.3
+   },
+   {
+    "date": "2026-06-12",
+    "contract": "202606",
+    "open": 16250.2,
+    "high": 16296.8,
+    "low": 16112.3,
+    "close": 16131.8,
+    "nextContract": "202607",
+    "nextClose": 16136.8,
+    "foreignNetOi": 121736,
+    "pcrOi": 108.4
+   },
+   {
+    "date": "2026-06-15",
+    "contract": "202606",
+    "open": 16089.5,
+    "high": 16357.1,
+    "low": 16053.2,
+    "close": 16340.4,
+    "nextContract": "202607",
+    "nextClose": 16359.2,
+    "foreignNetOi": 126308,
+    "pcrOi": 121.6
+   },
+   {
+    "date": "2026-06-16",
+    "contract": "202607",
+    "open": 16434.6,
+    "high": 16478.8,
+    "low": 16190,
+    "close": 16223.3,
+    "nextContract": "202608",
+    "nextClose": 16241.2,
+    "foreignNetOi": 128725,
+    "pcrOi": 125.9
+   },
+   {
+    "date": "2026-06-17",
+    "contract": "202607",
+    "open": 16238.6,
+    "high": 16498.4,
+    "low": 16189.7,
+    "close": 16439.2,
+    "nextContract": "202608",
+    "nextClose": 16449.4,
+    "foreignNetOi": 133662,
+    "pcrOi": 110.1
+   },
+   {
+    "date": "2026-06-18",
+    "contract": "202607",
+    "open": 16457.9,
+    "high": 16671.2,
+    "low": 16405.1,
+    "close": 16654.1,
+    "nextContract": "202608",
+    "nextClose": 16663.6,
+    "foreignNetOi": 138019,
+    "pcrOi": 101
+   },
+   {
+    "date": "2026-06-19",
+    "contract": "202607",
+    "open": 16706.2,
+    "high": 16752.9,
+    "low": 16574.1,
+    "close": 16595.5,
+    "nextContract": "202608",
+    "nextClose": 16608.7,
+    "foreignNetOi": 141277,
+    "pcrOi": 107
+   },
+   {
+    "date": "2026-06-22",
+    "contract": "202607",
+    "open": 16575.3,
+    "high": 16901.2,
+    "low": 16556.8,
+    "close": 16875.7,
+    "nextContract": "202608",
+    "nextClose": 16890.5,
+    "foreignNetOi": 146895,
+    "pcrOi": 107.9
+   },
+   {
+    "date": "2026-06-23",
+    "contract": "202607",
+    "open": 16939.2,
+    "high": 17077.4,
+    "low": 16880.6,
+    "close": 17069.3,
+    "nextContract": "202608",
+    "nextClose": 17077.1,
+    "foreignNetOi": 152942,
+    "pcrOi": 130.6
+   },
+   {
+    "date": "2026-06-24",
+    "contract": "202607",
+    "open": 17060.5,
+    "high": 17160.2,
+    "low": 17043.1,
+    "close": 17122.2,
+    "nextContract": "202608",
+    "nextClose": 17138.5,
+    "foreignNetOi": 156815,
+    "pcrOi": 90.5
+   },
+   {
+    "date": "2026-06-25",
+    "contract": "202607",
+    "open": 17115.9,
+    "high": 17153,
+    "low": 16781.6,
+    "close": 16809.5,
+    "nextContract": "202608",
+    "nextClose": 16825.5,
+    "foreignNetOi": 161374,
+    "pcrOi": 80.3
+   },
+   {
+    "date": "2026-06-26",
+    "contract": "202607",
+    "open": 16725.3,
+    "high": 16812.3,
+    "low": 16683.4,
+    "close": 16789.3,
+    "nextContract": "202608",
+    "nextClose": 16805.7,
+    "foreignNetOi": 166357,
+    "pcrOi": 112.9
+   },
+   {
+    "date": "2026-06-29",
+    "contract": "202607",
+    "open": 16721.9,
+    "high": 16729.5,
+    "low": 16454.2,
+    "close": 16505.7,
+    "nextContract": "202608",
+    "nextClose": 16519.7,
+    "foreignNetOi": 172860,
+    "pcrOi": 108.4
+   },
+   {
+    "date": "2026-06-30",
+    "contract": "202607",
+    "open": 16561.8,
+    "high": 16702.2,
+    "low": 16539.1,
+    "close": 16683.5,
+    "nextContract": "202608",
+    "nextClose": 16699.1,
+    "foreignNetOi": 177152,
+    "pcrOi": 109.8
+   },
+   {
+    "date": "2026-07-01",
+    "contract": "202607",
+    "open": 16683.4,
+    "high": 16712,
+    "low": 16589.7,
+    "close": 16634.9,
+    "nextContract": "202608",
+    "nextClose": 16653.4,
+    "foreignNetOi": 182096,
+    "pcrOi": 96.9
+   },
+   {
+    "date": "2026-07-02",
+    "contract": "202607",
+    "open": 16608.9,
+    "high": 16639.5,
+    "low": 16481.7,
+    "close": 16510.2,
+    "nextContract": "202608",
+    "nextClose": 16532.7,
+    "foreignNetOi": 189921,
+    "pcrOi": 115.8
+   },
+   {
+    "date": "2026-07-03",
+    "contract": "202607",
+    "open": 16578.1,
+    "high": 16746.6,
+    "low": 16553,
+    "close": 16700.4,
+    "nextContract": "202608",
+    "nextClose": 16718.2,
+    "foreignNetOi": 193417,
+    "pcrOi": 130
+   },
+   {
+    "date": "2026-07-06",
+    "contract": "202607",
+    "open": 16687.6,
+    "high": 16725.1,
+    "low": 16285.9,
+    "close": 16330.6,
+    "nextContract": "202608",
+    "nextClose": 16347.3,
+    "foreignNetOi": 197757,
+    "pcrOi": 118.9
+   },
+   {
+    "date": "2026-07-07",
+    "contract": "202607",
+    "open": 16303.5,
+    "high": 16312.4,
+    "low": 16140.5,
+    "close": 16180.6,
+    "nextContract": "202608",
+    "nextClose": 16200.9,
+    "foreignNetOi": 202281,
+    "pcrOi": 103.1
+   },
+   {
+    "date": "2026-07-08",
+    "contract": "202607",
+    "open": 16179.8,
+    "high": 16354.5,
+    "low": 16132.4,
+    "close": 16337.6,
+    "nextContract": "202608",
+    "nextClose": 16353.6,
+    "foreignNetOi": 208556,
+    "pcrOi": 114.5
+   },
+   {
+    "date": "2026-07-09",
+    "contract": "202607",
+    "open": 16341.7,
+    "high": 16583.3,
+    "low": 16325.1,
+    "close": 16534.4,
+    "nextContract": "202608",
+    "nextClose": 16555.1,
+    "foreignNetOi": 213383,
+    "pcrOi": 100.9
+   },
+   {
+    "date": "2026-07-10",
+    "contract": "202607",
+    "open": 16661.9,
+    "high": 16675.7,
+    "low": 16564.3,
+    "close": 16590.5,
+    "nextContract": "202608",
+    "nextClose": 16606.4,
+    "foreignNetOi": 217839,
+    "pcrOi": 90.2
+   },
+   {
+    "date": "2026-07-13",
+    "contract": "202607",
+    "open": 16646.5,
+    "high": 16650.4,
+    "low": 16532.2,
+    "close": 16589.4,
+    "nextContract": "202608",
+    "nextClose": 16611.1,
+    "foreignNetOi": 224662,
+    "pcrOi": 118.2
+   },
+   {
+    "date": "2026-07-14",
+    "contract": "202607",
+    "open": 16547.5,
+    "high": 16547.6,
+    "low": 16460.6,
+    "close": 16507.5,
+    "nextContract": "202608",
+    "nextClose": 16516.6,
+    "foreignNetOi": 229398,
+    "pcrOi": 97.1
+   },
+   {
+    "date": "2026-07-15",
+    "contract": "202608",
+    "open": 16443.2,
+    "high": 16487.5,
+    "low": 16269.5,
+    "close": 16316.3,
+    "nextContract": "202609",
+    "nextClose": 16333.1,
+    "foreignNetOi": 234576,
+    "pcrOi": 117.2
+   },
+   {
+    "date": "2026-07-16",
+    "contract": "202608",
+    "open": 16324.6,
+    "high": 16329.2,
+    "low": 16136.9,
+    "close": 16140.6,
+    "nextContract": "202609",
+    "nextClose": 16148.2,
+    "foreignNetOi": 238691,
+    "pcrOi": 120.4
+   },
+   {
+    "date": "2026-07-17",
+    "contract": "202608",
+    "open": 16077.2,
+    "high": 16090.8,
+    "low": 15984.6,
+    "close": 16046.3,
+    "nextContract": "202609",
+    "nextClose": 16061,
+    "foreignNetOi": 243357,
+    "pcrOi": 114.4
+   },
+   {
+    "date": "2026-07-20",
+    "contract": "202608",
+    "open": 15967.1,
+    "high": 16101.3,
+    "low": 15908,
+    "close": 16062.8,
+    "nextContract": "202609",
+    "nextClose": 16080,
+    "foreignNetOi": 248008,
+    "pcrOi": 100.3
+   },
+   {
+    "date": "2026-07-21",
+    "contract": "202608",
+    "open": 16025.9,
+    "high": 16075.2,
+    "low": 15785.4,
+    "close": 15830.4,
+    "nextContract": "202609",
+    "nextClose": 15854.3,
+    "foreignNetOi": 255272,
+    "pcrOi": 108.4
+   },
+   {
+    "date": "2026-07-22",
+    "contract": "202608",
+    "open": 15868.4,
+    "high": 16141.5,
+    "low": 15844.7,
+    "close": 16100.1,
+    "nextContract": "202609",
+    "nextClose": 16123.3,
+    "foreignNetOi": 261189,
+    "pcrOi": 120.5
+   },
+   {
+    "date": "2026-07-23",
+    "contract": "202608",
+    "open": 16057.2,
+    "high": 16120.9,
+    "low": 15642.3,
+    "close": 15694.4,
+    "nextContract": "202609",
+    "nextClose": 15721.4,
+    "foreignNetOi": 264767,
+    "pcrOi": 123.1
+   },
+   {
+    "date": "2026-07-24",
+    "contract": "202608",
+    "open": 15700.6,
+    "high": 15818.7,
+    "low": 15698.9,
+    "close": 15774.3,
+    "nextContract": "202609",
+    "nextClose": 15790.6,
+    "foreignNetOi": 273908,
+    "pcrOi": 120.5
+   },
+   {
+    "date": "2026-07-27",
+    "contract": "202608",
+    "open": 15765.8,
+    "high": 15932.1,
+    "low": 15760,
+    "close": 15871.1,
+    "nextContract": "202609",
+    "nextClose": 15881.9,
+    "foreignNetOi": 276771,
+    "pcrOi": 124.8
+   },
+   {
+    "date": "2026-07-28",
+    "contract": "202608",
+    "open": 15797.2,
+    "high": 15874,
+    "low": 15763.7,
+    "close": 15841.3,
+    "nextContract": "202609",
+    "nextClose": 15852.8,
+    "foreignNetOi": 283683,
+    "pcrOi": 92.5
+   },
+   {
+    "date": "2026-07-29",
+    "contract": "202608",
+    "open": 15886.1,
+    "high": 16062.1,
+    "low": 15829.6,
+    "close": 16018.8,
+    "nextContract": "202609",
+    "nextClose": 16034.2,
+    "foreignNetOi": 287484,
+    "pcrOi": 137.5
+   },
+   {
+    "date": "2026-07-30",
+    "contract": "202608",
+    "open": 16028.3,
+    "high": 16125.2,
+    "low": 15983.9,
+    "close": 16079.3,
+    "nextContract": "202609",
+    "nextClose": 16091.9,
+    "foreignNetOi": 292788,
+    "pcrOi": 97.9
+   },
+   {
+    "date": "2026-07-31",
+    "contract": "202608",
+    "open": 16103.6,
+    "high": 16148.8,
+    "low": 15918.4,
+    "close": 15949.1,
+    "nextContract": "202609",
+    "nextClose": 15966.3,
+    "foreignNetOi": 296922,
+    "pcrOi": 119.3
+   },
+   {
+    "date": "2026-08-03",
+    "contract": "202608",
+    "open": 16026.9,
+    "high": 16357.9,
+    "low": 16003.4,
+    "close": 16321.3,
+    "nextContract": "202609",
+    "nextClose": 16335,
+    "foreignNetOi": 300343,
+    "pcrOi": 104.9
+   },
+   {
+    "date": "2026-08-04",
+    "contract": "202608",
+    "open": 16328.4,
+    "high": 16331.8,
+    "low": 16203.1,
+    "close": 16233.4,
+    "nextContract": "202609",
+    "nextClose": 16250.6,
+    "foreignNetOi": 305742,
+    "pcrOi": 129.4
+   },
+   {
+    "date": "2026-08-05",
+    "contract": "202608",
+    "open": 16180.1,
+    "high": 16236.1,
+    "low": 16113.4,
+    "close": 16144.7,
+    "nextContract": "202609",
+    "nextClose": 16154.2,
+    "foreignNetOi": 311782,
+    "pcrOi": 115.9
+   },
+   {
+    "date": "2026-08-06",
+    "contract": "202608",
+    "open": 16221.6,
+    "high": 16302.6,
+    "low": 16194.9,
+    "close": 16257,
+    "nextContract": "202609",
+    "nextClose": 16274.2,
+    "foreignNetOi": 316653,
+    "pcrOi": 119.9
+   },
+   {
+    "date": "2026-08-07",
+    "contract": "202608",
+    "open": 16229.6,
+    "high": 16272.7,
+    "low": 16178.1,
+    "close": 16187.9,
+    "nextContract": "202609",
+    "nextClose": 16203.8,
+    "foreignNetOi": 319234,
+    "pcrOi": 121.5
+   },
+   {
+    "date": "2026-08-10",
+    "contract": "202608",
+    "open": 16215.9,
+    "high": 16262.3,
+    "low": 16150.6,
+    "close": 16208.1,
+    "nextContract": "202609",
+    "nextClose": 16222.3,
+    "foreignNetOi": 322085,
+    "pcrOi": 103.3
+   },
+   {
+    "date": "2026-08-11",
+    "contract": "202608",
+    "open": 16211.6,
+    "high": 16238.5,
+    "low": 16162.9,
+    "close": 16170.2,
+    "nextContract": "202609",
+    "nextClose": 16180.2,
+    "foreignNetOi": 325397,
+    "pcrOi": 96.1
+   },
+   {
+    "date": "2026-08-12",
+    "contract": "202608",
+    "open": 16202.9,
+    "high": 16215.7,
+    "low": 15882.6,
+    "close": 15930,
+    "nextContract": "202609",
+    "nextClose": 15942.2,
+    "foreignNetOi": 332304,
+    "pcrOi": 113.9
+   },
+   {
+    "date": "2026-08-13",
+    "contract": "202609",
+    "open": 15913.2,
+    "high": 16020.5,
+    "low": 15881.5,
+    "close": 15970,
+    "nextContract": "202610",
+    "nextClose": 15982.9,
+    "foreignNetOi": 328150,
+    "pcrOi": 103.4
+   },
+   {
+    "date": "2026-08-14",
+    "contract": "202609",
+    "open": 15989.1,
+    "high": 16047.5,
+    "low": 15785.1,
+    "close": 15811.2,
+    "nextContract": "202610",
+    "nextClose": 15828.3,
+    "foreignNetOi": 324026,
+    "pcrOi": 96.7
+   },
+   {
+    "date": "2026-08-17",
+    "contract": "202609",
+    "open": 15778.5,
+    "high": 15804.9,
+    "low": 15553.3,
+    "close": 15555.3,
+    "nextContract": "202610",
+    "nextClose": 15572.7,
+    "foreignNetOi": 318436,
+    "pcrOi": 113.9
+   },
+   {
+    "date": "2026-08-18",
+    "contract": "202609",
+    "open": 15528,
+    "high": 15695.1,
+    "low": 15486.9,
+    "close": 15672.4,
+    "nextContract": "202610",
+    "nextClose": 15689,
+    "foreignNetOi": 313794,
+    "pcrOi": 93.7
+   },
+   {
+    "date": "2026-08-19",
+    "contract": "202609",
+    "open": 15644.2,
+    "high": 15740.9,
+    "low": 15606.7,
+    "close": 15728.4,
+    "nextContract": "202610",
+    "nextClose": 15743.1,
+    "foreignNetOi": 309262,
+    "pcrOi": 107
+   },
+   {
+    "date": "2026-08-20",
+    "contract": "202609",
+    "open": 15772.2,
+    "high": 15856.4,
+    "low": 15770.1,
+    "close": 15847.7,
+    "nextContract": "202610",
+    "nextClose": 15858.5,
+    "foreignNetOi": 303238,
+    "pcrOi": 96.2
+   },
+   {
+    "date": "2026-08-21",
+    "contract": "202609",
+    "open": 15847.6,
+    "high": 15894.8,
+    "low": 15745.1,
+    "close": 15789.9,
+    "nextContract": "202610",
+    "nextClose": 15804.1,
+    "foreignNetOi": 296807,
+    "pcrOi": 109
+   },
+   {
+    "date": "2026-08-24",
+    "contract": "202609",
+    "open": 15755,
+    "high": 15790.7,
+    "low": 15595.1,
+    "close": 15612.5,
+    "nextContract": "202610",
+    "nextClose": 15629.5,
+    "foreignNetOi": 293066,
+    "pcrOi": 112.4
+   },
+   {
+    "date": "2026-08-25",
+    "contract": "202609",
+    "open": 15607.8,
+    "high": 15749.1,
+    "low": 15591.1,
+    "close": 15739.4,
+    "nextContract": "202610",
+    "nextClose": 15755.4,
+    "foreignNetOi": 289670,
+    "pcrOi": 101.8
+   },
+   {
+    "date": "2026-08-26",
+    "contract": "202609",
+    "open": 15761.5,
+    "high": 15774,
+    "low": 15614.1,
+    "close": 15641.9,
+    "nextContract": "202610",
+    "nextClose": 15649.9,
+    "foreignNetOi": 286642,
+    "pcrOi": 95.7
+   },
+   {
+    "date": "2026-08-27",
+    "contract": "202609",
+    "open": 15650.2,
+    "high": 15669.1,
+    "low": 15604.2,
+    "close": 15666,
+    "nextContract": "202610",
+    "nextClose": 15679.1,
+    "foreignNetOi": 282136,
+    "pcrOi": 100.5
+   },
+   {
+    "date": "2026-08-28",
+    "contract": "202609",
+    "open": 15613.3,
+    "high": 15909.3,
+    "low": 15607.4,
+    "close": 15866.7,
+    "nextContract": "202610",
+    "nextClose": 15879.3,
+    "foreignNetOi": 276024,
+    "pcrOi": 113.9
+   },
+   {
+    "date": "2026-08-31",
+    "contract": "202609",
+    "open": 15902.6,
+    "high": 15962.2,
+    "low": 15841.6,
+    "close": 15956.3,
+    "nextContract": "202610",
+    "nextClose": 15971.2,
+    "foreignNetOi": 274157,
+    "pcrOi": 99.5
+   },
+   {
+    "date": "2026-09-01",
+    "contract": "202609",
+    "open": 15950,
+    "high": 16170.1,
+    "low": 15927.2,
+    "close": 16114.9,
+    "nextContract": "202610",
+    "nextClose": 16142.6,
+    "foreignNetOi": 271796,
+    "pcrOi": 120.6
+   },
+   {
+    "date": "2026-09-02",
+    "contract": "202609",
+    "open": 16095,
+    "high": 16264.3,
+    "low": 16064.5,
+    "close": 16218.5,
+    "nextContract": "202610",
+    "nextClose": 16233.9,
+    "foreignNetOi": 266247,
+    "pcrOi": 98.5
+   },
+   {
+    "date": "2026-09-03",
+    "contract": "202609",
+    "open": 16216.8,
+    "high": 16245.3,
+    "low": 16161.4,
+    "close": 16228.9,
+    "nextContract": "202610",
+    "nextClose": 16241,
+    "foreignNetOi": 259502,
+    "pcrOi": 119.9
+   },
+   {
+    "date": "2026-09-04",
+    "contract": "202609",
+    "open": 16180.5,
+    "high": 16202.3,
+    "low": 16013.8,
+    "close": 16066.2,
+    "nextContract": "202610",
+    "nextClose": 16077.2,
+    "foreignNetOi": 255042,
+    "pcrOi": 88.5
+   },
+   {
+    "date": "2026-09-07",
+    "contract": "202609",
+    "open": 16067.5,
+    "high": 16126.7,
+    "low": 15937.7,
+    "close": 15995.3,
+    "nextContract": "202610",
+    "nextClose": 16016.2,
+    "foreignNetOi": 249136,
+    "pcrOi": 124.2
+   },
+   {
+    "date": "2026-09-08",
+    "contract": "202609",
+    "open": 16042,
+    "high": 16059.9,
+    "low": 15887.6,
+    "close": 15888.4,
+    "nextContract": "202610",
+    "nextClose": 15910.3,
+    "foreignNetOi": 242862,
+    "pcrOi": 100
+   },
+   {
+    "date": "2026-09-09",
+    "contract": "202609",
+    "open": 15948.2,
+    "high": 16027,
+    "low": 15909.2,
+    "close": 15975.2,
+    "nextContract": "202610",
+    "nextClose": 15990.3,
+    "foreignNetOi": 240742,
+    "pcrOi": 124.5
+   },
+   {
+    "date": "2026-09-10",
+    "contract": "202609",
+    "open": 16037.2,
+    "high": 16175.3,
+    "low": 15985.8,
+    "close": 16143.9,
+    "nextContract": "202610",
+    "nextClose": 16170.5,
+    "foreignNetOi": 232941,
+    "pcrOi": 106.3
+   },
+   {
+    "date": "2026-09-11",
+    "contract": "202610",
+    "open": 16255.4,
+    "high": 16263.8,
+    "low": 16029.2,
+    "close": 16067.7,
+    "nextContract": "202611",
+    "nextClose": 16080.9,
+    "foreignNetOi": 226565,
+    "pcrOi": 100.5
+   },
+   {
+    "date": "2026-09-14",
+    "contract": "202610",
+    "open": 16071.1,
+    "high": 16073.7,
+    "low": 15723.9,
+    "close": 15783.2,
+    "nextContract": "202611",
+    "nextClose": 15801,
+    "foreignNetOi": 221613,
+    "pcrOi": 111.7
+   },
+   {
+    "date": "2026-09-15",
+    "contract": "202610",
+    "open": 15748.7,
+    "high": 15796.2,
+    "low": 15517.2,
+    "close": 15522.5,
+    "nextContract": "202611",
+    "nextClose": 15539.3,
+    "foreignNetOi": 216897,
+    "pcrOi": 92.8
+   },
+   {
+    "date": "2026-09-16",
+    "contract": "202610",
+    "open": 15525.2,
+    "high": 15534.5,
+    "low": 15431.5,
+    "close": 15483,
+    "nextContract": "202611",
+    "nextClose": 15495.9,
+    "foreignNetOi": 212485,
+    "pcrOi": 107.8
+   },
+   {
+    "date": "2026-09-17",
+    "contract": "202610",
+    "open": 15471,
+    "high": 15526.6,
+    "low": 15286.3,
+    "close": 15321.2,
+    "nextContract": "202611",
+    "nextClose": 15330,
+    "foreignNetOi": 206595,
+    "pcrOi": 95.9
+   },
+   {
+    "date": "2026-09-18",
+    "contract": "202610",
+    "open": 15333.2,
+    "high": 15378.2,
+    "low": 15237.5,
+    "close": 15280,
+    "nextContract": "202611",
+    "nextClose": 15293.6,
+    "foreignNetOi": 202273,
+    "pcrOi": 104.3
+   },
+   {
+    "date": "2026-09-21",
+    "contract": "202610",
+    "open": 15193,
+    "high": 15226.2,
+    "low": 15063,
+    "close": 15074.8,
+    "nextContract": "202611",
+    "nextClose": 15092.5,
+    "foreignNetOi": 196108,
+    "pcrOi": 106.5
+   },
+   {
+    "date": "2026-09-22",
+    "contract": "202610",
+    "open": 15082.3,
+    "high": 15167.2,
+    "low": 15024.9,
+    "close": 15123.1,
+    "nextContract": "202611",
+    "nextClose": 15133.2,
+    "foreignNetOi": 190630,
+    "pcrOi": 107.7
+   },
+   {
+    "date": "2026-09-23",
+    "contract": "202610",
+    "open": 15076,
+    "high": 15217.6,
+    "low": 15070.9,
+    "close": 15179.3,
+    "nextContract": "202611",
+    "nextClose": 15194.1,
+    "foreignNetOi": 184903,
+    "pcrOi": 100.5
+   },
+   {
+    "date": "2026-09-24",
+    "contract": "202610",
+    "open": 15206.1,
+    "high": 15236.1,
+    "low": 15012.6,
+    "close": 15022.9,
+    "nextContract": "202611",
+    "nextClose": 15045.5,
+    "foreignNetOi": 182242,
+    "pcrOi": 117.9
+   },
+   {
+    "date": "2026-09-25",
+    "contract": "202610",
+    "open": 15055,
+    "high": 15108.9,
+    "low": 15042.8,
+    "close": 15093.3,
+    "nextContract": "202611",
+    "nextClose": 15108.9,
+    "foreignNetOi": 176738,
+    "pcrOi": 114.6
+   },
+   {
+    "date": "2026-09-28",
+    "contract": "202610",
+    "open": 15079.4,
+    "high": 15290.1,
+    "low": 15078,
+    "close": 15252.6,
+    "nextContract": "202611",
+    "nextClose": 15258.9,
+    "foreignNetOi": 171822,
+    "pcrOi": 109.1
+   },
+   {
+    "date": "2026-09-29",
+    "contract": "202610",
+    "open": 15285.6,
+    "high": 15461.9,
+    "low": 15282.6,
+    "close": 15432,
+    "nextContract": "202611",
+    "nextClose": 15448.1,
+    "foreignNetOi": 168487,
+    "pcrOi": 88.4
+   },
+   {
+    "date": "2026-09-30",
+    "contract": "202610",
+    "open": 15360,
+    "high": 15361.1,
+    "low": 15319.6,
+    "close": 15339.1,
+    "nextContract": "202611",
+    "nextClose": 15354.4,
+    "foreignNetOi": 165136,
+    "pcrOi": 124.4
+   },
+   {
+    "date": "2026-10-01",
+    "contract": "202610",
+    "open": 15313.4,
+    "high": 15371.1,
+    "low": 15231,
+    "close": 15272.8,
+    "nextContract": "202611",
+    "nextClose": 15283.8,
+    "foreignNetOi": 154521,
+    "pcrOi": 106
+   },
+   {
+    "date": "2026-10-02",
+    "contract": "202610",
+    "open": 15332.9,
+    "high": 15611.9,
+    "low": 15291.5,
+    "close": 15561.3,
+    "nextContract": "202611",
+    "nextClose": 15574.8,
+    "foreignNetOi": 148035,
+    "pcrOi": 98.4
+   },
+   {
+    "date": "2026-10-05",
+    "contract": "202610",
+    "open": 15660.3,
+    "high": 15701.5,
+    "low": 15439.8,
+    "close": 15458,
+    "nextContract": "202611",
+    "nextClose": 15477.5,
+    "foreignNetOi": 142048,
+    "pcrOi": 129.6
+   },
+   {
+    "date": "2026-10-06",
+    "contract": "202610",
+    "open": 15400.7,
+    "high": 15412.7,
+    "low": 15367.5,
+    "close": 15399.9,
+    "nextContract": "202611",
+    "nextClose": 15416.4,
+    "foreignNetOi": 136038,
+    "pcrOi": 111.6
+   },
+   {
+    "date": "2026-10-07",
+    "contract": "202610",
+    "open": 15410.4,
+    "high": 15668.4,
+    "low": 15401.7,
+    "close": 15665.8,
+    "nextContract": "202611",
+    "nextClose": 15685,
+    "foreignNetOi": 132299,
+    "pcrOi": 111.3
+   },
+   {
+    "date": "2026-10-08",
+    "contract": "202610",
+    "open": 15682.7,
+    "high": 15803.3,
+    "low": 15657.3,
+    "close": 15750.8,
+    "nextContract": "202611",
+    "nextClose": 15760.1,
+    "foreignNetOi": 126859,
+    "pcrOi": 104.6
+   },
+   {
+    "date": "2026-10-09",
+    "contract": "202610",
+    "open": 15882.9,
+    "high": 15919.7,
+    "low": 15756.2,
+    "close": 15757.2,
+    "nextContract": "202611",
+    "nextClose": 15769.9,
+    "foreignNetOi": 120913,
+    "pcrOi": 113.8
+   },
+   {
+    "date": "2026-10-12",
+    "contract": "202611",
+    "open": 15781.7,
+    "high": 15896,
+    "low": 15772.6,
+    "close": 15867.1,
+    "nextContract": "202612",
+    "nextClose": 15888.9,
+    "foreignNetOi": 115853,
+    "pcrOi": 109.5
+   },
+   {
+    "date": "2026-10-13",
+    "contract": "202611",
+    "open": 15811.2,
+    "high": 15885.5,
+    "low": 15759.8,
+    "close": 15843.8,
+    "nextContract": "202612",
+    "nextClose": 15858.3,
+    "foreignNetOi": 112505,
+    "pcrOi": 102.6
+   },
+   {
+    "date": "2026-10-14",
+    "contract": "202611",
+    "open": 15841.2,
+    "high": 15957.5,
+    "low": 15784.7,
+    "close": 15905.1,
+    "nextContract": "202612",
+    "nextClose": 15917.8,
+    "foreignNetOi": 106724,
+    "pcrOi": 105
+   },
+   {
+    "date": "2026-10-15",
+    "contract": "202611",
+    "open": 15857.3,
+    "high": 15862.9,
+    "low": 15630.2,
+    "close": 15669,
+    "nextContract": "202612",
+    "nextClose": 15679.5,
+    "foreignNetOi": 101617,
+    "pcrOi": 118.7
+   },
+   {
+    "date": "2026-10-16",
+    "contract": "202611",
+    "open": 15594.2,
+    "high": 15654.8,
+    "low": 15395.9,
+    "close": 15452.9,
+    "nextContract": "202612",
+    "nextClose": 15461.7,
+    "foreignNetOi": 94932,
+    "pcrOi": 110.9
+   },
+   {
+    "date": "2026-10-19",
+    "contract": "202611",
+    "open": 15462.6,
+    "high": 15500.2,
+    "low": 15279,
+    "close": 15332.9,
+    "nextContract": "202612",
+    "nextClose": 15342.3,
+    "foreignNetOi": 91285,
+    "pcrOi": 112.4
+   },
+   {
+    "date": "2026-10-20",
+    "contract": "202611",
+    "open": 15320.6,
+    "high": 15378.5,
+    "low": 15270.3,
+    "close": 15329.7,
+    "nextContract": "202612",
+    "nextClose": 15347.5,
+    "foreignNetOi": 85598,
+    "pcrOi": 123
+   },
+   {
+    "date": "2026-10-21",
+    "contract": "202611",
+    "open": 15343.4,
+    "high": 15382.2,
+    "low": 15249.2,
+    "close": 15256.7,
+    "nextContract": "202612",
+    "nextClose": 15275.9,
+    "foreignNetOi": 81331,
+    "pcrOi": 103.2
+   },
+   {
+    "date": "2026-10-22",
+    "contract": "202611",
+    "open": 15241,
+    "high": 15442.3,
+    "low": 15213.9,
+    "close": 15424.8,
+    "nextContract": "202612",
+    "nextClose": 15440.1,
+    "foreignNetOi": 73255,
+    "pcrOi": 117.4
+   },
+   {
+    "date": "2026-10-23",
+    "contract": "202611",
+    "open": 15452.4,
+    "high": 15662.8,
+    "low": 15399.3,
+    "close": 15650.8,
+    "nextContract": "202612",
+    "nextClose": 15670.3,
+    "foreignNetOi": 68809,
+    "pcrOi": 102.9
+   },
+   {
+    "date": "2026-10-26",
+    "contract": "202611",
+    "open": 15630.2,
+    "high": 15666.7,
+    "low": 15512.4,
+    "close": 15529.3,
+    "nextContract": "202612",
+    "nextClose": 15543.4,
+    "foreignNetOi": 66167,
+    "pcrOi": 132.1
+   },
+   {
+    "date": "2026-10-27",
+    "contract": "202611",
+    "open": 15594.6,
+    "high": 15596.3,
+    "low": 15529.4,
+    "close": 15549.1,
+    "nextContract": "202612",
+    "nextClose": 15573.3,
+    "foreignNetOi": 62771,
+    "pcrOi": 109.6
+   },
+   {
+    "date": "2026-10-28",
+    "contract": "202611",
+    "open": 15584.1,
+    "high": 15615.1,
+    "low": 15546.9,
+    "close": 15576.5,
+    "nextContract": "202612",
+    "nextClose": 15597.8,
+    "foreignNetOi": 56471,
+    "pcrOi": 126.3
+   },
+   {
+    "date": "2026-10-29",
+    "contract": "202611",
+    "open": 15518.8,
+    "high": 15528.7,
+    "low": 15457.6,
+    "close": 15528.4,
+    "nextContract": "202612",
+    "nextClose": 15544.3,
+    "foreignNetOi": 51339,
+    "pcrOi": 116.8
+   },
+   {
+    "date": "2026-10-30",
+    "contract": "202611",
+    "open": 15515.6,
+    "high": 15538.5,
+    "low": 15408.2,
+    "close": 15411.1,
+    "nextContract": "202612",
+    "nextClose": 15423.8,
+    "foreignNetOi": 46079,
+    "pcrOi": 93.9
+   },
+   {
+    "date": "2026-11-02",
+    "contract": "202611",
+    "open": 15540.6,
+    "high": 15567,
+    "low": 15507.7,
+    "close": 15520.9,
+    "nextContract": "202612",
+    "nextClose": 15536,
+    "foreignNetOi": 43229,
+    "pcrOi": 108.9
+   },
+   {
+    "date": "2026-11-03",
+    "contract": "202611",
+    "open": 15518.9,
+    "high": 15888.2,
+    "low": 15494.1,
+    "close": 15875.3,
+    "nextContract": "202612",
+    "nextClose": 15891.3,
+    "foreignNetOi": 38395,
+    "pcrOi": 103.4
+   },
+   {
+    "date": "2026-11-04",
+    "contract": "202611",
+    "open": 15877.3,
+    "high": 15926.6,
+    "low": 15565.5,
+    "close": 15623.5,
+    "nextContract": "202612",
+    "nextClose": 15632.7,
+    "foreignNetOi": 34871,
+    "pcrOi": 104.4
+   }
+  ]
+ },
+ "output": {
+  "modelVersion": "tx-v1",
+  "config": {
+   "mode": "auto",
+   "product": "TMF",
+   "pointValue": 10,
+   "initialCapital": 2000000,
+   "riskPerTradePct": 1,
+   "maxContracts": 8,
+   "allowShort": true,
+   "maxDrawdownPct": 25,
+   "commissionPerSide": 15,
+   "slippagePoints": 1,
+   "marginPerContract": 17500,
+   "notifyEnabled": true
+  },
+  "signals": [
+   {
+    "index": 60,
+    "date": "2025-03-27",
+    "composite": 0.525,
+    "quantScore": 0.525,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 956.5,
+      "score": 1
+     },
+     "breakout": {
+      "raw": 0.997,
+      "score": 0.995
+     },
+     "tsmom": {
+      "raw": 0.0823,
+      "score": 0.511
+     },
+     "foreignFlow": {
+      "raw": 302568,
+      "score": -0.376
+     },
+     "pcr": {
+      "raw": 109.8,
+      "score": -0.013
+     }
+    },
+    "atr20": 270.5,
+    "adx14": 31.4
+   },
+   {
+    "index": 67,
+    "date": "2025-04-07",
+    "composite": 0.261,
+    "quantScore": 0.261,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 745.6,
+      "score": 0.828
+     },
+     "breakout": {
+      "raw": 0.625,
+      "score": 0.25
+     },
+     "tsmom": {
+      "raw": 0.0957,
+      "score": 0.567
+     },
+     "foreignFlow": {
+      "raw": 267458,
+      "score": -0.682
+     },
+     "pcr": {
+      "raw": 107.1,
+      "score": -0.148
+     }
+    },
+    "atr20": 289.8,
+    "adx14": 25.7
+   },
+   {
+    "index": 74,
+    "date": "2025-04-16",
+    "composite": 0.135,
+    "quantScore": 0.135,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 496.7,
+      "score": 0.494
+     },
+     "breakout": {
+      "raw": 0.456,
+      "score": -0.088
+     },
+     "tsmom": {
+      "raw": 0.0475,
+      "score": 0.282
+     },
+     "foreignFlow": {
+      "raw": 233161,
+      "score": -0.376
+     },
+     "pcr": {
+      "raw": 115.3,
+      "score": 0.235
+     }
+    },
+    "atr20": 271.7,
+    "adx14": 19
+   },
+   {
+    "index": 81,
+    "date": "2025-04-25",
+    "composite": -0.085,
+    "quantScore": -0.085,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 168.6,
+      "score": 0.013
+     },
+     "breakout": {
+      "raw": 0.327,
+      "score": -0.347
+     },
+     "tsmom": {
+      "raw": 0.029,
+      "score": 0.17
+     },
+     "foreignFlow": {
+      "raw": 200829,
+      "score": -0.343
+     },
+     "pcr": {
+      "raw": 113.6,
+      "score": 0.148
+     }
+    },
+    "atr20": 281.4,
+    "adx14": 24.8
+   },
+   {
+    "index": 88,
+    "date": "2025-05-06",
+    "composite": -0.325,
+    "quantScore": -0.325,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -99.4,
+      "score": -0.458
+     },
+     "breakout": {
+      "raw": 0.109,
+      "score": -0.783
+     },
+     "tsmom": {
+      "raw": -0.0071,
+      "score": -0.042
+     },
+     "foreignFlow": {
+      "raw": 165654,
+      "score": -0.407
+     },
+     "pcr": {
+      "raw": 122.8,
+      "score": 0.59
+     }
+    },
+    "atr20": 282.6,
+    "adx14": 31.9
+   },
+   {
+    "index": 95,
+    "date": "2025-05-15",
+    "composite": -0.516,
+    "quantScore": -0.516,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -315.9,
+      "score": -0.672
+     },
+     "breakout": {
+      "raw": 0.141,
+      "score": -0.718
+     },
+     "tsmom": {
+      "raw": -0.0439,
+      "score": -0.278
+     },
+     "foreignFlow": {
+      "raw": 129323,
+      "score": -0.456
+     },
+     "pcr": {
+      "raw": 105.8,
+      "score": -0.238
+     }
+    },
+    "atr20": 262.9,
+    "adx14": 36.6
+   },
+   {
+    "index": 102,
+    "date": "2025-05-26",
+    "composite": -0.632,
+    "quantScore": -0.632,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -315,
+      "score": -0.721
+     },
+     "breakout": {
+      "raw": 0.046,
+      "score": -0.908
+     },
+     "tsmom": {
+      "raw": -0.0419,
+      "score": -0.251
+     },
+     "foreignFlow": {
+      "raw": 84835,
+      "score": -0.662
+     },
+     "pcr": {
+      "raw": 100.1,
+      "score": -0.513
+     }
+    },
+    "atr20": 286,
+    "adx14": 28.1
+   },
+   {
+    "index": 109,
+    "date": "2025-06-04",
+    "composite": -0.776,
+    "quantScore": -0.776,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -418.1,
+      "score": -0.894
+     },
+     "breakout": {
+      "raw": 0.033,
+      "score": -0.933
+     },
+     "tsmom": {
+      "raw": -0.0773,
+      "score": -0.492
+     },
+     "foreignFlow": {
+      "raw": 51418,
+      "score": -0.615
+     },
+     "pcr": {
+      "raw": 86.9,
+      "score": -1
+     }
+    },
+    "atr20": 265.2,
+    "adx14": 30
+   },
+   {
+    "index": 116,
+    "date": "2025-06-13",
+    "composite": -0.756,
+    "quantScore": -0.756,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -576.5,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.124,
+      "score": -0.752
+     },
+     "tsmom": {
+      "raw": -0.1265,
+      "score": -0.811
+     },
+     "foreignFlow": {
+      "raw": 15436,
+      "score": -0.674
+     },
+     "pcr": {
+      "raw": 108.5,
+      "score": -0.086
+     }
+    },
+    "atr20": 259.2,
+    "adx14": 35.6
+   },
+   {
+    "index": 123,
+    "date": "2025-06-24",
+    "composite": -0.739,
+    "quantScore": -0.739,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -698,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.006,
+      "score": -0.987
+     },
+     "tsmom": {
+      "raw": -0.1774,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 1744,
+      "score": -0.463
+     },
+     "pcr": {
+      "raw": 120.8,
+      "score": 0.51
+     }
+    },
+    "atr20": 279.6,
+    "adx14": 39.7
+   },
+   {
+    "index": 130,
+    "date": "2025-07-03",
+    "composite": -0.753,
+    "quantScore": -0.753,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -774.6,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.142,
+      "score": -0.717
+     },
+     "tsmom": {
+      "raw": -0.1618,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 2641,
+      "score": -0.392
+     },
+     "pcr": {
+      "raw": 104,
+      "score": -0.312
+     }
+    },
+    "atr20": 269.7,
+    "adx14": 39.7
+   },
+   {
+    "index": 137,
+    "date": "2025-07-14",
+    "composite": -0.669,
+    "quantScore": -0.669,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -704.9,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.147,
+      "score": -0.707
+     },
+     "tsmom": {
+      "raw": -0.118,
+      "score": -0.727
+     },
+     "foreignFlow": {
+      "raw": -1529,
+      "score": -0.389
+     },
+     "pcr": {
+      "raw": 109.2,
+      "score": -0.043
+     }
+    },
+    "atr20": 248.8,
+    "adx14": 30.6
+   },
+   {
+    "index": 144,
+    "date": "2025-07-23",
+    "composite": -0.536,
+    "quantScore": -0.536,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -589.2,
+      "score": -0.843
+     },
+     "breakout": {
+      "raw": 0.214,
+      "score": -0.573
+     },
+     "tsmom": {
+      "raw": -0.0921,
+      "score": -0.58
+     },
+     "foreignFlow": {
+      "raw": 2430,
+      "score": -0.245
+     },
+     "pcr": {
+      "raw": 110,
+      "score": -0.031
+     }
+    },
+    "atr20": 257.9,
+    "adx14": 21.1
+   },
+   {
+    "index": 151,
+    "date": "2025-08-01",
+    "composite": -0.28,
+    "quantScore": -0.466,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -418.5,
+      "score": -0.64
+     },
+     "breakout": {
+      "raw": 0.28,
+      "score": -0.44
+     },
+     "tsmom": {
+      "raw": -0.0559,
+      "score": -0.364
+     },
+     "foreignFlow": {
+      "raw": -2072,
+      "score": -0.277
+     },
+     "pcr": {
+      "raw": 99.2,
+      "score": -0.58
+     }
+    },
+    "atr20": 230.1,
+    "adx14": 14.7
+   },
+   {
+    "index": 158,
+    "date": "2025-08-12",
+    "composite": -0.413,
+    "quantScore": -0.689,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -435.5,
+      "score": -0.97
+     },
+     "breakout": {
+      "raw": 0.015,
+      "score": -0.969
+     },
+     "tsmom": {
+      "raw": -0.137,
+      "score": -0.898
+     },
+     "foreignFlow": {
+      "raw": 2727,
+      "score": -0.137
+     },
+     "pcr": {
+      "raw": 110.8,
+      "score": 0.03
+     }
+    },
+    "atr20": 231.7,
+    "adx14": 14.9
+   },
+   {
+    "index": 165,
+    "date": "2025-08-21",
+    "composite": -0.581,
+    "quantScore": -0.581,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -456.2,
+      "score": -0.996
+     },
+     "breakout": {
+      "raw": 0.189,
+      "score": -0.621
+     },
+     "tsmom": {
+      "raw": -0.0943,
+      "score": -0.631
+     },
+     "foreignFlow": {
+      "raw": 4773,
+      "score": -0.062
+     },
+     "pcr": {
+      "raw": 106.6,
+      "score": -0.196
+     }
+    },
+    "atr20": 230.1,
+    "adx14": 18.4
+   },
+   {
+    "index": 172,
+    "date": "2025-09-01",
+    "composite": -0.56,
+    "quantScore": -0.56,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -590.1,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.063,
+      "score": -0.874
+     },
+     "tsmom": {
+      "raw": -0.0827,
+      "score": -0.568
+     },
+     "foreignFlow": {
+      "raw": 3456,
+      "score": -0.044
+     },
+     "pcr": {
+      "raw": 117.2,
+      "score": 0.376
+     }
+    },
+    "atr20": 217.6,
+    "adx14": 28.5
+   },
+   {
+    "index": 179,
+    "date": "2025-09-10",
+    "composite": -0.568,
+    "quantScore": -0.568,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -690.2,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.005,
+      "score": -0.991
+     },
+     "tsmom": {
+      "raw": -0.1205,
+      "score": -0.771
+     },
+     "foreignFlow": {
+      "raw": 3584,
+      "score": 0.026
+     },
+     "pcr": {
+      "raw": 125.5,
+      "score": 0.794
+     }
+    },
+    "atr20": 255.4,
+    "adx14": 33.1
+   },
+   {
+    "index": 186,
+    "date": "2025-09-19",
+    "composite": -0.497,
+    "quantScore": -0.497,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -871,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.017,
+      "score": -0.966
+     },
+     "tsmom": {
+      "raw": -0.1208,
+      "score": -0.812
+     },
+     "foreignFlow": {
+      "raw": 38301,
+      "score": 0.505
+     },
+     "pcr": {
+      "raw": 122.1,
+      "score": 0.581
+     }
+    },
+    "atr20": 234.8,
+    "adx14": 38.5
+   },
+   {
+    "index": 193,
+    "date": "2025-09-30",
+    "composite": -0.547,
+    "quantScore": -0.547,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -1082.9,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.026,
+      "score": -0.948
+     },
+     "tsmom": {
+      "raw": -0.1826,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 74371,
+      "score": 0.609
+     },
+     "pcr": {
+      "raw": 114.5,
+      "score": 0.207
+     }
+    },
+    "atr20": 218.6,
+    "adx14": 50.4
+   },
+   {
+    "index": 200,
+    "date": "2025-10-09",
+    "composite": -0.629,
+    "quantScore": -0.629,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -1282.6,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.007,
+      "score": -0.986
+     },
+     "tsmom": {
+      "raw": -0.2391,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 106761,
+      "score": 0.675
+     },
+     "pcr": {
+      "raw": 96.9,
+      "score": -0.663
+     }
+    },
+    "atr20": 215.1,
+    "adx14": 62.6
+   },
+   {
+    "index": 207,
+    "date": "2025-10-20",
+    "composite": -0.443,
+    "quantScore": -0.443,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -1243.5,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.114,
+      "score": -0.772
+     },
+     "tsmom": {
+      "raw": -0.2301,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 143898,
+      "score": 0.934
+     },
+     "pcr": {
+      "raw": 115.7,
+      "score": 0.243
+     }
+    },
+    "atr20": 200.5,
+    "adx14": 62.5
+   },
+   {
+    "index": 214,
+    "date": "2025-10-29",
+    "composite": -0.51,
+    "quantScore": -0.51,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -1043,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.141,
+      "score": -0.718
+     },
+     "tsmom": {
+      "raw": -0.1991,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 178516,
+      "score": 1
+     },
+     "pcr": {
+      "raw": 96.5,
+      "score": -0.661
+     }
+    },
+    "atr20": 178.9,
+    "adx14": 50
+   },
+   {
+    "index": 221,
+    "date": "2025-11-07",
+    "composite": -0.337,
+    "quantScore": -0.337,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -747.3,
+      "score": -0.761
+     },
+     "breakout": {
+      "raw": 0.339,
+      "score": -0.322
+     },
+     "tsmom": {
+      "raw": -0.1421,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 218417,
+      "score": 1
+     },
+     "pcr": {
+      "raw": 101.2,
+      "score": -0.444
+     }
+    },
+    "atr20": 193.7,
+    "adx14": 36.9
+   },
+   {
+    "index": 228,
+    "date": "2025-11-18",
+    "composite": -0.223,
+    "quantScore": -0.223,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -423.2,
+      "score": -0.639
+     },
+     "breakout": {
+      "raw": 0.417,
+      "score": -0.165
+     },
+     "tsmom": {
+      "raw": -0.1004,
+      "score": -0.765
+     },
+     "foreignFlow": {
+      "raw": 251346,
+      "score": 0.901
+     },
+     "pcr": {
+      "raw": 104.9,
+      "score": -0.256
+     }
+    },
+    "atr20": 178.8,
+    "adx14": 33.7
+   },
+   {
+    "index": 235,
+    "date": "2025-11-27",
+    "composite": 0.315,
+    "quantScore": 0.315,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -140.5,
+      "score": 0.28
+     },
+     "breakout": {
+      "raw": 0.865,
+      "score": 0.73
+     },
+     "tsmom": {
+      "raw": -0.0461,
+      "score": -0.347
+     },
+     "foreignFlow": {
+      "raw": 285692,
+      "score": 0.83
+     },
+     "pcr": {
+      "raw": 108,
+      "score": -0.114
+     }
+    },
+    "atr20": 177.3,
+    "adx14": 36
+   },
+   {
+    "index": 242,
+    "date": "2025-12-08",
+    "composite": 0.213,
+    "quantScore": 0.213,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 43.3,
+      "score": 0.223
+     },
+     "breakout": {
+      "raw": 0.823,
+      "score": 0.645
+     },
+     "tsmom": {
+      "raw": -0.0249,
+      "score": -0.217
+     },
+     "foreignFlow": {
+      "raw": 292147,
+      "score": 0.133
+     },
+     "pcr": {
+      "raw": 117.4,
+      "score": 0.334
+     }
+    },
+    "atr20": 174.4,
+    "adx14": 37.9
+   },
+   {
+    "index": 249,
+    "date": "2025-12-17",
+    "composite": 0.109,
+    "quantScore": 0.109,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 46.8,
+      "score": 0.102
+     },
+     "breakout": {
+      "raw": 0.768,
+      "score": 0.536
+     },
+     "tsmom": {
+      "raw": 0.0225,
+      "score": 0.222
+     },
+     "foreignFlow": {
+      "raw": 265285,
+      "score": -0.116
+     },
+     "pcr": {
+      "raw": 100.1,
+      "score": -0.5
+     }
+    },
+    "atr20": 175.1,
+    "adx14": 25.1
+   },
+   {
+    "index": 256,
+    "date": "2025-12-26",
+    "composite": -0.442,
+    "quantScore": -0.442,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -246.7,
+      "score": -0.801
+     },
+     "breakout": {
+      "raw": 0.199,
+      "score": -0.602
+     },
+     "tsmom": {
+      "raw": -0.011,
+      "score": -0.095
+     },
+     "foreignFlow": {
+      "raw": 232856,
+      "score": -0.229
+     },
+     "pcr": {
+      "raw": 107.1,
+      "score": -0.163
+     }
+    },
+    "atr20": 204.7,
+    "adx14": 35.1
+   },
+   {
+    "index": 263,
+    "date": "2026-01-06",
+    "composite": -0.667,
+    "quantScore": -0.667,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -452.5,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.026,
+      "score": -0.947
+     },
+     "tsmom": {
+      "raw": -0.0053,
+      "score": -0.047
+     },
+     "foreignFlow": {
+      "raw": 193323,
+      "score": -0.341
+     },
+     "pcr": {
+      "raw": 87.2,
+      "score": -1
+     }
+    },
+    "atr20": 190.9,
+    "adx14": 45.5
+   },
+   {
+    "index": 270,
+    "date": "2026-01-15",
+    "composite": -0.624,
+    "quantScore": -0.624,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -678.2,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.027,
+      "score": -0.946
+     },
+     "tsmom": {
+      "raw": -0.0687,
+      "score": -0.519
+     },
+     "foreignFlow": {
+      "raw": 157958,
+      "score": -0.398
+     },
+     "pcr": {
+      "raw": 120.1,
+      "score": 0.486
+     }
+    },
+    "atr20": 203.9,
+    "adx14": 51.2
+   },
+   {
+    "index": 277,
+    "date": "2026-01-26",
+    "composite": -0.616,
+    "quantScore": -0.616,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -694,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.064,
+      "score": -0.872
+     },
+     "tsmom": {
+      "raw": -0.0636,
+      "score": -0.48
+     },
+     "foreignFlow": {
+      "raw": 123783,
+      "score": -0.416
+     },
+     "pcr": {
+      "raw": 118.1,
+      "score": 0.378
+     }
+    },
+    "atr20": 181.9,
+    "adx14": 46.6
+   },
+   {
+    "index": 284,
+    "date": "2026-02-04",
+    "composite": -0.739,
+    "quantScore": -0.739,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -689.9,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.009,
+      "score": -0.982
+     },
+     "tsmom": {
+      "raw": -0.1374,
+      "score": -1
+     },
+     "foreignFlow": {
+      "raw": 91885,
+      "score": -0.445
+     },
+     "pcr": {
+      "raw": 120.4,
+      "score": 0.467
+     }
+    },
+    "atr20": 185,
+    "adx14": 44.8
+   },
+   {
+    "index": 291,
+    "date": "2026-02-13",
+    "composite": -0.681,
+    "quantScore": -0.681,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -546.2,
+      "score": -0.964
+     },
+     "breakout": {
+      "raw": 0.198,
+      "score": -0.605
+     },
+     "tsmom": {
+      "raw": -0.109,
+      "score": -0.767
+     },
+     "foreignFlow": {
+      "raw": 55524,
+      "score": -0.564
+     },
+     "pcr": {
+      "raw": 109.2,
+      "score": -0.045
+     }
+    },
+    "atr20": 184.9,
+    "adx14": 30.8
+   },
+   {
+    "index": 298,
+    "date": "2026-02-24",
+    "composite": -0.334,
+    "quantScore": -0.334,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -289.5,
+      "score": -0.186
+     },
+     "breakout": {
+      "raw": 0.49,
+      "score": -0.021
+     },
+     "tsmom": {
+      "raw": -0.0814,
+      "score": -0.547
+     },
+     "foreignFlow": {
+      "raw": 23637,
+      "score": -0.64
+     },
+     "pcr": {
+      "raw": 102.5,
+      "score": -0.366
+     }
+    },
+    "atr20": 195.1,
+    "adx14": 29.5
+   },
+   {
+    "index": 305,
+    "date": "2026-03-05",
+    "composite": -0.194,
+    "quantScore": -0.194,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -88.2,
+      "score": -0.016
+     },
+     "breakout": {
+      "raw": 0.494,
+      "score": -0.012
+     },
+     "tsmom": {
+      "raw": -0.075,
+      "score": -0.51
+     },
+     "foreignFlow": {
+      "raw": 11798,
+      "score": -0.45
+     },
+     "pcr": {
+      "raw": 111.6,
+      "score": 0.057
+     }
+    },
+    "atr20": 187.9,
+    "adx14": 30.4
+   },
+   {
+    "index": 312,
+    "date": "2026-03-16",
+    "composite": 0.191,
+    "quantScore": 0.191,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 11.5,
+      "score": 0.261
+     },
+     "breakout": {
+      "raw": 0.939,
+      "score": 0.878
+     },
+     "tsmom": {
+      "raw": -0.0079,
+      "score": -0.055
+     },
+     "foreignFlow": {
+      "raw": 11579,
+      "score": -0.379
+     },
+     "pcr": {
+      "raw": 115.6,
+      "score": 0.238
+     }
+    },
+    "atr20": 204.9,
+    "adx14": 29.4
+   },
+   {
+    "index": 319,
+    "date": "2026-03-25",
+    "composite": 0.174,
+    "quantScore": 0.174,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 99.8,
+      "score": 0.245
+     },
+     "breakout": {
+      "raw": 0.798,
+      "score": 0.596
+     },
+     "tsmom": {
+      "raw": 0.0118,
+      "score": 0.081
+     },
+     "foreignFlow": {
+      "raw": 12959,
+      "score": -0.276
+     },
+     "pcr": {
+      "raw": 114.5,
+      "score": 0.201
+     }
+    },
+    "atr20": 199.5,
+    "adx14": 34
+   },
+   {
+    "index": 326,
+    "date": "2026-04-03",
+    "composite": 0.021,
+    "quantScore": 0.021,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 10.2,
+      "score": -0.058
+     },
+     "breakout": {
+      "raw": 0.652,
+      "score": 0.304
+     },
+     "tsmom": {
+      "raw": 0.0406,
+      "score": 0.298
+     },
+     "foreignFlow": {
+      "raw": 10535,
+      "score": -0.293
+     },
+     "pcr": {
+      "raw": 104.7,
+      "score": -0.232
+     }
+    },
+    "atr20": 188.7,
+    "adx14": 23.8
+   },
+   {
+    "index": 333,
+    "date": "2026-04-14",
+    "composite": -0.426,
+    "quantScore": -0.426,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -135.8,
+      "score": -0.682
+     },
+     "breakout": {
+      "raw": 0.306,
+      "score": -0.387
+     },
+     "tsmom": {
+      "raw": -0.0035,
+      "score": -0.025
+     },
+     "foreignFlow": {
+      "raw": 13061,
+      "score": -0.194
+     },
+     "pcr": {
+      "raw": 86.4,
+      "score": -1
+     }
+    },
+    "atr20": 186.7,
+    "adx14": 23.7
+   },
+   {
+    "index": 340,
+    "date": "2026-04-23",
+    "composite": -0.456,
+    "quantScore": -0.456,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -280.2,
+      "score": -0.864
+     },
+     "breakout": {
+      "raw": 0.157,
+      "score": -0.685
+     },
+     "tsmom": {
+      "raw": 0.0004,
+      "score": 0.003
+     },
+     "foreignFlow": {
+      "raw": 13651,
+      "score": -0.117
+     },
+     "pcr": {
+      "raw": 100.8,
+      "score": -0.367
+     }
+    },
+    "atr20": 177.2,
+    "adx14": 30.3
+   },
+   {
+    "index": 347,
+    "date": "2026-05-04",
+    "composite": -0.584,
+    "quantScore": -0.584,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -487.2,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.038,
+      "score": -0.924
+     },
+     "tsmom": {
+      "raw": -0.0593,
+      "score": -0.445
+     },
+     "foreignFlow": {
+      "raw": 22020,
+      "score": 0.017
+     },
+     "pcr": {
+      "raw": 106.1,
+      "score": -0.132
+     }
+    },
+    "atr20": 176,
+    "adx14": 42.6
+   },
+   {
+    "index": 354,
+    "date": "2026-05-13",
+    "composite": -0.495,
+    "quantScore": -0.495,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -514.8,
+      "score": -1
+     },
+     "breakout": {
+      "raw": 0.168,
+      "score": -0.664
+     },
+     "tsmom": {
+      "raw": -0.0559,
+      "score": -0.429
+     },
+     "foreignFlow": {
+      "raw": 20257,
+      "score": -0.003
+     },
+     "pcr": {
+      "raw": 115.3,
+      "score": 0.243
+     }
+    },
+    "atr20": 168,
+    "adx14": 45.3
+   },
+   {
+    "index": 361,
+    "date": "2026-05-22",
+    "composite": -0.355,
+    "quantScore": -0.355,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -434.6,
+      "score": -0.714
+     },
+     "breakout": {
+      "raw": 0.307,
+      "score": -0.385
+     },
+     "tsmom": {
+      "raw": -0.0695,
+      "score": -0.534
+     },
+     "foreignFlow": {
+      "raw": 36770,
+      "score": 0.356
+     },
+     "pcr": {
+      "raw": 103,
+      "score": -0.277
+     }
+    },
+    "atr20": 171.7,
+    "adx14": 39.4
+   },
+   {
+    "index": 368,
+    "date": "2026-06-02",
+    "composite": 0.065,
+    "quantScore": 0.065,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -201.6,
+      "score": -0.055
+     },
+     "breakout": {
+      "raw": 0.531,
+      "score": 0.063
+     },
+     "tsmom": {
+      "raw": -0.0494,
+      "score": -0.386
+     },
+     "foreignFlow": {
+      "raw": 76002,
+      "score": 0.66
+     },
+     "pcr": {
+      "raw": 112.6,
+      "score": 0.138
+     }
+    },
+    "atr20": 171.4,
+    "adx14": 32.5
+   },
+   {
+    "index": 375,
+    "date": "2026-06-11",
+    "composite": 0.223,
+    "quantScore": 0.223,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -23.2,
+      "score": 0.17
+     },
+     "breakout": {
+      "raw": 0.643,
+      "score": 0.286
+     },
+     "tsmom": {
+      "raw": -0.0447,
+      "score": -0.349
+     },
+     "foreignFlow": {
+      "raw": 116467,
+      "score": 0.751
+     },
+     "pcr": {
+      "raw": 117.3,
+      "score": 0.343
+     }
+    },
+    "atr20": 176.9,
+    "adx14": 29.4
+   },
+   {
+    "index": 382,
+    "date": "2026-06-22",
+    "composite": 0.563,
+    "quantScore": 0.563,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 138.9,
+      "score": 0.67
+     },
+     "breakout": {
+      "raw": 0.986,
+      "score": 0.972
+     },
+     "tsmom": {
+      "raw": 0.0171,
+      "score": 0.126
+     },
+     "foreignFlow": {
+      "raw": 146895,
+      "score": 0.747
+     },
+     "pcr": {
+      "raw": 107.9,
+      "score": -0.069
+     }
+    },
+    "atr20": 204.8,
+    "adx14": 31.7
+   },
+   {
+    "index": 389,
+    "date": "2026-07-01",
+    "composite": 0.422,
+    "quantScore": 0.422,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 255,
+      "score": 0.611
+     },
+     "breakout": {
+      "raw": 0.749,
+      "score": 0.498
+     },
+     "tsmom": {
+      "raw": 0.0017,
+      "score": 0.012
+     },
+     "foreignFlow": {
+      "raw": 182096,
+      "score": 0.951
+     },
+     "pcr": {
+      "raw": 96.9,
+      "score": -0.535
+     }
+    },
+    "atr20": 206.2,
+    "adx14": 28.6
+   },
+   {
+    "index": 396,
+    "date": "2026-07-10",
+    "composite": 0.39,
+    "quantScore": 0.39,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 184.1,
+      "score": 0.439
+     },
+     "breakout": {
+      "raw": 0.728,
+      "score": 0.456
+     },
+     "tsmom": {
+      "raw": 0.0404,
+      "score": 0.272
+     },
+     "foreignFlow": {
+      "raw": 217839,
+      "score": 0.965
+     },
+     "pcr": {
+      "raw": 90.2,
+      "score": -0.806
+     }
+    },
+    "atr20": 214.3,
+    "adx14": 20.8
+   },
+   {
+    "index": 403,
+    "date": "2026-07-21",
+    "composite": 0.083,
+    "quantScore": 0.083,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": 42.1,
+      "score": -0.316
+     },
+     "breakout": {
+      "raw": 0.36,
+      "score": -0.279
+     },
+     "tsmom": {
+      "raw": 0.0342,
+      "score": 0.238
+     },
+     "foreignFlow": {
+      "raw": 255272,
+      "score": 0.943
+     },
+     "pcr": {
+      "raw": 108.4,
+      "score": -0.026
+     }
+    },
+    "atr20": 208,
+    "adx14": 21.3
+   },
+   {
+    "index": 410,
+    "date": "2026-07-30",
+    "composite": 0.111,
+    "quantScore": 0.111,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -85.5,
+      "score": -0.205
+     },
+     "breakout": {
+      "raw": 0.435,
+      "score": -0.13
+     },
+     "tsmom": {
+      "raw": 0.051,
+      "score": 0.324
+     },
+     "foreignFlow": {
+      "raw": 292788,
+      "score": 0.909
+     },
+     "pcr": {
+      "raw": 97.9,
+      "score": -0.482
+     }
+    },
+    "atr20": 210.7,
+    "adx14": 23.3
+   },
+   {
+    "index": 417,
+    "date": "2026-08-10",
+    "composite": 0.068,
+    "quantScore": 0.113,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -46.7,
+      "score": -0.056
+     },
+     "breakout": {
+      "raw": 0.371,
+      "score": -0.259
+     },
+     "tsmom": {
+      "raw": 0.0487,
+      "score": 0.299
+     },
+     "foreignFlow": {
+      "raw": 322085,
+      "score": 0.735
+     },
+     "pcr": {
+      "raw": 103.3,
+      "score": -0.253
+     }
+    },
+    "atr20": 199.2,
+    "adx14": 15.2
+   },
+   {
+    "index": 424,
+    "date": "2026-08-19",
+    "composite": -0.365,
+    "quantScore": -0.365,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -149.2,
+      "score": -0.527
+     },
+     "breakout": {
+      "raw": 0.143,
+      "score": -0.715
+     },
+     "tsmom": {
+      "raw": -0.0021,
+      "score": -0.013
+     },
+     "foreignFlow": {
+      "raw": 309262,
+      "score": -0.263
+     },
+     "pcr": {
+      "raw": 107,
+      "score": -0.085
+     }
+    },
+    "atr20": 199.9,
+    "adx14": 21.5
+   },
+   {
+    "index": 431,
+    "date": "2026-08-28",
+    "composite": -0.283,
+    "quantScore": -0.283,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -192.2,
+      "score": -0.416
+     },
+     "breakout": {
+      "raw": 0.224,
+      "score": -0.552
+     },
+     "tsmom": {
+      "raw": -0.0221,
+      "score": -0.135
+     },
+     "foreignFlow": {
+      "raw": 276024,
+      "score": -0.218
+     },
+     "pcr": {
+      "raw": 113.9,
+      "score": 0.224
+     }
+    },
+    "atr20": 190.2,
+    "adx14": 22.9
+   },
+   {
+    "index": 438,
+    "date": "2026-09-08",
+    "composite": -0.197,
+    "quantScore": -0.328,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -95.9,
+      "score": -0.279
+     },
+     "breakout": {
+      "raw": 0.237,
+      "score": -0.526
+     },
+     "tsmom": {
+      "raw": -0.0224,
+      "score": -0.14
+     },
+     "foreignFlow": {
+      "raw": 242862,
+      "score": -0.366
+     },
+     "pcr": {
+      "raw": 100,
+      "score": -0.379
+     }
+    },
+    "atr20": 185.7,
+    "adx14": 17.4
+   },
+   {
+    "index": 445,
+    "date": "2026-09-17",
+    "composite": -0.394,
+    "quantScore": -0.657,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -166.3,
+      "score": -0.711
+     },
+     "breakout": {
+      "raw": 0.023,
+      "score": -0.954
+     },
+     "tsmom": {
+      "raw": -0.1003,
+      "score": -0.645
+     },
+     "foreignFlow": {
+      "raw": 206595,
+      "score": -0.35
+     },
+     "pcr": {
+      "raw": 95.9,
+      "score": -0.534
+     }
+    },
+    "atr20": 196.6,
+    "adx14": 17.9
+   },
+   {
+    "index": 452,
+    "date": "2026-09-28",
+    "composite": -0.597,
+    "quantScore": -0.597,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -338.7,
+      "score": -0.951
+     },
+     "breakout": {
+      "raw": 0.152,
+      "score": -0.697
+     },
+     "tsmom": {
+      "raw": -0.0738,
+      "score": -0.5
+     },
+     "foreignFlow": {
+      "raw": 171822,
+      "score": -0.37
+     },
+     "pcr": {
+      "raw": 109.1,
+      "score": 0.02
+     }
+    },
+    "atr20": 187.7,
+    "adx14": 26.2
+   },
+   {
+    "index": 459,
+    "date": "2026-10-07",
+    "composite": -0.296,
+    "quantScore": -0.296,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -275.3,
+      "score": -0.432
+     },
+     "breakout": {
+      "raw": 0.472,
+      "score": -0.056
+     },
+     "tsmom": {
+      "raw": -0.044,
+      "score": -0.286
+     },
+     "foreignFlow": {
+      "raw": 132299,
+      "score": -0.538
+     },
+     "pcr": {
+      "raw": 111.3,
+      "score": 0.098
+     }
+    },
+    "atr20": 192.9,
+    "adx14": 19.7
+   },
+   {
+    "index": 466,
+    "date": "2026-10-16",
+    "composite": -0.349,
+    "quantScore": -0.349,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -147.9,
+      "score": -0.461
+     },
+     "breakout": {
+      "raw": 0.309,
+      "score": -0.382
+     },
+     "tsmom": {
+      "raw": -0.0241,
+      "score": -0.169
+     },
+     "foreignFlow": {
+      "raw": 94932,
+      "score": -0.542
+     },
+     "pcr": {
+      "raw": 110.9,
+      "score": 0.079
+     }
+    },
+    "atr20": 191.6,
+    "adx14": 21.5
+   },
+   {
+    "index": 473,
+    "date": "2026-10-27",
+    "composite": -0.195,
+    "quantScore": -0.325,
+    "coverage": 1,
+    "factors": {
+     "trend": {
+      "raw": -159.9,
+      "score": -0.35
+     },
+     "breakout": {
+      "raw": 0.41,
+      "score": -0.18
+     },
+     "tsmom": {
+      "raw": -0.0473,
+      "score": -0.343
+     },
+     "foreignFlow": {
+      "raw": 62771,
+      "score": -0.59
+     },
+     "pcr": {
+      "raw": 109.6,
+      "score": 0.024
+     }
+    },
+    "atr20": 183.9,
+    "adx14": 16.5
+   }
+  ],
+  "backtest": {
+   "full": {
+    "metrics": {
+     "totalReturnPct": 0.04,
+     "cagrPct": 0.02,
+     "sharpe": 0.03,
+     "maxDrawdownPct": 7.75,
+     "trades": 20,
+     "winRatePct": 20,
+     "profitFactor": 1,
+     "avgHoldingBars": 14.4,
+     "exposurePct": 68.6,
+     "finalEquity": 2000789
+    },
+    "trades": [
+     {
+      "side": "long",
+      "contracts": 3,
+      "product": "TMF",
+      "openDate": "2025-03-28",
+      "closeDate": "2025-04-02",
+      "entryPrice": 23964.5,
+      "exitPrice": 23432.8,
+      "pnlPoints": -531.7,
+      "grossPnl": -15951,
+      "costs": 356,
+      "netPnl": -16307,
+      "holdingBars": 3,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": 0.525
+     },
+     {
+      "side": "long",
+      "contracts": 3,
+      "product": "TMF",
+      "openDate": "2025-04-11",
+      "closeDate": "2025-04-16",
+      "entryPrice": 23400.3,
+      "exitPrice": 22757.7,
+      "pnlPoints": -642.6,
+      "grossPnl": -19278,
+      "costs": 178,
+      "netPnl": -19456,
+      "holdingBars": 3,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": 0.374
+     },
+     {
+      "side": "short",
+      "contracts": 3,
+      "product": "TMF",
+      "openDate": "2025-05-05",
+      "closeDate": "2025-05-16",
+      "entryPrice": 21798.8,
+      "exitPrice": 22256.8,
+      "pnlPoints": -458,
+      "grossPnl": -13740,
+      "costs": 176,
+      "netPnl": -13916,
+      "holdingBars": 9,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.444
+     },
+     {
+      "side": "short",
+      "contracts": 3,
+      "product": "TMF",
+      "openDate": "2025-05-21",
+      "closeDate": "2025-07-28",
+      "entryPrice": 22169.6,
+      "exitPrice": 20578,
+      "pnlPoints": 1591.6,
+      "grossPnl": 47748,
+      "costs": 699,
+      "netPnl": 47049,
+      "holdingBars": 48,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.367
+     },
+     {
+      "side": "short",
+      "contracts": 4,
+      "product": "TMF",
+      "openDate": "2025-07-30",
+      "closeDate": "2025-10-30",
+      "entryPrice": 20536.2,
+      "exitPrice": 16946.9,
+      "pnlPoints": 3589.3,
+      "grossPnl": 143572,
+      "costs": 916,
+      "netPnl": 142656,
+      "holdingBars": 66,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.359
+     },
+     {
+      "side": "short",
+      "contracts": 6,
+      "product": "TMF",
+      "openDate": "2025-10-31",
+      "closeDate": "2025-11-05",
+      "entryPrice": 16899.4,
+      "exitPrice": 17247.6,
+      "pnlPoints": -348.2,
+      "grossPnl": -20892,
+      "costs": 341,
+      "netPnl": -21233,
+      "holdingBars": 3,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.423
+     },
+     {
+      "side": "short",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2025-11-06",
+      "closeDate": "2025-11-11",
+      "entryPrice": 17233.6,
+      "exitPrice": 17610,
+      "pnlPoints": -376.4,
+      "grossPnl": -18820,
+      "costs": 285,
+      "netPnl": -19105,
+      "holdingBars": 3,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.399
+     },
+     {
+      "side": "long",
+      "contracts": 6,
+      "product": "TMF",
+      "openDate": "2025-12-02",
+      "closeDate": "2025-12-11",
+      "entryPrice": 18266.7,
+      "exitPrice": 17918.5,
+      "pnlPoints": -348.2,
+      "grossPnl": -20892,
+      "costs": 344,
+      "netPnl": -21236,
+      "holdingBars": 7,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": 0.393
+     },
+     {
+      "side": "short",
+      "contracts": 4,
+      "product": "TMF",
+      "openDate": "2025-12-26",
+      "closeDate": "2026-02-09",
+      "entryPrice": 16773.1,
+      "exitPrice": 16095.8,
+      "pnlPoints": 677.3,
+      "grossPnl": 27092,
+      "costs": 452,
+      "netPnl": 26640,
+      "holdingBars": 31,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.483
+     },
+     {
+      "side": "short",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2026-02-10",
+      "closeDate": "2026-02-20",
+      "entryPrice": 16254.5,
+      "exitPrice": 16649.9,
+      "pnlPoints": -395.4,
+      "grossPnl": -19770,
+      "costs": 565,
+      "netPnl": -20335,
+      "holdingBars": 8,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.632
+     },
+     {
+      "side": "short",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2026-02-23",
+      "closeDate": "2026-03-11",
+      "entryPrice": 16700.9,
+      "exitPrice": 16972.4,
+      "pnlPoints": -271.5,
+      "grossPnl": -13575,
+      "costs": 284,
+      "netPnl": -13859,
+      "holdingBars": 12,
+      "exitReason": "signal",
+      "source": "auto",
+      "entryComposite": -0.403
+     },
+     {
+      "side": "long",
+      "contracts": 4,
+      "product": "TMF",
+      "openDate": "2026-03-18",
+      "closeDate": "2026-03-20",
+      "entryPrice": 17045.7,
+      "exitPrice": 16998.6,
+      "pnlPoints": -47.1,
+      "grossPnl": -1884,
+      "costs": 456,
+      "netPnl": -2340,
+      "holdingBars": 2,
+      "exitReason": "signal",
+      "source": "auto",
+      "entryComposite": 0.352
+     },
+     {
+      "side": "short",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2026-04-14",
+      "closeDate": "2026-05-22",
+      "entryPrice": 16133.9,
+      "exitPrice": 15712.4,
+      "pnlPoints": 421.5,
+      "grossPnl": 21075,
+      "costs": 844,
+      "netPnl": 20231,
+      "holdingBars": 28,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.359
+     },
+     {
+      "side": "short",
+      "contracts": 6,
+      "product": "TMF",
+      "openDate": "2026-05-25",
+      "closeDate": "2026-05-29",
+      "entryPrice": 15710.2,
+      "exitPrice": 16053.6,
+      "pnlPoints": -343.4,
+      "grossPnl": -20604,
+      "costs": 338,
+      "netPnl": -20942,
+      "holdingBars": 4,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.355
+     },
+     {
+      "side": "long",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2026-06-19",
+      "closeDate": "2026-06-29",
+      "entryPrice": 16706.2,
+      "exitPrice": 16521.4,
+      "pnlPoints": -184.8,
+      "grossPnl": -9240,
+      "costs": 284,
+      "netPnl": -9524,
+      "holdingBars": 6,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": 0.426
+     },
+     {
+      "side": "long",
+      "contracts": 4,
+      "product": "TMF",
+      "openDate": "2026-06-30",
+      "closeDate": "2026-07-08",
+      "entryPrice": 16561.8,
+      "exitPrice": 16139.2,
+      "pnlPoints": -422.6,
+      "grossPnl": -16904,
+      "costs": 226,
+      "netPnl": -17130,
+      "holdingBars": 6,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": 0.409
+     },
+     {
+      "side": "long",
+      "contracts": 4,
+      "product": "TMF",
+      "openDate": "2026-07-09",
+      "closeDate": "2026-07-20",
+      "entryPrice": 16350.8,
+      "exitPrice": 15967.1,
+      "pnlPoints": -383.7,
+      "grossPnl": -15348,
+      "costs": 452,
+      "netPnl": -15800,
+      "holdingBars": 7,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": 0.355
+     },
+     {
+      "side": "short",
+      "contracts": 4,
+      "product": "TMF",
+      "openDate": "2026-08-18",
+      "closeDate": "2026-08-31",
+      "entryPrice": 15528,
+      "exitPrice": 15934.2,
+      "pnlPoints": -406.2,
+      "grossPnl": -16248,
+      "costs": 225,
+      "netPnl": -16473,
+      "holdingBars": 9,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.366
+     },
+     {
+      "side": "short",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2026-09-16",
+      "closeDate": "2026-10-02",
+      "entryPrice": 15525.2,
+      "exitPrice": 15571,
+      "pnlPoints": -45.8,
+      "grossPnl": -2290,
+      "costs": 282,
+      "netPnl": -2572,
+      "holdingBars": 12,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.382
+     },
+     {
+      "side": "short",
+      "contracts": 5,
+      "product": "TMF",
+      "openDate": "2026-10-05",
+      "closeDate": "2026-11-03",
+      "entryPrice": 15673,
+      "exitPrice": 15772.9,
+      "pnlPoints": -99.9,
+      "grossPnl": -4995,
+      "costs": 564,
+      "netPnl": -5559,
+      "holdingBars": 21,
+      "exitReason": "stop",
+      "source": "auto",
+      "entryComposite": -0.451
+     }
+    ],
+    "finalEquity": 2000789
+   },
+   "trendOnly": {
+    "metrics": {
+     "totalReturnPct": -1.54,
+     "cagrPct": -0.93,
+     "sharpe": -0.19,
+     "maxDrawdownPct": 8.91,
+     "trades": 22,
+     "winRatePct": 18.2,
+     "profitFactor": 0.89,
+     "avgHoldingBars": 13.4,
+     "exposurePct": 70.2,
+     "finalEquity": 1969236
+    },
+    "finalEquity": 1969236
+   }
+  }
+ }
+}

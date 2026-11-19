@@ -1,0 +1,40 @@
+name: Deploy Apps Script
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps-script/**'
+      - '.github/workflows/deploy-apps-script.yml'
+
+jobs:
+  deploy:
+    name: clasp push + deploy
+    # 開源版預設不部署：在 repo Settings → Variables 設 ENABLE_DEPLOY=true 並補齊 secrets 後才會跑（見 docs/CICD_SETUP.md）
+    if: vars.ENABLE_DEPLOY == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install clasp
+        run: npm install -g @google/clasp
+
+      - name: Restore clasp credentials
+        run: |
+          echo '${{ secrets.CLASPRC_JSON }}' > "$HOME/.clasprc.json"
+          echo '${{ secrets.CLASP_JSON }}' > apps-script/.clasp.json
+
+      - name: Push code
+        working-directory: apps-script
+        run: clasp push --force
+
+      - name: Deploy new version
+        working-directory: apps-script
+        run: |
+          clasp deploy \
+            --deploymentId "${{ secrets.CLASP_DEPLOYMENT_ID }}" \
+            --description "auto: $(git rev-parse --short HEAD)"

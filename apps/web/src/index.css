@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 262 83% 96%;
+    --accent-foreground: 262 83% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* 圖表色票：收入 / 支出 / 淨額語意色 + 8 色類別色（沒有自訂顏色的類別用） */
+    --chart-income: 152 60% 40%;
+    --chart-expense: 0 72% 56%;
+    --chart-net: 262 83% 58%;
+    --chart-muted: 215 16% 65%;
+    --chart-1: 262 83% 58%;
+    --chart-2: 217 91% 55%;
+    --chart-3: 160 84% 36%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 330 81% 56%;
+    --chart-6: 189 94% 40%;
+    --chart-7: 24 94% 52%;
+    --chart-8: 84 70% 40%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 83% 68%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 262 30% 20%;
+    --accent-foreground: 262 83% 90%;
+
+    --destructive: 0 62.8% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 240 3.7% 18%;
+    --input: 240 3.7% 18%;
+    --ring: 262 83% 68%;
+
+    --chart-income: 152 55% 50%;
+    --chart-expense: 0 80% 64%;
+    --chart-net: 262 83% 72%;
+    --chart-muted: 215 14% 50%;
+    --chart-1: 262 83% 70%;
+    --chart-2: 217 91% 66%;
+    --chart-3: 160 70% 48%;
+    --chart-4: 38 92% 58%;
+    --chart-5: 330 81% 66%;
+    --chart-6: 189 85% 52%;
+    --chart-7: 24 94% 60%;
+    --chart-8: 84 65% 52%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  /*
+   * 手機版防溢出：沒有指定 grid-cols-* 的 `.grid` 只有一條 implicit `auto` 欄，
+   * 欄寬下限是內容的 min-content —— 裡面只要有一個不換行的長字串 / 圖表 / 寬表格，整欄（連同所有卡片）就被撐出螢幕右邊。
+   * 預設改成 minmax(0, 1fr)（等同 grid-cols-1）；`grid-cols-*` / `lg:grid-cols-*` 在 utilities layer，照常覆蓋。
+   */
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  /* 橫向捲動的分頁 / chip 列：保留捲動但藏捲軸（手機上捲軸只會擠壓高度） */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+ * iOS Safari：focus 到字級 < 16px 的輸入框會自動放大整頁，失焦後還停在放大狀態。
+ * 元件上的 `text-sm` / `text-xs` 是 class 選擇器、權重比 element 選擇器高，所以要 !important。
+ * 只挑「明確設小字」或「沒設字級（會繼承父層 14px）」的欄位，
+ * 刻意放大的金額欄（text-3xl / inline font-size）不受影響；桌面維持原本字級。
+ */
+@media (max-width: 767px) {
+  :is(input, textarea, select):is(
+      [class*='text-xs'],
+      [class*='text-sm'],
+      [class*='text-[9px]'],
+      [class*='text-[10px]'],
+      [class*='text-[11px]'],
+      [class*='text-[12px]'],
+      [class*='text-[13px]'],
+      [class*='text-[14px]'],
+      [class*='text-[15px]']
+    ),
+  :is(input, textarea, select):not([class*='text-']):not([style*='font-size']) {
+    font-size: 16px !important;
+  }
+}
+
+@layer base {
+  html {
+    /* 拿掉 double-tap zoom 的 300ms 點擊延遲（pinch zoom 仍保留，無障礙需要） */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  /* 觸控裝置：按鈕點下去不要選到文字、不要跳出 iOS 長按選單 */
+  @media (pointer: coarse) {
+    button,
+    [role='button'],
+    [role='tab'] {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+    }
+  }
+}
+
+/* HackMD 風格筆記閱讀模式 / 行程報告書：列印時隱藏 nav / sidebar / TOC，只留內容 */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  aside,
+  nav,
+  header,
+  footer,
+  [data-slot="sidebar"],
+  .print\:hidden {
+    display: none !important;
+  }
+  /* 行程報告書列印優化：A4 邊距 + 卡片不要 page-break 在中間 */
+  .trip-report {
+    color: #111 !important;
+  }
+  .trip-report .rounded-md,
+  .trip-report .rounded-lg {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* 行李清單「列印」：body.print-packing 時只印 .packing-print（trip-packing-panel.tsx） */
+  body.print-packing * {
+    visibility: hidden;
+  }
+  body.print-packing .packing-print,
+  body.print-packing .packing-print * {
+    visibility: visible;
+  }
+  body.print-packing .packing-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+  @page {
+    size: A4;
+    margin: 12mm 10mm;
+  }
+}

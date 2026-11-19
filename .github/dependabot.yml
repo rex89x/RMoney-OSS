@@ -1,0 +1,36 @@
+version: 2
+updates:
+  # npm workspaces 只有一份 root package-lock.json，所以 directory 指 "/" 就會涵蓋 apps/web。
+  # minor + patch 合成一個 PR；semver-major 一律手動升（React / Vite / Firebase 大版本要看 changelog）。
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Asia/Taipei
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      npm-minor-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Asia/Taipei
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope

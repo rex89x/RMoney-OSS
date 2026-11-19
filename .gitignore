@@ -1,0 +1,80 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.production.local
+.env.test.local
+!.env.local.example
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor / OS
+.vscode/
+!.vscode/settings.json.example
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Claude Code — per-user settings only; commit project skills under .claude/skills/
+.claude/settings.local.json
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+ui-debug.log
+firestore-debug.log
+database-debug.log
+pubsub-debug.log
+
+# Apps Script / clasp
+.clasprc.json
+apps-script/.clasp.json
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+.nyc_output/
+
+# API keys / secrets
+*.apikey
+*.pem
+*.key
+service-account*.json
+!service-account*.example.json
+
+# Misc
+.env-cmdrc
+mobile-audit/
+
+# Claude Code 子代理的 git worktree（暫存工作目錄，不進版控）
+.claude/worktrees/
+
+# Cloud Functions local config (APPS_SCRIPT_URL is written by CI)
+functions/.env

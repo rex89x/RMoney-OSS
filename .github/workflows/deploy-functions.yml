@@ -1,0 +1,64 @@
+name: Deploy Functions (MCP gateway)
+
+# MCP 閘道（functions/）：Claude.ai 連線用的 OAuth + MCP 端點，轉送到 Apps Script。
+# 需求（一次性，見 docs/INTEGRATIONS_SETUP.md 3.2）：專案為 Blaze 方案、已啟用 Cloud Functions 相關 API、
+# FIREBASE_SERVICE_ACCOUNT 這個 SA 有部署 Functions 的角色。
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/**'
+      - '.github/workflows/deploy-functions.yml'
+
+concurrency:
+  group: deploy-functions
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Test + Deploy
+    # 開源版預設不部署：在 repo Settings → Variables 設 ENABLE_DEPLOY=true 並補齊 secrets 後才會跑（見 docs/CICD_SETUP.md）
+    if: vars.ENABLE_DEPLOY == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # 與 firebase.json 的 functions runtime（nodejs22）一致；nodejs20 已於 2026-10-30 停用
+          node-version: 22
+          cache: npm
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Install deps
+        working-directory: functions
+        run: npm ci
+
+      - name: Test
+        working-directory: functions
+        run: npm test
+
+      - name: Write functions/.env
+        env:
+          # Apps Script Web App URL（與前端 VITE_APPS_SCRIPT_URL 同一個；不是密鑰，但不寫死在 repo）
+          APPS_SCRIPT_URL: ${{ secrets.VITE_APPS_SCRIPT_URL }}
+        run: printf 'APPS_SCRIPT_URL=%s\n' "$APPS_SCRIPT_URL" > functions/.env
+
+      - name: Install firebase-tools
+        run: npm install -g firebase-tools@15.35.0
+
+      - name: Write service account
+        env:
+          # 不把 secret 內插進 shell 字串，改走環境變數（同 deploy-hosting.yml）
+          FIREBASE_SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          printf '%s' "$FIREBASE_SA_JSON" > /tmp/sa.json
+          echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa.json" >> "$GITHUB_ENV"
+
+      - name: Deploy functions
+        # --force：自動設定 Artifact Registry 的清理政策，避免舊映像累積產生費用
+        run: firebase deploy --only functions --project ${{ secrets.FIREBASE_PROJECT_ID }} --non-interactive --force

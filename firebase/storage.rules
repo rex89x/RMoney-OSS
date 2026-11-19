@@ -1,0 +1,76 @@
+rules_version = '2';
+
+// Personal Hub — Storage Rules
+// 路徑慣例：<scope>/<uid>/...   只有檔案擁有者本人可讀寫；admin 可讀全部
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function userRole() {
+      return request.auth != null
+        ? firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role
+        : '';
+    }
+    function isAdmin() {
+      return request.auth != null && userRole() == 'admin';
+    }
+    // 只收點陣圖：SVG 可以帶 script，直接開下載 URL 會在 storage origin 執行（2026-11 稽核 S14）
+    function isRasterImage() {
+      return request.resource.contentType.matches('image/(png|jpeg|jpg|webp|gif|heic|heif|avif)');
+    }
+
+    // 交易附件（2026-11 F10 多附件）：tx-receipts/{uid}/{txId}/{timestamp}-{name}
+    // 圖片仍只收點陣圖（前端已壓成 WebP ≤ 500KB）；另外開放 PDF（收據 / 發票 / 合約，前端限 5MB）。
+    // 不用 application/.* 之類的寬鬆比對，SVG / HTML 這類可執行內容一樣擋掉。
+    // write 包含 delete：delete 時 request.resource 為 null，所以大小 / 類型只檢查上傳（create / update）。
+    match /tx-receipts/{uid}/{allPaths=**} {
+      allow read: if request.auth != null && (request.auth.uid == uid || isAdmin());
+      allow delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.size < 5 * 1024 * 1024
+        && (isRasterImage() || request.resource.contentType == 'application/pdf');
+    }
+
+    match /trip-photos/{uid}/{allPaths=**} {
+      allow read: if request.auth != null && (request.auth.uid == uid || isAdmin());
+      allow write: if request.auth != null && request.auth.uid == uid
+        && request.resource.size < 5 * 1024 * 1024
+        && isRasterImage();
+    }
+
+    // Trip 文件：簽證 / 機票 PDF / 訂房單。
+    // 路徑：trip-documents/{ownerUid}/{tripId}/{docId}/{filename}
+    // 讀：owner / share user（read trip.sharedWith via firestore.get）
+    // 寫：只有 owner，限 25MB / PDF / image / zip / office / txt
+    match /trip-documents/{ownerUid}/{tripId}/{allPaths=**} {
+      function tripData() {
+        return firestore.get(/databases/(default)/documents/trips/$(tripId)).data;
+      }
+      function isShareReader() {
+        return request.auth != null
+          && tripData().sharedWith != null
+          && request.auth.uid in tripData().sharedWith;
+      }
+      allow read: if request.auth != null && (
+        request.auth.uid == ownerUid ||
+        isAdmin() ||
+        isShareReader()
+      );
+      allow write: if request.auth != null
+        && request.auth.uid == ownerUid
+        && request.resource.size < 25 * 1024 * 1024
+        && (
+          request.resource.contentType.matches('application/pdf') ||
+          isRasterImage() ||
+          request.resource.contentType.matches('application/zip') ||
+          request.resource.contentType.matches('application/vnd.openxmlformats-officedocument.*') ||
+          request.resource.contentType.matches('application/msword') ||
+          request.resource.contentType.matches('text/plain')
+        );
+    }
+
+    // 預設 deny
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

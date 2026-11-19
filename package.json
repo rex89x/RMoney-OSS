@@ -1,0 +1,27 @@
+{
+  "name": "personal-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal finance + travel planning hub (single-user PWA)",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace apps/web",
+    "build": "npm run build --workspace apps/web",
+    "preview": "npm run preview --workspace apps/web",
+    "typecheck": "npm run typecheck --workspace apps/web",
+    "lint": "npm run lint --workspace apps/web",
+    "lint:fix": "npm run lint:fix --workspace apps/web",
+    "format": "npm run format --workspace apps/web",
+    "test": "node --test apps-script/tests/*.test.cjs apps/web/tests/*.test.cjs functions/tests/*.test.mjs && npm run test --workspace apps/web --if-present",
+    "test:rules": "npx --yes firebase-tools@15.35.0 emulators:exec --only firestore --project demo-rmoney \"node --test tests/rules/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^3.0.4",
+    "esbuild": "^0.21.5"
+  }
+}
