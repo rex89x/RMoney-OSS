@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           # 與 firebase.json 的 functions runtime（nodejs22）一致；nodejs20 已於 2026-10-30 停用
           node-version: 22
